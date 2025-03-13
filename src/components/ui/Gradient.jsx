@@ -5,8 +5,8 @@ const Gradient = () => {
   return (
     <div className="absolute h-screen w-[120%] z-[-9999]">
       <div
-        className="bg-gradient-to-r h-full from-[#0569E8] to-[#76D232] md:rounded-4xl md:-rotate-25
-                                         absolute top-[-20%]  md:top-[-60%] md:right-[-3%] w-[110%] "
+        className="bg-gradient-to-r h-full from-[#0569E8] to-[#76D232] lg:rounded-4xl lg:-rotate-25
+                                         absolute top-[-20%] lg:top-[-60%] lg:right-[-3%] w-[110%] "
       />
       <img
         width={600}

@@ -16,7 +16,7 @@ const ProgressIndicator = ({ steps, currentStep, className = "" }) => {
   const progressPercentage = (currentStep / (steps.length - 1)) * 100;
 
   return (
-    <div className={`w-full px-4 ${className}`}>
+    <div className={`w-full mx-auto max-w-full px-4 ${className}`}>
       <div className="flex justify-between items-center relative">
         {/* Step circles and labels */}
         {steps.map((step, index) => (
@@ -36,7 +36,6 @@ const ProgressIndicator = ({ steps, currentStep, className = "" }) => {
           </div>
         ))}
 
-        {/* Background track */}
         <div
           className="absolute top-5 md:top-6 left-4 right-0 h-1.5 bg-gray-200 z-0"
           style={{
@@ -45,7 +44,6 @@ const ProgressIndicator = ({ steps, currentStep, className = "" }) => {
           }}
         ></div>
 
-        {/* Progress fill */}
         <div
           className={`absolute top-5 md:top-6 left-4 h-1.5 z-0 transition-all duration-300 ${getStepColor(
             currentStep,
