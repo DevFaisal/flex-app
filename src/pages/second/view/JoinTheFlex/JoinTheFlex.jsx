@@ -14,7 +14,7 @@ const JoinTheFlex = () => {
   ];
 
   return (
-    <section className="py-20 flex gap-10 relative bg-gray-900 md:h-[80vh]">
+    <section className="py-20 flex gap-10 relative bg-gray-900  xl:h-[80vh]">
       <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
         <img
           className="w-full h-full object-cover opacity-60"
@@ -23,7 +23,7 @@ const JoinTheFlex = () => {
         />
       </div>
 
-      <div className="relative z-10 container mx-auto px-4 flex flex-col md:flex-row md:gap-10">
+      <div className="relative z-10 container mx-auto px-4 flex flex-col  items-center xl:flex-row md:gap-10">
         <div className="flex-1 flex flex-col gap-6 bg-opacity-80 p-6">
           <h1 className="text-4xl font-bold text-white">
             Join the FlexCard <br /> Revolution
@@ -39,7 +39,7 @@ const JoinTheFlex = () => {
                 className="flex justify-start items-center gap-4"
               >
                 <p className="ring-3 flex rounded-full p-1 w-fit ring-white">
-                  <MdDone size={40} stroke="60px" className="text-[#76D232]" />
+                  <MdDone  className="text-[#76D232] md:size-7" />
                 </p>
                 <h1
                   className="text-white"
