@@ -19,7 +19,7 @@ const Navbar = () => {
         <div className="block md:hidden z-10">
           <button
             onClick={toggleMenu}
-            className="flex items-center px-3 py-2 border rounded text-gray-800 border-gray-400"
+            className="flex items-center px-3 py-2  rounded text-white"
           >
             {menuOpen ? <FaTimes size={16} /> : <FaBars size={16} />}
           </button>

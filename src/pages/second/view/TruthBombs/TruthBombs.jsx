@@ -43,7 +43,7 @@ const TruthBombs = () => {
     },
   ];
   return (
-    <section className="py-20 bg-[#F2F4F8] relative h-[80vh] min-h-[80vh] overflow-hidden">
+    <section className="py-20 bg-[#F2F4F8] relative md:h-[80vh] min-h-[80vh] overflow-hidden">
       <HeaderNote
         note={"Credit Card Truth Bombs"}
         desc={`Things the credit card industry doesn't want you to know.`}

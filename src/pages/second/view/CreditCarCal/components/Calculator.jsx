@@ -55,14 +55,14 @@ const Calculator = ({ handleNextStep }) => {
         </button> */}
       </div>
 
-      <div className="w-full md:w-1/2 flex flex-col items-start justify-center space-y-4  p-6 rounded-lg">
+      <div className="w-full md:w-1/2 flex flex-col items-start justify-center md:space-y-4  md:p-6 rounded-lg">
         <img
           src={debtImage}
           alt="Debt visualization"
-          className="max-w-full h-auto"
+          className="max-w-full h-auto hidden md:flex"
         />
-        <h2 className="text-xl font-bold">Did you know?</h2>
-        <p className="text-gray-700">
+        <h2 className="text-xl hidden md:flex font-bold">Did you know?</h2>
+        <p className="hidden md:flex text-gray-700">
           When you make partial repayments on your credit card, you're still
           being charged interest on the full amount from your last statement.
           With FlexCard, you only pay interest on what you actually owe, not on
@@ -72,7 +72,7 @@ const Calculator = ({ handleNextStep }) => {
           onClick={() => handleNextStep()}
           type="secondary"
           label={`Continue to Pre-Qualification →`}
-          className="w-full md:w-auto mt-4"
+          className="w-full md:w-auto md:mt-4"
         />
       </div>
     </section>

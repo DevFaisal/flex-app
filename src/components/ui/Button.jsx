@@ -94,7 +94,7 @@ const Button = ({
       aria-busy={isLoading}
     >
       {iconPosition === "left" && icon && <span className="mr-2">{icon}</span>}
-      {label}
+      <span className="text-nowrap">{label}</span>
       {iconPosition === "right" && icon && <span className="ml-2">{icon}</span>}
       {isLoading && <LoadingSpinner />}
     </button>
