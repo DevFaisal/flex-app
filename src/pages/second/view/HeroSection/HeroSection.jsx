@@ -26,7 +26,7 @@ export default HeroSection;
 
 function LeftSection() {
   return (
-    <section className="flex mt-20 lg:mt-60 flex-col gap-6 lg:gap-10  items-center md:items-start justify-between w-full lg:w-1/2 text-center lg:text-left">
+    <section className="flex mt-20 lg:mt-60 flex-col gap-6 lg:gap-10  items-center xl:items-start justify-between w-full lg:w-1/2 text-center lg:text-left">
       <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
         Pay For What You Owe <br className="hidden md:block" /> With Flexcard
         <span className="text-sm">.app</span>

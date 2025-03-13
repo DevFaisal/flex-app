@@ -123,7 +123,7 @@ const Footer = () => {
         <div>
           <h2 className="font-bold text-xl mb-6">Column Four</h2>
           <div className="space-y-6">
-            <div className="flex">
+            <div className="flex flex-wrap gap-2">
               <img
                 src={playsoreicon}
                 alt="Get it on Google Play"
