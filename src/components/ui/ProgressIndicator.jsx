@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProgressBar = ({ steps, currentStep, className = "" }) => {
+const ProgressIndicator = ({ steps, currentStep, className = "" }) => {
   // Helper function to determine the color based on step status
   const getStepColor = (currentStep, index) => {
     if (index < currentStep) {
@@ -63,4 +63,4 @@ const ProgressBar = ({ steps, currentStep, className = "" }) => {
   );
 };
 
-export default ProgressBar;
+export default ProgressIndicator;

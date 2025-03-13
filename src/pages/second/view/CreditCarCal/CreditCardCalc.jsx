@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import HeaderNote from "../../../../components/ui/HeaderNote";
-import ProgressBar from "../../../../components/ui/ProgressBar";
+import ProgressIndicator from "../../../../components/ui/ProgressIndicator";
 import CheckQualifyForm from "./components/CheckQualifyForm";
 import Calculator from "./components/Calculator";
 import Qualify from "./components/Qualify";
@@ -51,7 +51,7 @@ const CreditCardCalc = () => {
         note={"Credit Card Calculator"}
         desc={`Discover how much interest you're really paying and how FlexCard can help you save.`}
       />
-      <ProgressBar
+      <ProgressIndicator
         steps={steps}
         currentStep={currentStep}
         className="w-full mb-8 md:mb-10 px-4"

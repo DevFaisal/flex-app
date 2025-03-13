@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Select from "../../../components/ui/Select";
 import HeaderNote from "../../../components/ui/HeaderNote";
-import ProgressBar from "../../../components/ui/Progressbar";
+import ProgressIndicator from "../../../components/ui/ProgressIndicator";
 
 const CheckQualify = () => {
   const steps = ["screening", "calculator", "result"];
@@ -68,7 +68,11 @@ const CheckQualify = () => {
         note={"Check If You Qualify"}
       />
 
-      <ProgressBar steps={steps} currentStep={currentStep} className="mb-8" />
+      <ProgressIndicator
+        steps={steps}
+        currentStep={currentStep}
+        className="mb-8"
+      />
 
       {/* Form Content */}
       <div className="w-full px-4 md:px-20 mb-8 min-h-[300px] ">
