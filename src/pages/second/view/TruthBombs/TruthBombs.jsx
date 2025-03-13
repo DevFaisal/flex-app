@@ -79,7 +79,7 @@ function PromoCard({
 }) {
   return (
     <div
-      className={`bg-white flex-shrink-0 flex-col rounded-md even:h-[400px] odd:h-[420px]  w-[360px] flex items-start justify-between py-15 px-8 snap-start max-w-md ${className} shadow-[0_8px_30px_rgb(0,0,0,0.12)] border-[1px] border-gray-200`}
+      className={`bg-white flex-shrink-0 flex-col rounded-md md:even:h-[400px] md:odd:h-[420px]  w-[360px] flex items-start justify-between py-15 px-8 snap-start max-w-md ${className} shadow-[0_8px_30px_rgb(0,0,0,0.12)] border-[1px] border-gray-200`}
     >
       <div className="flex items-start mb-4">
         <div className="mr-4">{icon}</div>

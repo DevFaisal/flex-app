@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 
 const CardStack = () => {
   return (
-    <section className="hidden w-full lg:w-1/2 md:flex flex-col justify-start items-center relative h-72 md:h-96 mt-12 lg:mt-0">
+    <section className="hidden w-full lg:w-1/2 lg:flex flex-col justify-start items-center relative h-72 md:h-96 mt-12 lg:mt-0">
       {/* Green Card */}
       <motion.img
         src={greencard}

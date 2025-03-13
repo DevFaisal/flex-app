@@ -1,10 +1,27 @@
 import HeaderNote from "../../../../components/ui/HeaderNote";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import { FaQuoteRight } from "react-icons/fa";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const Feedback = () => {
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+      slidesToSlide: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+      slidesToSlide: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      slidesToSlide: 1,
+    },
+  };
   const feedbackData = [
     {
       text: "Malesuada facilisi libero, nam eu. Quis pellentesque tortor a elementum ut blandit sed pellentesque arcu. Malesuada in faucibus risus velit diam.",
@@ -59,19 +76,8 @@ const Feedback = () => {
         note={`What Early Users Are Saying`}
         desc={`Pay For What You Owe`}
       />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <Carousel
-          showArrows={true}
-          infiniteLoop={true}
-          showThumbs={false}
-          showStatus={false}
-          autoPlay={true}
-          interval={5000}
-          centerMode={true}
-          className="py-5"
-          renderArrowPrev={customRenderArrowPrev}
-          renderArrowNext={customRenderArrowNext}
-        >
+      <div className="px-4 sm:px-6 lg:px-8 py-8">
+        <Carousel responsive={responsive}>
           {feedbackData.map((feedback, index) => (
             <Card
               key={index}
@@ -88,7 +94,7 @@ const Feedback = () => {
 
 function Card({ text, author, role }) {
   return (
-    <div className="mx-4 gap-4 h-80  bg-white rounded-lg shadow-md p-8 flex flex-col text-left transition-transform duration-300 hover:-translate-y-2">
+    <div className="mx-4 gap-4 md:h-80  bg-white rounded-lg shadow-md p-8 flex flex-col text-left transition-transform duration-300 hover:-translate-y-2">
       <div className="text-blue-600 text-3xl mb-4">
         <FaQuoteRight />
       </div>
