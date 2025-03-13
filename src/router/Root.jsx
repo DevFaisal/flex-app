@@ -8,12 +8,12 @@ const router = createBrowserRouter([
     path: "",
     element: <RootLayout />,
     children: [
-      // {
-      //   path: "",
-      //   element: <LandingPage />,
-      // },
       {
         path: "",
+        element: <LandingPage />,
+      },
+      {
+        path: "/second",
         element: <Second />,
       },
     ],
