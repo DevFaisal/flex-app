@@ -5,7 +5,7 @@ import CheckQualifyForm from "./components/CheckQualifyForm";
 import Calculator from "./components/Calculator";
 import Qualify from "./components/Qualify";
 
-const CreditCardCal = () => {
+const CreditCardCalc = () => {
   const steps = ["card details", "calculate", "qualify"];
   const [currentStep, setCurrentStep] = useState(0);
 
@@ -63,4 +63,4 @@ const CreditCardCal = () => {
   );
 };
 
-export default CreditCardCal;
+export default CreditCardCalc;

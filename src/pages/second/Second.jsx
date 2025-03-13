@@ -1,6 +1,6 @@
 import React from "react";
 import HeroSection from "./view/HeroSection/HeroSection";
-import CreditCardCal from "./view/CreditCarCal/CreditCardCal";
+import CreditCardCal from "./view/CreditCarCal/CreditCardCalc";
 import TruthBombs from "./view/TruthBombs/TruthBombs";
 import TestCredit from "./view/TestCredit/TestCredit";
 import JoinTheFlex from "./view/JoinTheFlex/JoinTheFlex";
