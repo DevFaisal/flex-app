@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import HeaderNote from "../../../../components/ui/HeaderNote";
-import ProgressBar from "../../../../components/ui/Progressbar";
+import ProgressBar from "../../../../components/ui/ProgressBar";
 import CheckQualifyForm from "./components/CheckQualifyForm";
 import Calculator from "./components/Calculator";
 import Qualify from "./components/Qualify";
