@@ -47,6 +47,8 @@ const Button = ({
         return `bg-transparent text-primary ring-2 ring-primary hover:bg-primary/10 ${sizeStyles[size]} ${widthStyles} ${disabledStyles} ${loadingStyles} ${className}`;
       case "text":
         return `bg-transparent text-primary hover:bg-primary/10 ${sizeStyles[size]} ${widthStyles} ${disabledStyles} ${loadingStyles} ${className}`;
+      case "white":
+        return `bg-trasnparent text-black bg-white ${sizeStyles[size]} ${widthStyles} ${disabledStyles} ${loadingStyles} ${className}`;
       default:
         return `bg-primary text-white ring-2 ring-primary ${sizeStyles[size]} ${widthStyles} ${disabledStyles} ${loadingStyles} ${className}`;
     }

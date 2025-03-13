@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import Button from "../ui/Button";
-import logo from "../../assets/ui/logo.svg";
+import logo from "../../assets/new-logo.svg";
 import playsoreicon from "../../assets/icons/playstore.svg";
 import appstoreicon from "../../assets/icons/appstore.svg";
 
