@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Select from "../../../components/ui/Select";
 import HeaderNote from "../../../components/ui/HeaderNote";
+import ProgressBar from "../../../components/ui/Progressbar";
 
 const CheckQualify = () => {
   const steps = ["screening", "calculator", "result"];
@@ -67,35 +68,7 @@ const CheckQualify = () => {
         note={"Check If You Qualify"}
       />
 
-      {/* Progress Bar */}
-      <div className="w-full mb-8 md:mb-10 px-4">
-        <div className="flex justify-between items-center relative">
-          {steps.map((step, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-center relative z-10"
-            >
-              <div
-                className={`w-10 h-10 md:w-12 md:h-12 flex items-center justify-center font-bold rounded-full transition-colors ${
-                  currentStep >= index
-                    ? "bg-secondary text-white"
-                    : "bg-gray-200"
-                }`}
-              >
-                {index + 1}
-              </div>
-              <span className="text-xs md:text-sm font-bold mt-2 uppercase">
-                {step}
-              </span>
-            </div>
-          ))}
-          <div className="absolute top-5 md:top-6 md:left-6 md:max-w-[840px] w-full h-1.5 bg-gray-200 z-0"></div>
-          <div
-            className="absolute top-5 md:top-6 md:left-6 md:max-w-[840px] w-full h-1.5 bg-secondary z-0 transition-all duration-300"
-            style={{ width: `${(currentStep / (steps.length - 1)) * 100}%` }}
-          ></div>
-        </div>
-      </div>
+      <ProgressBar steps={steps} currentStep={currentStep} className="mb-8" />
 
       {/* Form Content */}
       <div className="w-full px-4 md:px-20 mb-8 min-h-[300px] ">
