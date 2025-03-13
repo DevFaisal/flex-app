@@ -5,7 +5,6 @@ import BetaPerks from "./components/BetaPerks";
 import JoinWaitlist from "./components/JoinWaitlist";
 import Feedback from "./components/Feedback";
 import Join from "./components/Join";
-import Container from "../../components/view/Container";
 
 const LandingPage = () => {
   return (
