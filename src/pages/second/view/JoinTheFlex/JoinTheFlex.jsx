@@ -14,7 +14,7 @@ const JoinTheFlex = () => {
   ];
 
   return (
-    <section className="py-20 flex gap-10 relative bg-gray-900 h-[80vh]">
+    <section className="py-20 flex gap-10 relative bg-gray-900 md:h-[80vh]">
       <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
         <img
           className="w-full h-full object-cover opacity-60"
@@ -23,7 +23,7 @@ const JoinTheFlex = () => {
         />
       </div>
 
-      <div className="relative z-10 container mx-auto px-4 flex flex-col md:flex-row gap-10">
+      <div className="relative z-10 container mx-auto px-4 flex flex-col md:flex-row md:gap-10">
         <div className="flex-1 flex flex-col gap-6 bg-opacity-80 p-6">
           <h1 className="text-4xl font-bold text-white">
             Join the FlexCard <br /> Revolution
@@ -50,7 +50,7 @@ const JoinTheFlex = () => {
           </div>
         </div>
 
-        <div className="max-w-xl flex flex-col gap-6 bg-white bg-opacity-80 p-6 rounded-lg py-10 px-6 shadow-[-20px_20px_0px_rgba(0,0,0,0.25)] shadow-gray-300">
+        <div className="max-w-xl flex flex-col gap-6 bg-white bg-opacity-80 p-6 rounded-lg py-10 px-6 ml-5 md:ml-0 shadow-[-20px_20px_0px_rgba(0,0,0,0.25)] shadow-gray-300">
           <h2 className="text-2xl font-bold">Join the Waitlist</h2>
           <p className="text-xl">
             Be the first to get your FlexCard when we launch.

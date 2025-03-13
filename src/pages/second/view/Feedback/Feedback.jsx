@@ -68,7 +68,6 @@ const Feedback = () => {
           autoPlay={true}
           interval={5000}
           centerMode={true}
-          centerSlidePercentage={50}
           className="py-5"
           renderArrowPrev={customRenderArrowPrev}
           renderArrowNext={customRenderArrowNext}
@@ -89,7 +88,7 @@ const Feedback = () => {
 
 function Card({ text, author, role }) {
   return (
-    <div className="mx-4 h-80 bg-white rounded-lg shadow-md p-8 flex flex-col text-left transition-transform duration-300 hover:-translate-y-2">
+    <div className="mx-4 gap-4 h-80  bg-white rounded-lg shadow-md p-8 flex flex-col text-left transition-transform duration-300 hover:-translate-y-2">
       <div className="text-blue-600 text-3xl mb-4">
         <FaQuoteRight />
       </div>
