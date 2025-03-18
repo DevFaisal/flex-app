@@ -11,9 +11,9 @@ import Model from "../../components/ui/Model";
 const LandingPage = () => {
   return (
     <main className="">
-      <Model>
+      {/* <Model>
         <Form />
-      </Model>
+      </Model> */}
       <HeroSection />
       <CheckQaulify />
       <BetaPerks />
