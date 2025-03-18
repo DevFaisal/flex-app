@@ -5,15 +5,10 @@ import BetaPerks from "./components/BetaPerks";
 import JoinWaitlist from "./components/JoinWaitlist";
 import Feedback from "./components/Feedback";
 import Join from "./components/Join";
-import Form from "./components/Form";
-import Model from "../../components/ui/Model";
 
 const LandingPage = () => {
   return (
     <main className="">
-      {/* <Model>
-        <Form />
-      </Model> */}
       <HeroSection />
       <CheckQaulify />
       <BetaPerks />
