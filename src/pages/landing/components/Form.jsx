@@ -1,35 +1,118 @@
-import axios from "axios";
-import React from "react";
-
-const accessToken = import.meta.env.VITE_ACCESS_TOKEN;
+import { useState } from "react";
+import { useForm, Controller } from "react-hook-form";
+import { api } from "../../../utils/api";
+import Input from "../../../components/ui/Input";
+import Button from "../../../components/ui/Button";
 
 const Form = () => {
-  const ConactObject = {
-    properties: {
-      email: "ali@gmail.com",
-      firstname: "Faisal",
-      lastname: "Ahmded",
-    },
-  };
+  const accessToken = import.meta.env.VITE_ACCESS_TOKEN;
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
 
-  const createContact = async () => {
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm({
+    defaultValues: {
+      fullname: "",
+      email: "",
+    },
+  });
+
+  const onSubmit = async (data) => {
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    const ContactObject = {
+      properties: {
+        email: data.email,
+        firstname: data.fullname.split(" ")[0],
+        lastname: data.fullname.split(" ")[1],
+      },
+    };
+
     try {
-      const response = await axios.post("https://api.hubspot.com/crm/v3/objects/contacts", ConactObject, {
-        headers: {
-          Authorization: `Bearer ${accessToken}`,
-          "Content-Type": "application/json",
-        },
+      const response = await api.post("create-contact", {
+        ContactObject,
+        Auth: accessToken,
       });
-      console.log(response);
+      setSubmitStatus({ type: "success", message: "Contact created successfully!" });
+      reset();
     } catch (error) {
-      console.log(`Error Occurred ${error}`);
+      console.error("Error Occurred:", error.response?.data || error.message);
+      setSubmitStatus({
+        type: "error",
+        message: error.response?.data?.message || "An error occurred while creating the contact",
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
   return (
-    <div className="h-[20vh] bg-gray-100">
-      <h1>Contact From</h1>
-      <button onClick={createContact}>Submit</button>
+    <div className="p-6">
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+        <div className="flex flex-col gap-6 bg-white p-6 md:p-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-center md:text-left">
+            Join the Waitlist & Get a Free Card Today!
+          </h2>
+
+          <div className="flex flex-col gap-4 mt-2">
+            <div>
+              <Controller
+                name="fullname"
+                control={control}
+                rules={{ required: "Name is required" }}
+                render={({ field }) => <Input label="Name" placeholder="Your Name" {...field} />}
+              />
+              {errors.fullname && <p className="text-red-500 text-sm mt-1">{errors.fullname.message}</p>}
+            </div>
+
+            <div>
+              <Controller
+                name="email"
+                control={control}
+                rules={{
+                  required: "Email is required",
+                  pattern: {
+                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                    message: "Invalid email address",
+                  },
+                }}
+                render={({ field }) => <Input label="Email" type="email" placeholder="you@example.com" {...field} />}
+              />
+              {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>}
+            </div>
+          </div>
+
+          <p className="text-sm text-gray-600 mt-2">
+            FlexCard is preparing to enter the FCA Sandbox for regulatory approval. All sign-ups are for early access
+            and product testing purposes. Credit issuance is subject to FCA approval and final licensing.
+          </p>
+
+          <div className="self-center mt-4">
+            <Button
+              htmlType="submit"
+              type="secondary"
+              isLoading={isSubmitting}
+              disabled={isSubmitting}
+              label="Join the waitlist"
+              className="w-full md:w-auto px-8"
+            />
+          </div>
+        </div>
+        {submitStatus && (
+          <div
+            className={`mt-4 p-3 rounded ${
+              submitStatus.type === "success" ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"
+            }`}
+          >
+            {submitStatus.message}
+          </div>
+        )}
+      </form>
     </div>
   );
 };
