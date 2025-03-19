@@ -13,14 +13,6 @@ const router = createBrowserRouter([
         index: true,
         element: <TrafficRedirect />,
       },
-      {
-        path: "social",
-        element: <LandingPage />,
-      },
-      {
-        path: "organic",
-        element: <Second />,
-      },
     ],
   },
 ]);

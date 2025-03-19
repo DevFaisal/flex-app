@@ -1,46 +1,42 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import LandingPage from "../pages/landing/LandingPage";
+import Second from "../pages/second/Second";
 
 function TrafficRedirect() {
+  const [source, setSource] = useState(() => localStorage.getItem("traffic_source") || "");
+
   useEffect(() => {
-    const isSocialTraffic = () => {
-      const referrer = document.referrer ? document.referrer.toLowerCase() : "";
+    if (source) return;
 
-      if (!referrer) return false;
+    const referrer = document.referrer ? document.referrer.toLowerCase() : "";
 
-      localStorage.setItem("source", referrer);
+    const socialDomains = new Set([
+      "twitter.com",
+      "t.co",
+      "facebook.com",
+      "instagram.com",
+      "linkedin.com",
+      "pinterest.com",
+      "reddit.com",
+      "tiktok.com",
+      "snapchat.com",
+      "youtube.com",
+      "whatsapp.com",
+      "t.me",
+      "discord.com",
+      "quora.com",
+    ]);
 
-      const socialDomains = [
-        "twitter.com",
-        "t.co",
-        "facebook.com",
-        "instagram.com",
-        "linkedin.com",
-        "pinterest.com",
-        "reddit.com",
-        "tiktok.com",
-        "snapchat.com",
-        "youtube.com",
-        "whatsapp.com",
-        "t.me",
-        "discord.com",
-        "quora.com",
-      ];
+    const isSocial = referrer && [...socialDomains].some((domain) => referrer.includes(domain));
+    const trafficSource = isSocial ? "social" : "organic";
 
-      return socialDomains.some((domain) => referrer.includes(domain));
-    };
+    localStorage.setItem("traffic_source", trafficSource);
+    if (referrer) localStorage.setItem("platform", referrer);
 
-    if (isSocialTraffic()) {
-      window.location.href = "/social";
-    } else {
-      window.location.href = "/organic";
-    }
-  }, []);
+    setSource(trafficSource);
+  }, [source]);
 
-  return (
-    <div className="h-screen flex justify-center items-center">
-      <h2>Redirecting...</h2>
-    </div>
-  );
+  return source === "social" ? <Second /> : <LandingPage />;
 }
 
 export default TrafficRedirect;
