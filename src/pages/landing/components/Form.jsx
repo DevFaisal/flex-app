@@ -39,7 +39,7 @@ const Form = () => {
         ContactObject,
         Auth: accessToken,
       });
-      setSubmitStatus({ type: "success", message: "Contact created successfully!" });
+      setSubmitStatus({ type: "success", message: "Joined successfully!" });
       reset();
     } catch (error) {
       console.error("Error Occurred:", error.response?.data || error.message);
@@ -53,7 +53,7 @@ const Form = () => {
   };
 
   return (
-    <div className="p-6">
+    <div>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
         <div className="flex flex-col gap-6 bg-white p-6 md:p-8">
           <h2 className="text-3xl md:text-4xl font-bold text-center md:text-left">
