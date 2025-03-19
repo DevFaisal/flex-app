@@ -27,14 +27,15 @@ const Form = () => {
 
     const ContactObject = {
       properties: {
-        email: data.email,
-        firstname: data.fullname.split(" ")[0],
-        lastname: data.fullname.split(" ")[1],
+        email: data.email || "",
+        firstname: data.fullname?.split(" ")[0] || "",
+        lastname: data.fullname?.split(" ").slice(1).join(" ") || "",
+        traffic_source: getSource() || "",
+        channel: (await getChannel()) || "",
       },
     };
-
     try {
-      const response = await api.post("create-contact", {
+      const res = await api.post("create-contact", {
         ContactObject,
         Auth: accessToken,
       });
@@ -118,3 +119,40 @@ const Form = () => {
 };
 
 export default Form;
+
+const capitalize = (string) => string.charAt(0).toUpperCase() + string.slice(1);
+
+function getSource() {
+  let source = localStorage.getItem("traffic_source");
+  return capitalize(source);
+}
+
+async function getChannel() {
+  let channel = localStorage.getItem("channel");
+
+  if (!channel) return "";
+  const channels = {
+    "facebook.com": "Facebook",
+    "twitter.com": "Twitter",
+    "t.co": "Twitter",
+    "instagram.com": "Instagram",
+    "linkedin.com": "LinkedIn",
+    "pinterest.com": "Pinterest",
+    "reddit.com": "Reddit",
+    "tiktok.com": "TikTok",
+    "snapchat.com": "Snapchat",
+    "youtube.com": "YouTube",
+    "whatsapp.com": "WhatsApp",
+    "t.me": "Telegram",
+    "discord.com": "Discord",
+    "quora.com": "Quora",
+  };
+
+  const normalizedChannel = channel.toLowerCase();
+
+  for (const domain in channels) {
+    if (normalizedChannel.includes(domain.toLowerCase())) {
+      return channels[domain];
+    }
+  }
+}

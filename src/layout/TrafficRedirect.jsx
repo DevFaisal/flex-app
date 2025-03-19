@@ -31,7 +31,7 @@ function TrafficRedirect() {
     const trafficSource = isSocial ? "social" : "organic";
 
     localStorage.setItem("traffic_source", trafficSource);
-    if (referrer) localStorage.setItem("platform", referrer);
+    if (referrer) localStorage.setItem("channel", referrer);
 
     setSource(trafficSource);
   }, [source]);
