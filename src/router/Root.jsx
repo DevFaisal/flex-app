@@ -10,15 +10,15 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     children: [
       {
-        index: true, 
+        index: true,
         element: <TrafficRedirect />,
       },
       {
-        path: "landing",
+        path: "social",
         element: <LandingPage />,
       },
       {
-        path: "second",
+        path: "organic",
         element: <Second />,
       },
     ],

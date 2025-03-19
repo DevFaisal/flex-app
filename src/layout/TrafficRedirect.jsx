@@ -7,30 +7,30 @@ function TrafficRedirect() {
       localStorage.setItem("source", referrer);
       if (!referrer) return false;
 
-       const socialDomains = [
-         "twitter.com",
-         "t.co",
-         "facebook.com",
-         "instagram.com",
-         "linkedin.com",
-         "pinterest.com",
-         "reddit.com",
-         "tiktok.com",
-         "snapchat.com",
-         "youtube.com",
-         "whatsapp.com",
-         "t.me",
-         "discord.com",
-         "quora.com",
-       ];
+      const socialDomains = [
+        "twitter.com",
+        "t.co",
+        "facebook.com",
+        "instagram.com",
+        "linkedin.com",
+        "pinterest.com",
+        "reddit.com",
+        "tiktok.com",
+        "snapchat.com",
+        "youtube.com",
+        "whatsapp.com",
+        "t.me",
+        "discord.com",
+        "quora.com",
+      ];
 
       return socialDomains.some((domain) => referrer.includes(domain));
     };
 
     if (isSocialTraffic()) {
-      window.location.href = "/landing";
+      window.location.href = "/social";
     } else {
-      window.location.href = "/second";
+      window.location.href = "/organic";
     }
   }, []);
 
