@@ -4,8 +4,10 @@ function TrafficRedirect() {
   useEffect(() => {
     const isSocialTraffic = () => {
       const referrer = document.referrer ? document.referrer.toLowerCase() : "";
-      localStorage.setItem("source", referrer);
+
       if (!referrer) return false;
+
+      localStorage.setItem("source", referrer);
 
       const socialDomains = [
         "twitter.com",
@@ -34,7 +36,11 @@ function TrafficRedirect() {
     }
   }, []);
 
-  return <div className="h-screen">Redirecting...</div>;
+  return (
+    <div className="h-screen flex justify-center items-center">
+      <h2>Redirecting...</h2>
+    </div>
+  );
 }
 
 export default TrafficRedirect;
