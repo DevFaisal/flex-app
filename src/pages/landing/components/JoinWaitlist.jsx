@@ -37,7 +37,7 @@ export default JoinWaitlist;
 
 function RightSideForm() {
   return (
-    <div className="w-full lg:w-1/2 flex flex-col gap-6 bg-white p-6 md:p-8">
+    <div className="w-full lg:w-1/2 flex flex-col gap-6 bg-white p-2 md:p-4">
       <Form />
     </div>
   );
