@@ -5,7 +5,7 @@ function TrafficRedirect() {
   useEffect(() => {
     const isSocialTraffic = () => {
       const referrer = document.referrer ? document.referrer.toLowerCase() : "";
-      console.log("Source of traffic:", referrer);
+      localStorage.setItem("source", referrer);
       if (!referrer) return false;
 
       const socialDomains = [
