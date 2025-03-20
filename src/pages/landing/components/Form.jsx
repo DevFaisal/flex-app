@@ -178,7 +178,7 @@ function Success() {
       <h1 className="text-2xl font-bold">You're on the list!</h1>
       <h3 className="text-xl">You've successfully joined the FlexCard waitlist! </h3>
       <p className="text-sm font-light">Your estimated savings with FlexCard</p>
-      <h4 className="text-5xl font-extrabold text-sky-700">$1,220</h4>
+      <h4 className="text-5xl font-extrabold text-sky-700">${Math.floor(Math.random() * 6666)}</h4>
     </motion.div>
   );
 }
