@@ -1,3 +1,4 @@
+import { ImCog } from "react-icons/im";
 export const feedbackData = [
   {
     text: "Going back to university for an MBA meant no salary for a while. I knew I had to plan my finances carefully, but in our focus group, I realised just how unfair standard credit cards are. If FlexCard existed, I’d have had a way to make partial repayments without getting hit with interest on my full balance. It’s exactly what students and career changers need—I can’t wait for it to go live!",
@@ -48,5 +49,79 @@ export const feedbackData = [
     text: "I took a short career break to travel before starting a new job. Money was tight, and I had to be careful with spending. In the focus group, I learned how traditional credit cards punish you with full interest, even if you pay off most of your balance. If FlexCard were available, it would have been a game-changer for me. I’m excited to be part of the early adopters!",
     author: "Eduardo",
     role: "Architect, Career Break",
+  },
+];
+
+export const promoCards = [
+  {
+    title: `Partial Payments?
+Still Paying Full
+Interest`,
+    description: `Paying more than the minimum but less than the full balance? Traditional credit cards still charge you interest on the full statement amount.`,
+    icon: <ImCog className="text-5xl text-blue-500" />,
+  },
+  {
+    title: `Refunds Aren’t Payments`,
+    description: `Returned an item? You might think it reduces what you owe… but if it’s after your statement cycle, you’ll still pay interest.`,
+    icon: <ImCog className="text-5xl text-green-500" />,
+  },
+  {
+    title: `Rewards Are 
+Designed for 
+Banks, Not You`,
+    description: `That cashback and rewards program? It’s built to make you spend more—not to help you save.`,
+    icon: <ImCog className="text-5xl text-purple-500" />,
+  },
+  {
+    title: `70% of People 
+Want a Credit 
+Card That’s Fair`,
+    description: `We asked 2,500+ people what they wanted—70% said they wanted to “Pay for What You Owe.” So, we built Flex.`,
+    icon: <ImCog className="text-5xl text-red-500" />,
+  },
+];
+
+export const faqData = [
+  { question: "Why the name Flex?", answer: "Flex represents flexibility in payments and financial freedom." },
+  {
+    question: "What does Pay For What You Owe actually mean?",
+    answer: "It means you only pay for what you've spent, ensuring transparency.",
+  },
+  { question: "Can I get Flex now?", answer: "Yes, you can sign up and check your eligibility on our platform." },
+  {
+    question: "Will joining the waitlist affect my credit score?",
+    answer: "No, joining the waitlist does not impact your credit score.",
+  },
+  {
+    question: "How is Flex different from other credit cards?",
+    answer: "Flex offers a more flexible repayment system without hidden fees.",
+  },
+  {
+    question: "How do you keep my account safe?",
+    answer: "We use advanced encryption and fraud detection to protect your account.",
+  },
+];
+
+export const questions = [
+  {
+    question: "If you make a partial payment on your credit card, do you still pay interest on the full amount?",
+    answers: ["No, only on the remaining balance", "Yes, on the full statement amount"],
+  },
+  {
+    question: "Do refunds count as payments for your minimum monthly payment?",
+    answers: ["Yes, they reduce what you need to pay", "No, they don't count towards your minimum payment"],
+  },
+  {
+    question: "What percentage of your credit card balance is typically required as a minimum payment?",
+    answers: ["1-3%", "5-10%", "15-20%"],
+  },
+  {
+    question:
+      "When you pay only the minimum on a £1,000 balance at 20% APR, approximately how long will it take to pay off?",
+    answers: ["2-3 years", "5-7 years", "Over 10 years"],
+  },
+  {
+    question: "Which of these is NOT a common credit card fee?",
+    answers: ["Late payment fee", "Over-limit fee", "Early repayment fee"],
   },
 ];

@@ -1,12 +1,12 @@
 import React from "react";
-import logo from "../assets/ui/logo.svg";
+import logo from "../assets/logo/logo.svg";
 
 const Index = () => {
   return (
-    <div className="fixed w-full h-screen bg-linear-to-r from-[#0569E8] to-[#76D232] z-[9999]">
-      <div className="flex gap-9 flex-col justify-center items-center h-full text-white">
-        <img src={logo} alt="logo" height={300} width={400} />
-        <h3 className="text-4xl font-light">Pay For What You Owe</h3>
+    <div className="fixed w-full h-screen bg-gradient-to-r from-[#0569E8] to-[#76D232] z-[9999]">
+      <div className="flex flex-col justify-center items-center h-full text-white gap-4 md:gap-9">
+        <img src={logo} alt="logo" className="w-48 h-48 md:w-96 md:h-96" />
+        <h3 className="text-2xl md:text-4xl font-light text-center">Pay For What You Owe</h3>
       </div>
     </div>
   );
