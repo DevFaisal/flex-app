@@ -16,7 +16,7 @@ const Button = ({
 }) => {
   // Shared button styles
   const baseStyles =
-    "font-semibold rounded-lg transition-all duration-200 flex items-center justify-center";
+    "font-semibold rounded-lg transition-all duration-200 flex items-center justify-center cursor-pointer";
 
   // Size variations
   const sizeStyles = {
@@ -29,9 +29,7 @@ const Button = ({
   const widthStyles = fullWidth ? "w-full" : "";
 
   // Disabled state
-  const disabledStyles = disabled
-    ? "opacity-50 cursor-not-allowed"
-    : "hover:opacity-90 active:scale-95";
+  const disabledStyles = disabled ? "opacity-50 cursor-not-allowed" : "hover:opacity-90 active:scale-95";
 
   // Loading state
   const loadingStyles = isLoading ? "relative !text-transparent" : "";
@@ -56,25 +54,14 @@ const Button = ({
 
   // Loading spinner
   const LoadingSpinner = () => (
-    <div
-      className={`absolute inset-0 flex items-center justify-center ${
-        isLoading ? "opacity-100" : "opacity-0"
-      }`}
-    >
+    <div className={`absolute inset-0 flex items-center justify-center ${isLoading ? "opacity-100" : "opacity-0"}`}>
       <svg
         className="animate-spin h-5 w-5 text-white"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
       >
-        <circle
-          className="opacity-25"
-          cx="12"
-          cy="12"
-          r="10"
-          stroke="currentColor"
-          strokeWidth="4"
-        ></circle>
+        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
         <path
           className="opacity-75"
           fill="currentColor"
