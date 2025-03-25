@@ -62,7 +62,7 @@ const Navbar = () => {
             className="flex items-center p-2 rounded-lg text-white hover:bg-white/10 transition-colors"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
           >
-            {menuOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
+            {menuOpen ? <FaTimes size={20} color="white" /> : <FaBars size={20} color="white" />}
           </button>
         </div>
 
@@ -76,7 +76,7 @@ const Navbar = () => {
               {link.label}
             </button>
           ))}
-          <Button label="Check if you qualify" className="ml-4" />
+          <Button type="outline" label="Check if you qualify" className="ml-4" />
         </div>
       </div>
 

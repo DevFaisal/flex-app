@@ -11,7 +11,7 @@ const HeroSection = () => {
       <Gradient>
         <Container>
           <Navbar />
-          <div className="flex mt-20 flex-col lg:flex-row justify-between items-center pt-10">
+          <div className="flex mt-20 flex-col lg:flex-row justify-between items-center pt-40 md:pt-10">
             <LeftSection />
             <CardStack />
           </div>
@@ -25,19 +25,19 @@ export default HeroSection;
 
 function LeftSection() {
   return (
-    <section className="flex mt-10 lg:mt-40 flex-col gap-6 lg:gap-10 items-center xl:items-start justify-between w-full lg:w-1/2 text-center lg:text-left">
-      <div>
-        <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold text-white">
-          Pay For What You Owe <br /> No More, No Less
+    <section className="flex flex-col w-full lg:w-1/2 px-4 sm:px-6 lg:px-0 mt-6 sm:mt-8 lg:mt-35">
+      <div className="text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+          Pay For What You Owe <span className="block sm:inline">No More, No Less</span>
         </h2>
-        <p className="text-white text-base md:text-md mt-2 lg:mt-4 px-4 lg:px-0">
+        <p className="text-white text-base sm:text-lg mt-3 sm:mt-4 lg:mt-6 opacity-90">
           Join <span className="font-extrabold">1,527</span> people who are redefining credit—fairer, smarter, and built
           for you.
         </p>
       </div>
-      <div className="flex  gap-4 mt-6 lg:mt-4">
-        <Button type="white" label={"Learn More"} />
-        <Button type="primary" label={"Join The Waitlist"} />
+      <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mt-8 sm:mt-10">
+        <Button type="white" label={"Learn More"} className="w-full sm:w-auto" />
+        <Button type="outline" label={"Join The Waitlist"} className="w-full sm:w-auto" />
       </div>
     </section>
   );
