@@ -10,18 +10,9 @@ const Join = () => {
             Join the #PayForWhatYouOwe Challenge
           </h1>
           <p className="text-white text-center text-sm md:text-base w-full md:max-w-3xl lg:max-w-5xl">
-            Share on social media and get an extra £10 cashback bonus when your
-            card arrives.
+            Join <strong>12,873</strong> people who are switching to fairer credit.
           </p>
-          <Button
-            type="white"
-            label="Share now ->"
-            className="w-full sm:w-auto px-4 sm:px-6 md:px-8"
-          />
-          <p className="text-white text-center text-sm md:text-base w-full md:max-w-3xl lg:max-w-5xl">
-            We'll verify your social share when you receive your card to apply
-            the bonus.
-          </p>
+          <Button type="white" label="Share now ->" className="w-full sm:w-auto px-4 sm:px-6 md:px-8" />
         </div>
       </div>
     </section>

@@ -1,25 +1,26 @@
 import React from "react";
-import circlefaded from "../../assets/circle-faded.svg";
+import centerImage from "../../assets/png/background.png";
 
-const Gradient = () => {
+const Gradient = ({ children }) => {
   return (
-    <div className="absolute h-screen w-[120%] z-[-9999]">
+    <div className="absolute  h-screen w-full z-[-1] overflow-hidden flex items-center justify-center">
+      {/* Gradient Background */}
       <div
-        className="bg-gradient-to-r h-full from-[#0569E8] to-[#76D232] lg:rounded-4xl lg:-rotate-25
-                                         absolute top-[-20%] lg:top-[-60%] lg:right-[-3%] w-[110%] "
-      />
-      <img
-        width={600}
-        height={600}
-        src={circlefaded}
-        className="absolute rotate-12 top-60 left-[20%] transform -translate-x-1/2 -translate-y-1/2 z-[2]"
-      />
-      <img
-        width={600}
-        height={600}
-        src={circlefaded}
-        className="absolute top-1/2 left-[40%] transform -translate-x-1/2 -translate-y-1/2 z-[2]"
-      />
+        className="absolute top-[0%] lg:top-[-40%] lg:right-[-3%] w-[110%] h-full 
+                   bg-gradient-to-r from-[#0569E8] to-[#76D232] 
+                   lg:rounded-4xl lg:-rotate-[25deg] overflow-hidden"
+      >
+        {/* Background Image (Centered & Unrotated) */}
+        <img
+          src={centerImage}
+          className="absolute lg:rotate-[25deg] w-full h-full lg:top-[30%] lg:right-[10%] object-cover opacity-50 z-[10]"
+          alt="background"
+          loading="lazy"
+        />
+      </div>
+
+      {/* Centered Children */}
+      <div className="relative z-[9999] overflow-hidden h-full w-full">{children}</div>
     </div>
   );
 };

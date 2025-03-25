@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Button from "../ui/Button";
-import logo from "../../assets/ui/logo.svg";
+import logo from "../../assets/logo/logo.svg";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
@@ -17,10 +17,7 @@ const Navbar = () => {
 
         {/* Mobile menu button */}
         <div className="block md:hidden z-10">
-          <button
-            onClick={toggleMenu}
-            className="flex items-center px-3 py-2  rounded text-white"
-          >
+          <button onClick={toggleMenu} className="flex items-center px-3 py-2  rounded text-white">
             {menuOpen ? <FaTimes size={16} /> : <FaBars size={16} />}
           </button>
         </div>
@@ -32,7 +29,7 @@ const Navbar = () => {
       </div>
 
       {menuOpen && (
-        <div className="md:hidden absolute top-0 left-0 right-0 py-4 px-4 pt-16 z-0 border-b border[0.3px] border-gray-300 bg-gradient-to-r from-[#0569E8] to-[#76D232]">
+        <div className="md:hidden  ">
           <div className="flex justify-center py-2">
             <Button label={"Check if you qualify"} />
           </div>
