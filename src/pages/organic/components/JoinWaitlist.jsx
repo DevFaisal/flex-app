@@ -1,6 +1,6 @@
 import React from "react";
 import Container from "../../../components/view/Container";
-import Form from "./Form";
+import Form from "../../../components/other/Form/Form";
 
 const JoinWaitlist = () => {
   const info = [

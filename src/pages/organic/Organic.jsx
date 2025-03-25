@@ -6,7 +6,7 @@ import JoinWaitlist from "./components/JoinWaitlist";
 import Feedback from "./components/Feedback";
 import Join from "./components/Join";
 
-const LandingPage = () => {
+const Organic = () => {
   return (
     <main className="">
       <HeroSection />
@@ -19,4 +19,4 @@ const LandingPage = () => {
   );
 };
 
-export default LandingPage;
+export default Organic;

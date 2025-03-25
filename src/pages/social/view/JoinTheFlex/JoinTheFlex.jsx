@@ -1,9 +1,7 @@
 import React from "react";
 import image from "../../../../assets/png/image.png";
-import Input from "../../../../components/ui/Input";
-import Button from "../../../../components/ui/Button";
 import { MdDone } from "react-icons/md";
-import Form from "../../../landing/components/Form";
+import Form from "../../../../components/other/Form/Form";
 
 const JoinTheFlex = () => {
   const Info = [

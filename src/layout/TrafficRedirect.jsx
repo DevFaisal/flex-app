@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import LandingPage from "../pages/landing/LandingPage";
-import Second from "../pages/second/Second";
+import Social from "../pages/social/Social";
+import Organic from "../pages/organic/Organic";
 
 function TrafficRedirect() {
   const [source, setSource] = useState(() => localStorage.getItem("traffic_source") || "");
@@ -36,7 +36,8 @@ function TrafficRedirect() {
     setSource(trafficSource);
   }, [source]);
 
-  return source === "social" ? <Second /> : <LandingPage />;
+  // return source === "social" ? <Social /> : <Organic />;
+  return <Social />;
 }
 
 export default TrafficRedirect;

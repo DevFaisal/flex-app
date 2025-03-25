@@ -13,13 +13,7 @@ const TestCredit = () => {
   const StepContent = () => {
     switch (currentStep) {
       case 0:
-        return (
-          <Button
-            type="secondary"
-            label={"Take The Quiz ->"}
-            onClick={handleNextStep}
-          />
-        );
+        return <Button type="secondary" label={"Take The Quiz ->"} onClick={handleNextStep} />;
       case 1:
         return <Quiz />;
       default:
@@ -45,24 +39,15 @@ export default TestCredit;
 function Quiz() {
   const questions = [
     {
-      question:
-        "If you make a partial payment on your credit card, do you still pay interest on the full amount?",
-      answers: [
-        "No, only on the remaining balance",
-        "Yes, on the full statement amount",
-      ],
+      question: "If you make a partial payment on your credit card, do you still pay interest on the full amount?",
+      answers: ["No, only on the remaining balance", "Yes, on the full statement amount"],
     },
     {
-      question:
-        "Do refunds count as payments for your minimum monthly payment?",
-      answers: [
-        "Yes, they reduce what you need to pay",
-        "No, they don't count towards your minimum payment",
-      ],
+      question: "Do refunds count as payments for your minimum monthly payment?",
+      answers: ["Yes, they reduce what you need to pay", "No, they don't count towards your minimum payment"],
     },
     {
-      question:
-        "What percentage of your credit card balance is typically required as a minimum payment?",
+      question: "What percentage of your credit card balance is typically required as a minimum payment?",
       answers: ["1-3%", "5-10%", "15-20%"],
     },
     {
@@ -101,28 +86,21 @@ function Quiz() {
                 Question {currentQuestionIndex + 1} of {questions.length}
               </p>
               <p className="text-sm font-bold text-blue-600">
-                {Math.round(
-                  (currentQuestionIndex / (questions.length - 1)) * 100
-                )}
-                % Complete
+                {Math.round((currentQuestionIndex / (questions.length - 1)) * 100)}% Complete
               </p>
             </div>
             <div className="w-full h-2 bg-gray-200 rounded-full">
               <div
                 className="h-2 bg-blue-500 rounded-full transition-all duration-300"
                 style={{
-                  width: `${
-                    (currentQuestionIndex / (questions.length - 1)) * 100
-                  }%`,
+                  width: `${(currentQuestionIndex / (questions.length - 1)) * 100}%`,
                 }}
               ></div>
             </div>
           </div>
 
           <div className="w-full">
-            <h2 className="text-xl md:text-2xl font-bold text-center mb-8">
-              {currentQuestion.question}
-            </h2>
+            <h2 className="text-xl md:text-2xl font-bold text-center mb-8">{currentQuestion.question}</h2>
 
             <div className="w-full space-y-4">
               {currentQuestion.answers.map((answer, index) => (
@@ -139,16 +117,11 @@ function Quiz() {
         </div>
       ) : (
         <div className="text-center py-10 px-4 flex flex-col justify-center items-center">
-          <MdDone
-            size={40}
-            color="white"
-            className="bg-green-300 m-4 rounded-full"
-          />
+          <MdDone size={40} color="white" className="bg-green-300 m-4 rounded-full" />
 
           <h2 className="text-2xl font-bold mb-4">Quiz Completed!</h2>
           <p className="mb-6">
-            There's a lot the credit card industry doesn't tell you. FlexCard is
-            designed to be transparent and fair.
+            There's a lot the credit card industry doesn't tell you. FlexCard is designed to be transparent and fair.
           </p>
           <div className="flex gap-4">
             <Button type="secondary" label={`Share Your Score ->`} />
