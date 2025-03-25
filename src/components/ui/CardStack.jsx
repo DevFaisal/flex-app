@@ -43,7 +43,7 @@ const CardStack = () => {
   }, [greenControls, blackControls]);
 
   return (
-    <section className="hidden w-full lg:w-1/2 lg:flex flex-col justify-start items-center relative h-72 md:h-96 mt-12 lg:mt-0">
+    <section className="hidden top-40 w-full lg:w-1/2 lg:flex flex-col justify-start items-center relative h-72 md:h-96 mt-12 lg:mt-0">
       {/* Black Card (Appears First) */}
       <motion.img
         src={blackcard}

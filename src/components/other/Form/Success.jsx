@@ -5,7 +5,7 @@ import icon from "../../../assets/icons/flexicon.svg";
 
 const Success = () => {
   return (
-    <div className="flex flex-col justify-center items-center relative z-[1] h-96 w-96">
+    <div className="flex flex-col justify-center items-center relative z-[1]">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -23,7 +23,7 @@ const Success = () => {
         </h3>
         <p className="text-sm font-light">flexcard.app coming soon...</p>
       </motion.div>
-      <img src={icon} className="absolute z-[-1] top-0" />
+      <img src={icon} className="absolute z-[-1] top-0 object-containe h-60" />
     </div>
   );
 };

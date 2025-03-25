@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import HeaderNote from "../../../../components/ui/HeaderNote";
 import Button from "../../../../components/ui/Button";
-import { MdDone } from "react-icons/md";
+import { MdDone, MdOutlineDone } from "react-icons/md";
+import { questions } from "../../constants/constants";
 
 const TestCredit = () => {
   const [currentStep, setCurrentStep] = useState(0);
@@ -22,7 +23,7 @@ const TestCredit = () => {
   };
 
   return (
-    <section className="py-20">
+    <section id="quiz" className="py-20">
       <HeaderNote
         note={`Test Your Credit Card Knowledge`}
         desc={`Take our quick 5-question quiz to see how much you really know about credit cards.`}
@@ -37,37 +38,28 @@ const TestCredit = () => {
 export default TestCredit;
 
 function Quiz() {
-  const questions = [
-    {
-      question: "If you make a partial payment on your credit card, do you still pay interest on the full amount?",
-      answers: ["No, only on the remaining balance", "Yes, on the full statement amount"],
-    },
-    {
-      question: "Do refunds count as payments for your minimum monthly payment?",
-      answers: ["Yes, they reduce what you need to pay", "No, they don't count towards your minimum payment"],
-    },
-    {
-      question: "What percentage of your credit card balance is typically required as a minimum payment?",
-      answers: ["1-3%", "5-10%", "15-20%"],
-    },
-    {
-      question:
-        "When you pay only the minimum on a £1,000 balance at 20% APR, approximately how long will it take to pay off?",
-      answers: ["2-3 years", "5-7 years", "Over 10 years"],
-    },
-    {
-      question: "Which of these is NOT a common credit card fee?",
-      answers: ["Late payment fee", "Over-limit fee", "Early repayment fee"],
-    },
-  ];
-
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [isCompleted, setIsCompleted] = useState(false);
+  const [score, setScore] = useState(0);
 
   // Get the current question object
   const currentQuestion = questions[currentQuestionIndex];
 
-  function handleNextQuestion() {
+  // Correct answers for each question (index corresponds to questions array)
+  const correctAnswers = [
+    "Yes, on the full statement amount",
+    "No, they don't count towards your minimum payment",
+    "1-3%",
+    "Over 10 years",
+    "Early repayment fee",
+  ];
+
+  function handleAnswerClick(selectedAnswer) {
+    // Check if answer is correct and update score
+    if (selectedAnswer === correctAnswers[currentQuestionIndex]) {
+      setScore(score + 1);
+    }
+
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
@@ -106,7 +98,7 @@ function Quiz() {
               {currentQuestion.answers.map((answer, index) => (
                 <button
                   key={index}
-                  onClick={handleNextQuestion}
+                  onClick={() => handleAnswerClick(answer)}
                   className="px-5 py-4 font-medium text-base rounded-lg bg-[#F2F4F8] w-full border border-[#DDE1E6] text-left hover:bg-gray-200 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                   {answer}
@@ -116,10 +108,15 @@ function Quiz() {
           </div>
         </div>
       ) : (
-        <div className="text-center py-10 px-4 flex flex-col justify-center items-center">
-          <MdDone size={40} color="white" className="bg-green-300 m-4 rounded-full" />
+        <div className="text-center py-10 px-4 flex flex-col justify-center items-center gap-4">
+          <span className="flex justify-center items-center bg-[#76D232] p-4 rounded-full">
+            <MdOutlineDone size={90} className="text-white" />
+          </span>
 
           <h2 className="text-2xl font-bold mb-4">Quiz Completed!</h2>
+          <p className="text-xl font-bold text-blue-600 mb-4">
+            Your Score: {score}/{questions.length}
+          </p>
           <p className="mb-6">
             There's a lot the credit card industry doesn't tell you. FlexCard is designed to be transparent and fair.
           </p>

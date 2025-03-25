@@ -18,8 +18,8 @@ const FormOne = () => {
   });
 
   return (
-    <div className="flex flex-col gap-6 bg-white p-6 md:p-8">
-      <h2 className="text-3xl md:text-4xl font-bold text-center md:text-left">
+    <div className="flex flex-col gap-6 bg-white">
+      <h2 className="text-2xl md:text-4xl font-bold text-center md:text-left">
         Join the Waitlist & Get a Free Card Today!
       </h2>
 

@@ -33,7 +33,7 @@ const FormTwo = () => {
         channel: (await getChannel()) || "",
       },
     };
-    console.log(`Access Token : ${accessToken}`);
+
     try {
       await api.post("create-contact", {
         ContactObject,
@@ -59,8 +59,8 @@ const FormTwo = () => {
   };
 
   return (
-    <div className="flex flex-col gap-6 bg-white p-6 md:p-8">
-      <h2 className="text-3xl md:text-3xl font-bold text-center md:text-left">Pre-Qualification Questions</h2>
+    <div className="flex flex-col gap-6 bg-white">
+      <h2 className="text-2xl md:text-3xl font-bold text-center md:text-left">Pre-Qualification Questions</h2>
 
       <div className="flex flex-col gap-4 mt-2">
         <div>
