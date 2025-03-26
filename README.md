@@ -28,7 +28,7 @@ FlexCard is a modern web application that redefines credit card services with tr
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/flex-card.git
+git clone https://github.com/DevFaisal/flex-card.git
 cd flex-card
 ```
 
