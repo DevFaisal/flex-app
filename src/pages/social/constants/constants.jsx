@@ -1,4 +1,8 @@
 import { ImCog } from "react-icons/im";
+import refunds from "../../../assets/icons/cards/refund.svg";
+import rewards from "../../../assets/icons/cards/rewards.svg";
+import partial from "../../../assets/icons/cards/partialpayment.svg";
+import creditcard from "../../../assets/icons/cards/creditcard.svg";
 export const feedbackData = [
   {
     text: "Going back to university for an MBA meant no salary for a while. I knew I had to plan my finances carefully, but in our focus group, I realised just how unfair standard credit cards are. If FlexCard existed, I’d have had a way to make partial repayments without getting hit with interest on my full balance. It’s exactly what students and career changers need—I can’t wait for it to go live!",
@@ -58,26 +62,26 @@ export const promoCards = [
 Still Paying Full
 Interest`,
     description: `Paying more than the minimum but less than the full balance? Traditional credit cards still charge you interest on the full statement amount.`,
-    icon: <ImCog className="text-5xl text-blue-500" />,
+    icon: partial,
   },
   {
     title: `Refunds Aren’t Payments`,
     description: `Returned an item? You might think it reduces what you owe… but if it’s after your statement cycle, you’ll still pay interest.`,
-    icon: <ImCog className="text-5xl text-green-500" />,
+    icon: refunds,
   },
   {
     title: `Rewards Are 
 Designed for 
 Banks, Not You`,
     description: `That cashback and rewards program? It’s built to make you spend more—not to help you save.`,
-    icon: <ImCog className="text-5xl text-purple-500" />,
+    icon: rewards,
   },
   {
     title: `70% of People 
 Want a Credit 
 Card That’s Fair`,
     description: `We asked 2,500+ people what they wanted—70% said they wanted to “Pay for What You Owe.” So, we built Flex.`,
-    icon: <ImCog className="text-5xl text-red-500" />,
+    icon: creditcard,
   },
 ];
 

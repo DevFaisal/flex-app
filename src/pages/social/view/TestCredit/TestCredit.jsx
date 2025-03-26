@@ -1,20 +1,17 @@
 import React, { useState } from "react";
 import HeaderNote from "../../../../components/ui/HeaderNote";
 import Button from "../../../../components/ui/Button";
-import { MdDone, MdOutlineDone } from "react-icons/md";
+import { MdOutlineDone } from "react-icons/md";
 import { questions } from "../../constants/constants";
+import { useTakeQuizStore } from "../../store/calculateStore";
 
 const TestCredit = () => {
-  const [currentStep, setCurrentStep] = useState(0);
-
-  const handleNextStep = () => {
-    setCurrentStep(currentStep + 1);
-  };
+  const { handleNextStep, currentStep } = useTakeQuizStore((state) => state);
 
   const StepContent = () => {
     switch (currentStep) {
       case 0:
-        return <Button type="secondary" label={"Take The Quiz ->"} onClick={handleNextStep} />;
+        return <Button type="secondary" label={"Take The Quiz ->"} onClick={() => handleNextStep()} />;
       case 1:
         return <Quiz />;
       default:
@@ -122,7 +119,7 @@ function Quiz() {
           </p>
           <div className="flex gap-4">
             <Button type="secondary" label={`Share Your Score ->`} />
-            <Button type="outline" label={`Return to Facts`} />
+            <Button type="black" label={`Return to Facts`} />
           </div>
         </div>
       )}

@@ -55,7 +55,7 @@ const CreditCardCalculator = () => {
   return (
     <section
       id="calculator"
-      className=" relative flex flex-col justify-center items-center p-4 md:p-10 max-w-5xl mx-auto"
+      className=" relative flex flex-col justify-center items-center p-4 md:p-15 max-w-5xl mx-auto"
     >
       <HeaderNote
         note={"Credit Card Calculator"}
@@ -118,8 +118,11 @@ const CreditCardCalculator = () => {
 
           {/* Slider Track */}
           <div className="relative w-full h-2 mt-2">
-            <div className="absolute p-2 w-full h-full bg-gray-300 rounded-full"></div>
-            <div className="absolute p-2 h-full bg-blue-600 rounded-full" style={{ width: `${progress}%` }}></div>
+            <div className="absolute py-2.5 w-full h-full bg-gray-300 rounded-full"></div>
+            <div
+              className="absolute py-2.5 h-full bg-gradient-to-r from-[#096CE3] to-[#0A55B0] rounded-full"
+              style={{ width: `${progress}%` }}
+            ></div>
 
             <div className="relative flex justify-between items-center w-full h-full">
               {steps.map((step) => (
@@ -127,8 +130,8 @@ const CreditCardCalculator = () => {
                   key={step}
                   onClick={() => handleSliderChange(step)}
                   className={`
-                    w-4 h-4 -top-[1px] rounded-full border-2 border-white shadow-md 
-                    ${progress >= step ? "bg-blue-600" : "bg-white"}
+                    w-3 h-3 -top-[-3.5px] rounded-full border-2 border-white shadow-md 
+                    ${progress >= step ? "bg-white" : "bg-gray-300"}
                     absolute
                   `}
                   style={{

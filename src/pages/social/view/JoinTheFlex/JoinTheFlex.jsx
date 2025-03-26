@@ -38,7 +38,7 @@ const JoinTheFlex = () => {
           </div>
         </div>
 
-        <div className="w-full max-w-xl ml-5 flex flex-col gap-6 bg-white bg-opacity-80 p-6 rounded-lg py-10 px-6 mt-10 xl:mt-0 shadow-[-20px_20px_0px_rgba(0,0,0,0.25)] shadow-gray-300">
+        <div className="w-full max-w-xl ml-5 flex flex-col gap-6 bg-white bg-opacity-80 p-6 rounded-lg py-15 px-6 mt-10 xl:mt-0 shadow-[-20px_20px_0px_rgba(0,0,0,0.25)] shadow-gray-300">
           <Form />
         </div>
       </div>
