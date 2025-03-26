@@ -1,12 +1,84 @@
-# React + Vite
+# FlexCard - Modern Credit Card Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+FlexCard is a modern web application that redefines credit card services with transparency and user-centric features. Built with React and Vite, it offers a seamless experience for users to manage their credit card needs.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Interactive credit card calculator
+- Educational credit card quiz
+- User testimonials
+- Comprehensive FAQ section
+- Modern, responsive design
+- Real-time credit qualification checker
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React 18
+- Vite
+- Tailwind CSS
+- React Router
+- React Icons
+
+## 📦 Prerequisites
+
+- Node.js (v14 or higher)
+- npm or yarn
+
+## 🔧 Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/flex-card.git
+cd flex-card
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Create a `.env` file in the root directory:
+```env
+VITE_ACCESS_TOKEN=your_access_token
+```
+
+4. Start the development server:
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+## 🔑 Environment Variables
+
+| Variable | Description |
+|----------|-------------|
+| VITE_ACCESS_TOKEN | API access token for external services |
+
+## 📱 Responsive Design
+
+The application is fully responsive and optimized for:
+- Mobile devices
+- Tablets
+- Desktop screens
+- Large displays
+
+## 🧪 Testing
+
+Run tests:
+```bash
+npm run test
+# or
+yarn test
+```
+
+## 📦 Building for Production
+
+Build the application:
+```bash
+npm run build
+# or
+yarn build
+```
