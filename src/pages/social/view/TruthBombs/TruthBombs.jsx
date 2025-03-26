@@ -2,6 +2,7 @@ import React from "react";
 import img from "../../../../assets/png/creditcard.png";
 import { promoCards } from "../../constants/constants";
 import { useTakeQuizStore } from "../../store/calculateStore";
+import Marquee from "react-fast-marquee";
 
 const TruthBombs = () => {
   const { handleNextStepWithScroll } = useTakeQuizStore((state) => state);
@@ -19,17 +20,20 @@ const TruthBombs = () => {
           Things the credit card industry doesn't want you to know.
         </p>
       </div>
-      <div className="relative z-10 mt-10 flex flex-nowrap overflow-x-auto gap-6 pb-8 px-4 md:px-8 snap-x">
-        {promoCards.map((promoCard, index) => (
-          <PromoCard
-            key={index}
-            title={promoCard.title}
-            onCtaClick={handleNextStepWithScroll}
-            description={promoCard.description}
-            icon={promoCard.icon}
-          />
-        ))}
-      </div>
+
+      <Marquee pauseOnHover={true}>
+        <div className="relative z-10 mt-10 flex flex-nowrap overflow-x-auto gap-6  px-4 md:px-8 snap-x">
+          {promoCards.map((promoCard, index) => (
+            <PromoCard
+              key={index}
+              title={promoCard.title}
+              onCtaClick={handleNextStepWithScroll}
+              description={promoCard.description}
+              icon={promoCard.icon}
+            />
+          ))}
+        </div>
+      </Marquee>
     </section>
   );
 };
