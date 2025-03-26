@@ -26,8 +26,9 @@ const RootLayout = () => {
           Cookies.set("myConcent", "false", { expires: 150 });
         }}
       >
-        This website uses will store your personal information like email and name to enhance your experience. By
-        clicking "Accept", you consent to the use of ALL cookies.
+        We use cookies and collect personal data to provide you with the best possible experience on our website. Your
+        privacy matters - by clicking "Accept" you agree to our use of cookies and data collection practices. You can
+        review our privacy policy for more details.
       </CookieConsent>
     </div>
   );
