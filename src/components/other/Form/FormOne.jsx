@@ -3,6 +3,7 @@ import { Controller } from "react-hook-form";
 import Input from "../../ui/Input";
 import Button from "../../ui/Button";
 import { useFormContext } from "./FormContext";
+import { FaArrowRight } from "react-icons/fa6";
 
 const FormOne = () => {
   const { formMethods, nextStep } = useFormContext();
@@ -18,10 +19,9 @@ const FormOne = () => {
   });
 
   return (
-    <div className="flex flex-col gap-6 bg-white">
-      <h2 className="text-2xl md:text-4xl font-bold text-center md:text-left">
-        Join the Waitlist & Get a Free Card Today!
-      </h2>
+    <div className="flex flex-col gap-6">
+      <h2 className="text-2xl md:text-4xl font-bold text-center md:text-left">Join the Waitlist</h2>
+      <p className="text-sm md:text-lg text-center md:text-left">Be the first to get your FlexCard when we launch.</p>
 
       <div className="flex flex-col gap-4 mt-2">
         <div>
@@ -51,12 +51,21 @@ const FormOne = () => {
         </div>
       </div>
 
-      <p className="text-sm text-gray-600 mt-2">
+      {/* <p className="text-sm text-gray-600 mt-2">
         FlexCard is preparing to enter the FCA Sandbox for regulatory approval. All sign-ups are for early access and
         product testing purposes. Credit issuance is subject to FCA approval and final licensing.
-      </p>
+      </p> */}
 
-      <Button type="secondary" onClick={handleNext} label="Next" className="w-full md:w-auto px-8 mt-4" />
+      <div className="flex justify-center">
+        <Button
+          type="secondary"
+          icon={<FaArrowRight />}
+          iconPosition="right"
+          onClick={handleNext}
+          label="Next"
+          className="px-8 py-3 mt-4 text-md"
+        />
+      </div>
     </div>
   );
 };

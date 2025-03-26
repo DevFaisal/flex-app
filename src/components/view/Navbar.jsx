@@ -49,7 +49,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 w-full transition-all duration-300 bg-transparent z-50`}>
+    <nav className={`absolute top-0 left-0 right-0 w-full transition-all duration-300 bg-transparent z-50`}>
       <div className="flex justify-between items-center max-w-9xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <Link to="/" className="z-50">
           <img src={logo} alt="FlexCard Logo" width={80} />
@@ -62,7 +62,7 @@ const Navbar = () => {
             className="flex items-center p-2 rounded-lg text-white hover:bg-white/10 transition-colors"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
           >
-            {menuOpen ? <FaTimes size={20} color="white" /> : <FaBars size={20} color="white" />}
+            {/* {menuOpen ? <FaTimes size={20} color="white" /> : "" />} */}
           </button>
         </div>
 

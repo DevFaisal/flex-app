@@ -47,6 +47,8 @@ const Button = ({
         return `bg-transparent text-primary hover:bg-primary/5 ${sizeStyles[size]} ${widthStyles} ${disabledStyles} ${loadingStyles} ${className}`;
       case "white":
         return `bg-white text-gray-900 shadow-sm hover:bg-gray-50 ${sizeStyles[size]} ${widthStyles} ${disabledStyles} ${loadingStyles} ${className}`;
+      case "black":
+        return `bg-white text-gray-900 border-2 border-gray-900 shadow-sm hover:bg-gray-50 ${sizeStyles[size]} ${widthStyles} ${disabledStyles} ${loadingStyles} ${className}`;
       default:
         return `bg-primary text-white shadow-sm hover:bg-primary-dark ${sizeStyles[size]} ${widthStyles} ${disabledStyles} ${loadingStyles} ${className}`;
     }

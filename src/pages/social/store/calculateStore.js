@@ -13,4 +13,22 @@ const useCalculateStore = create((set) => ({
   resetForm: () => set({ form: { ...initialState } }),
 }));
 
-export default useCalculateStore;
+const useTakeQuizStore = create((set) => ({
+  currentStep: 0,
+  handleNextStep: () => {
+    set((state) => ({
+      currentStep: state.currentStep + 1,
+    }));
+  },
+  handleNextStepWithScroll: () => {
+    window.scrollTo({
+      top: document.getElementById("quiz").offsetTop,
+      behavior: "smooth",
+    });
+    set((state) => ({
+      currentStep: (state.currentStep = 1),
+    }));
+  },
+}));
+
+export { useCalculateStore, useTakeQuizStore };
