@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import HeaderNote from "../../../../components/ui/HeaderNote";
 import Input from "../../../../components/ui/Input";
 import Button from "../../../../components/ui/Button";
+import Tooltip from "../../../../components/ui/Tooltip";
+import { MdQuestionMark } from "react-icons/md";
 
 const CreditCardCalculator = () => {
   const [balance, setBalance] = useState("");
@@ -100,11 +102,10 @@ const CreditCardCalculator = () => {
           <div className="flex flex-wrap items-center justify-between text-gray-600 mb-2">
             <h2 className="flex items-center gap-1 w-full mb-2">
               Min Payment
-              <span className="relative group ml-1">
-                <span className="w-4 h-4 bg-gray-300 rounded-full flex items-center justify-center text-xs cursor-pointer">
-                  ?
-                </span>
-              </span>
+              <Tooltip
+                Icon={<MdQuestionMark size={12} />}
+                text={"This is the minimum payment you need to make to avoid late fees."}
+              />
             </h2>
 
             <div className="flex justify-between w-full">
@@ -150,7 +151,12 @@ const CreditCardCalculator = () => {
         {/* Financial Insights - Stacked on mobile */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <InputView symbol={"£"} title={"Monthly Repayments"} amount={monthlyRepayment} />
-          <InputView symbol={"%"} title={"Interest Rate (APR %)"} amount={interestRate || 0} />
+          <InputView
+            symbol={"%"}
+            title={"Interest Rate (APR %)"}
+            amount={interestRate || 0}
+            tooltipText={`This is the interest rate you're charged on your credit card. It's usually expressed as an annual percentage rate (APR).`}
+          />
           <InputView symbol={"£"} title={"Monthly Interest Charged"} amount={monthlyInterestCharged} />
         </div>
 
@@ -179,11 +185,14 @@ const CreditCardCalculator = () => {
 
 export default CreditCardCalculator;
 
-function InputView({ title, symbol, amount }) {
+function InputView({ title, symbol, amount, tooltipText }) {
   return (
     <div>
       <div>
-        <h2 className="text-sm py-2 text-[#21272A] text-nowrap">{title}</h2>
+        <div className="flex justify-between items-center">
+          <h2 className="text-sm py-2 text-[#21272A] text-nowrap">{title}</h2>
+          {tooltipText && <Tooltip Icon={<MdQuestionMark size={12} />} text={tooltipText} />}
+        </div>
         <h2 className="bg-[#E4EFFC] px-4 py-3 rounded-xl text-xl font-bold">
           <span className="text-secondary">{symbol}</span>
           {amount}
