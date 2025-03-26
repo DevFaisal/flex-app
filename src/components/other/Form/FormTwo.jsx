@@ -7,7 +7,7 @@ import { getSource } from "../../../utils/getSource";
 import { getChannel } from "../../../utils/getChannel";
 
 const FormTwo = () => {
-  const { formMethods, nextStep, setIsSubmitting, submitStatus, setSubmitStatus } = useFormContext();
+  const { formMethods, nextStep, setIsSubmitting, submitStatus, setSubmitStatus, isSubmitting } = useFormContext();
   const accessToken = import.meta.env.VITE_ACCESS_TOKEN;
 
   const {
@@ -70,13 +70,25 @@ const FormTwo = () => {
             control={control}
             rules={{ required: "This field is required" }}
             render={({ field }) => (
-              <div className="flex gap-4">
+              <div className="flex md:flex-col gap-4">
                 <label className="flex items-center">
-                  <input {...field} type="radio" value="yes" checked={field.value === "yes"} className="mr-2" />
+                  <input
+                    {...field}
+                    type="radio"
+                    value="yes"
+                    checked={field.value === "yes"}
+                    className="w-5 h-5 mr-2 accent-secondary cursor-pointer border-2 border-secondary"
+                  />
                   Yes
                 </label>
                 <label className="flex items-center">
-                  <input {...field} type="radio" value="no" checked={field.value === "no"} className="mr-2" />
+                  <input
+                    {...field}
+                    type="radio"
+                    value="no"
+                    checked={field.value === "no"}
+                    className="w-5 h-5 mr-2 accent-secondary cursor-pointer border-2 border-secondary"
+                  />
                   No
                 </label>
               </div>
@@ -92,13 +104,25 @@ const FormTwo = () => {
             control={control}
             rules={{ required: "This field is required" }}
             render={({ field }) => (
-              <div className="flex gap-4">
+              <div className="flex md:flex-col gap-4">
                 <label className="flex items-center">
-                  <input {...field} type="radio" value="yes" checked={field.value === "yes"} className="mr-2" />
+                  <input
+                    {...field}
+                    type="radio"
+                    value="yes"
+                    checked={field.value === "yes"}
+                    className="w-5 h-5 mr-2 accent-secondary cursor-pointer border-2 border-secondary"
+                  />
                   Yes
                 </label>
                 <label className="flex items-center">
-                  <input {...field} type="radio" value="no" checked={field.value === "no"} className="mr-2" />
+                  <input
+                    {...field}
+                    type="radio"
+                    value="no"
+                    checked={field.value === "no"}
+                    className="w-5 h-5 mr-2 accent-secondary cursor-pointer border-2 border-secondary"
+                  />
                   No
                 </label>
               </div>
@@ -114,13 +138,25 @@ const FormTwo = () => {
             control={control}
             rules={{ required: "This field is required" }}
             render={({ field }) => (
-              <div className="flex gap-4">
+              <div className="flex md:flex-col gap-4">
                 <label className="flex items-center">
-                  <input {...field} type="radio" value="yes" checked={field.value === "yes"} className="mr-2" />
+                  <input
+                    {...field}
+                    type="radio"
+                    value="yes"
+                    checked={field.value === "yes"}
+                    className="w-5 h-5 mr-2 accent-secondary cursor-pointer border-2 border-secondary"
+                  />
                   Yes
                 </label>
                 <label className="flex items-center">
-                  <input {...field} type="radio" value="no" checked={field.value === "no"} className="mr-2" />
+                  <input
+                    {...field}
+                    type="radio"
+                    value="no"
+                    checked={field.value === "no"}
+                    className="w-5 h-5 mr-2 accent-secondary cursor-pointer border-2 border-secondary"
+                  />
                   No
                 </label>
               </div>
@@ -131,12 +167,18 @@ const FormTwo = () => {
       </div>
 
       <p className="text-sm text-gray-600 mt-2">
-        FlexCard is preparing to enter the FCA Sandbox for regulatory approval. All sign-ups are for early access and
-        product testing purposes. Credit issuance is subject to FCA approval and final licensing.
+        By joining the waitlist, you agree to receive updates about FlexCard. We respect your privacy and will never
+        share your information.
       </p>
 
       <div className="flex justify-center mt-4">
-        <Button type="secondary" onClick={handleSubmit(onSubmit)} label="Join the Waitlist" className="px-8" />
+        <Button
+          type="secondary"
+          disabled={isSubmitting}
+          onClick={handleSubmit(onSubmit)}
+          label={isSubmitting ? "Joining..." : "Join the Waitlist"}
+          className="px-8"
+        />
       </div>
       {submitStatus?.type == "error" && (
         <h1 className="px-3 py-2 w-full overflow-x-scroll  bg-red-100 rounded-xl">{submitStatus?.message}</h1>
