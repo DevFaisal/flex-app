@@ -13,7 +13,9 @@ const Gradient = ({ children }) => {
         {/* Background Image (Centered & Unrotated) */}
         <img
           src={centerImage}
-          className="absolute lg:rotate-[25deg] w-full h-full lg:top-[34%] lg:right-[10%] object-cover opacity-50"
+          width={800}
+          height={600}
+          className="absolute transition-opacity duration-300  lg:rotate-[25deg] w-full h-full lg:top-[34%] lg:right-[10%] object-cover opacity-50"
           alt="background"
           loading="lazy"
         />
