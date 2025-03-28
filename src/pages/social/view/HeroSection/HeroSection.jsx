@@ -11,7 +11,7 @@ const HeroSection = () => {
       <Gradient>
         <Container>
           <Navbar />
-          <div className="flex mt-20 flex-col lg:flex-row justify-between items-center pt-40 md:pt-10">
+          <div className="flex mt-20 lg:mt-20 md:mt-70 flex-col lg:flex-row justify-between items-center pt-40 md:pt-10">
             <LeftSection />
             <CardStack />
           </div>
