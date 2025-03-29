@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy } from "react";
 const HeroSection = lazy(() => import("./view/HeroSection/HeroSection"));
 const TruthBombs = lazy(() => import("./view/TruthBombs/TruthBombs"));
 const TestCredit = lazy(() => import("./view/TestCredit/TestCredit"));
