@@ -53,7 +53,6 @@ const CardStack = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={blackControls}
       />
-
       {/* Material Card (Appears Second) */}
       <motion.img
         src={materialcard}
@@ -67,7 +66,6 @@ const CardStack = () => {
           transition: { delay: 0.9, duration: 0.2 },
         }}
       />
-
       {/* Green Card (Appears Last) */}
       <motion.img
         src={greencard}
@@ -76,6 +74,17 @@ const CardStack = () => {
         style={{ zIndex: 3, top: "-130px" }}
         initial={{ opacity: 0, y: -20 }}
         animate={greenControls}
+      />
+      <div
+        className="absolute top-[340px] left-[120px] right-[10px] bottom-[20px]"
+        style={{
+          boxSizing: "border-box",
+          width: "365.18px",
+          height: "231.09px",
+          border: "3px dashed #C1C7CD",
+          borderRadius: "12px",
+          transform: "matrix(0.87, -0.5, 0.87, 0.5, 0, 0)",
+        }}
       />
     </section>
   );
