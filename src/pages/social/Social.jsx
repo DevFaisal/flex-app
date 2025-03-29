@@ -1,5 +1,4 @@
-import React, { lazy, useEffect, useState } from "react";
-const Index = lazy(() => import(".."));
+import React from "react";
 const HeroSection = lazy(() => import("./view/HeroSection/HeroSection"));
 const TruthBombs = lazy(() => import("./view/TruthBombs/TruthBombs"));
 const TestCredit = lazy(() => import("./view/TestCredit/TestCredit"));
