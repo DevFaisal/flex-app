@@ -1,47 +1,46 @@
-import React, { useMemo } from "react";
+import React, { useState } from "react";
 import HeaderNote from "../../../../components/ui/HeaderNote";
 import { feedbackData } from "../../constants/constants";
 import feedbackIcon from "../../../../assets/svg/feedback.svg";
 import { CgProfile } from "react-icons/cg";
-import { Carousel } from "primereact/carousel";
 
 const Feedback = () => {
-  const memoizedCarousel = useMemo(
-    () => (
-      <Carousel
-        value={feedbackData}
-        numVisible={2}
-        numScroll={1}
-        responsiveOptions={[
-          {
-            breakpoint: "1024px",
-            numVisible: 2,
-            numScroll: 1,
-          },
-          {
-            breakpoint: "768px",
-            numVisible: 1,
-            numScroll: 1,
-          },
-          {
-            breakpoint: "560px",
-            numVisible: 1,
-            numScroll: 1,
-          },
-        ]}
-        itemTemplate={(item) => <Card {...item} />}
-        className="px-4 md:px-10 p-4 md:p-10 relative z-10"
-        showIndicators={false}
-        autoplayInterval={5000}
-      />
-    ),
-    []
-  );
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? feedbackData.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === feedbackData.length - 1 ? 0 : prevIndex + 1
+    );
+  };
 
   return (
     <section className="py-6 md:py-10 bg-[#F2F4F8]">
       <HeaderNote note="What People Are Saying" desc="Pay For What You Owe" />
-      <div className="container mx-auto px-2 sm:px-4 md:px-6 lg:px-8 py-8 md:py-12">{memoizedCarousel}</div>
+      <div className="container mx-auto px-2 sm:px-4 md:px-6 lg:px-8 py-8 md:py-12">
+        <div className="relative">
+          <button
+            onClick={handlePrev}
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-200 p-2 rounded-full shadow-md hover:bg-gray-300"
+          >
+            &#8592;
+          </button>
+          <div className="flex justify-center">
+            <Card {...feedbackData[currentIndex]} />
+          </div>
+          <button
+            onClick={handleNext}
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-200 p-2 rounded-full shadow-md hover:bg-gray-300"
+          >
+            &#8594;
+          </button>
+        </div>
+      </div>
     </section>
   );
 };
