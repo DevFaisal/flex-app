@@ -11,7 +11,8 @@ const HeroSection = () => {
       <Gradient>
         <Container>
           <Navbar />
-          <div className="flex mt-20 lg:mt-20 md:mt-70 flex-col lg:flex-row justify-between items-center pt-40 md:pt-10">
+          <div className="flex mt-20 lg:mt-20 flex-row md:mt-70 pt-40 md:pt-10 gap-8">
+            {/* <div className="flex mt-20 lg:mt-20 md:mt-70 flex-col lg:flex-row justify-between items-center pt-40 md:pt-10"> */}
             <LeftSection />
             <CardStack />
           </div>
@@ -25,7 +26,7 @@ export default HeroSection;
 
 function LeftSection() {
   return (
-    <section className="flex flex-col w-full lg:w-1/2 px-4 sm:px-6 lg:px-0 mt-6 sm:mt-8 lg:mt-35">
+    <section className="flex flex-col w-full xl:w-1/2 px-4 sm:px-6 lg:px-0 mt-6 sm:mt-8 lg:mt-35">
       <div className="text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
           Pay For What You Owe <span className="block sm:inline">No More, No Less</span>

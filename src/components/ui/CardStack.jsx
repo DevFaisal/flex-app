@@ -1,91 +1,68 @@
-import React, { useEffect } from "react";
-import { motion, useAnimation } from "motion/react";
-import greencard from "../../assets/cards/green.svg";
-import materialcard from "../../assets/cards/material.svg";
-import blackcard from "../../assets/cards/black.svg";
+import { motion, useAnimate } from "motion/react";
+import { useEffect } from "react";
 
 const CardStack = () => {
-  // Animation controls for green and black cards
-  const greenControls = useAnimation();
-  const blackControls = useAnimation();
+  const [greenCard, animate] = useAnimate();
+  const [blackCard] = useAnimate();
+  const [goldenCard] = useAnimate();
+
+  async function enterAnimation() {
+    await animate(blackCard.current, { opacity: 1 }, { duration: 0.5 });
+    await animate(goldenCard.current, { opacity: 1 }, { duration: 0.5 });
+    await animate(greenCard.current, { opacity: 1 }, { duration: 0.5 });
+  }
+
+  async function cardsAnimate() {
+    animate(greenCard.current, { y: 165 }, { duration: 0.5, delay: 1.5 });
+    animate(blackCard.current, { y: -165 }, { duration: 0.5, delay: 1.5 });
+  }
 
   useEffect(() => {
-    async function sequence() {
-      // Step 1: Black card appears first
-      await blackControls.start({
-        opacity: 1,
-        y: 0,
-        transition: { delay: 0.3, duration: 0.2 },
-      });
-
-      // Step 2: Material card appears next
-      await new Promise((resolve) => setTimeout(resolve, 600)); // Wait for material card
-      await greenControls.start({
-        opacity: 1,
-        y: 0,
-        transition: { delay: 0.6, duration: 0.2 },
-      });
-
-      // Step 3: After 0.2s delay, move green & black cards closer
-      await new Promise((resolve) => setTimeout(resolve, 200));
-      await Promise.all([
-        greenControls.start({
-          y: 100, // Move downward closer to material card
-          transition: { duration: 0.5 },
-        }),
-        blackControls.start({
-          y: -100, // Move upward closer to material card
-          transition: { duration: 0.5 },
-        }),
-      ]);
-    }
-    sequence();
-  }, [greenControls, blackControls]);
+    Promise.all([enterAnimation(), cardsAnimate()]);
+  }, []);
 
   return (
-    <section className="hidden top-40 w-full lg:w-1/2 lg:flex flex-col justify-start items-center relative h-72 md:h-96 mt-12 lg:mt-0">
-      {/* Black Card (Appears First) */}
+    <section className="hidden xl:flex mt-12">
       <motion.img
-        src={blackcard}
-        alt="Black credit card"
-        className="absolute w-xl"
-        style={{ zIndex: 1, top: "170px" }}
-        initial={{ opacity: 0, y: 20 }}
-        animate={blackControls}
+        ref={greenCard}
+        className="absolute top-30 z-30"
+        initial={{ opacity: 0, y: 0 }}
+        src="/blue.svg"
+        alt=""
       />
-      {/* Material Card (Appears Second) */}
+      <motion.img ref={goldenCard} className="absolute top-80 z-20" initial={{ opacity: 0 }} src="/golden.svg" alt="" />
       <motion.img
-        src={materialcard}
-        alt="Material credit card"
-        className="absolute w-xl"
-        style={{ zIndex: 2, top: "30px" }}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{
-          opacity: 1,
-          y: 0,
-          transition: { delay: 0.9, duration: 0.2 },
-        }}
+        ref={blackCard}
+        className="absolute top-130 z-10"
+        initial={{ opacity: 0, y: 0 }}
+        src="/black.svg"
+        alt=""
       />
-      {/* Green Card (Appears Last) */}
-      <motion.img
-        src={greencard}
-        alt="Green credit card"
-        className="absolute w-xl"
-        style={{ zIndex: 3, top: "-130px" }}
-        initial={{ opacity: 0, y: -20 }}
-        animate={greenControls}
-      />
-      <div
-        className="absolute top-[340px] left-[120px] right-[10px] bottom-[20px]"
-        style={{
-          boxSizing: "border-box",
-          width: "365.18px",
-          height: "231.09px",
-          border: "3px dashed #C1C7CD",
-          borderRadius: "12px",
-          transform: "matrix(0.87, -0.5, 0.87, 0.5, 0, 0)",
-        }}
-      />
+      <svg
+        className="absolute top-[55%] z-0"
+        width="505"
+        height="1002"
+        viewBox="0 0 505 1002"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M331 222L331 735.132V921.003C331 964.634 295.63 1000 252 1000V1000"
+          stroke="#C1C7CD"
+          stroke-width="3"
+          stroke-dasharray="6 6"
+        />
+        <rect
+          x="2.59808"
+          width="362.183"
+          height="228.087"
+          rx="10.5"
+          transform="matrix(0.866025 -0.5 0.866025 0.5 -5.65192 180.89)"
+          stroke="#C1C7CD"
+          stroke-width="3"
+          stroke-dasharray="6 6"
+        />
+      </svg>
     </section>
   );
 };

@@ -8,6 +8,7 @@ const Card = () => {
   const [balance, setBalance] = useState("");
   const [interestRate, setInterestRate] = useState("");
   const [progress, setProgress] = useState(50);
+  const [apr, setApr] = useState(25);
 
   const [monthlyRepayment, setMonthlyRepayment] = useState(0);
   const [monthlyInterestCharged, setMonthlyInterestCharged] = useState(0);
@@ -16,29 +17,27 @@ const Card = () => {
   const steps = [10, 25, 50, 75, 100];
 
   const calculateCreditCardFinances = () => {
-    // Convert inputs to numbers
-    const cardBalance = parseFloat(balance) || 0;
+    // Convert inputs to numbers with safe defaults
+    const cardBalance = Math.max(parseFloat(balance) || 0, 0); // Ensure non-negative
+    const aprRate = Math.max(parseFloat(apr) || 25, 0); // Ensure non-negative, default 25%
+    const progressRate = Math.min(Math.max(parseFloat(progress) || 0, 0), 100); // Ensure 0-100%
 
-    // Fixed APR rate
-    const aprRate = 25;
-
-    // Monthly interest rate (APR / 12)
+    // Compute repayment, ensuring it does not exceed balance
+    const repayment = Math.min((progressRate / 100) * cardBalance, cardBalance);
     const monthlyRate = aprRate / 100 / 12;
 
-    // Monthly repayment based on progress percentage
-    const monthlyRepayment = (progress / 100) * cardBalance;
+    // Ensure interest calculations stay within valid limits
+    const remainingBalance = Math.max(cardBalance - repayment, 0);
+    const monthlyInterest = remainingBalance * monthlyRate;
 
-    // Calculate monthly interest charged
-    const monthlyInterest = (cardBalance - monthlyRepayment) * monthlyRate;
+    // Ensure interest saved is valid
+    const totalPossibleInterest = cardBalance * monthlyRate;
+    const monthlyInterestSaved = Math.max(totalPossibleInterest - monthlyInterest, 0);
 
-    // Calculate potential savings
-    const typicalFullInterest = cardBalance * monthlyRate;
-    const potentialSavings = typicalFullInterest - monthlyInterest;
-
-    // Update state
-    setMonthlyRepayment(monthlyRepayment.toFixed(2));
+    // Set computed values
+    setMonthlyRepayment(repayment.toFixed(2));
     setMonthlyInterestCharged(monthlyInterest.toFixed(2));
-    setMonthlySavings(Math.max(potentialSavings, 0).toFixed(2));
+    setMonthlySavings(monthlyInterestSaved.toFixed(2));
   };
 
   useEffect(() => {
@@ -48,9 +47,9 @@ const Card = () => {
   const handleSliderChange = (step) => {
     setProgress(step);
   };
-  // border: "3px dashed #C1C7CD",
+
   return (
-    <div className="p-4 md:p-6 border-[#C1C7CD] border-[2px] border-dashed rounded-3xl bg-white z-[9999] w-full max-w-xl">
+    <div className="p-4 md:p-8 border-[#C1C7CD] border-[3.5px] border-dashed rounded-3xl bg-white z-[9999] w-full max-w-xl">
       {/* Inputs - Stacked on mobile, side-by-side on larger screens */}
       <div className="flex flex-col md:flex-row gap-3 mb-4">
         <div className="w-full md:w-1/2">
@@ -84,7 +83,7 @@ const Card = () => {
       </div>
 
       {/* Slider Section */}
-      <div className="mb-15 w-full bg-white">
+      <div className="mb:5 md:mb-15 w-full bg-white">
         <div className="flex flex-wrap items-center justify-between text-gray-600 mb-2">
           <h2 className="flex items-center gap-1 w-full mb-2">
             Min Payment
@@ -107,7 +106,7 @@ const Card = () => {
         <div className="relative w-full h-2 mt-2">
           <div className="absolute py-2.5 w-full h-full bg-gray-300 rounded-full"></div>
           <div
-            className="absolute py-2.5 h-full bg-gradient-to-r from-[#096CE3] to-[#0A55B0] rounded-full"
+            className="absolute py-2.5 h-full bg-gradient-to-r from-[#096CE3] to-[#0A55B0] rounded-full ease-linear duration-400"
             style={{ width: `${progress}%` }}
           ></div>
 
@@ -123,7 +122,7 @@ const Card = () => {
                   `}
                 style={{
                   left: `${step}%`,
-                  transform: "translateX(-50%)",
+                  transform: "translateX(-210%)",
                 }}
               />
             ))}
@@ -140,7 +139,7 @@ const Card = () => {
         <InputView
           symbol={"%"}
           title={"Interest Rate (APR %)"}
-          amount={interestRate || 0}
+          amount={apr || 0}
           tooltipText={`This is the interest rate you're charged on your credit card. It's usually expressed as an annual percentage rate (APR).`}
         />
         <InputView symbol={"£"} title={"Monthly Interest Charged"} amount={monthlyInterestCharged} />
@@ -150,9 +149,8 @@ const Card = () => {
       <div className="mt-6">
         <h2 className="text-sm py-2 text-[#21272A]">Monthly interest saved</h2>
         <div className="flex flex-col md:flex-row justify-between items-center bg-secondary p-3 rounded-xl">
-          <h2 className="text-3xl font-bold text-white mb-3 md:mb-0">
-            <span>£</span>
-            {monthlySavings}
+          <h2 className="text-3xl font-bold text-white truncate">
+            £{parseFloat(monthlySavings).toFixed(2).toLocaleString("en-GB")}
           </h2>
           <Button type="white" label={"Find out who"} />
         </div>
