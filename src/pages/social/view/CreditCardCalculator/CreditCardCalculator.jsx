@@ -14,9 +14,18 @@ const CreditCardCalculator = () => {
         desc={`Discover how much interest you&#39;re really paying <br />
           and how FlexCard can help you save.`}
       />
-      <Section>
-        <Card />
-      </Section>
+      {window.innerWidth <= 768 ? (
+        <>
+          <Card />
+        </>
+      ) : (
+        <>
+          <Section>
+            <Card />
+          </Section>
+        </>
+      )}
+
       {/* Background Gradient */}
       <div className="absolute w-full h-2/3 top-50 bg-gradient-to-r from-[#0569E8] to-[#76D232] blur-3xl opacity-15"></div>
     </section>

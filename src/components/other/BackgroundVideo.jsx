@@ -3,7 +3,7 @@ import videoBg from "../../assets/videos/background.mp4";
 
 const BackgroundVideo = ({ handleEndVideo = () => {} }) => {
   return (
-    <div className="fixed w-full h-screen z-[9999]">
+    <div className="relative w-full h-screen overflow-hidden">
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"
         onEnded={handleEndVideo}

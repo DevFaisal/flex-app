@@ -10,7 +10,7 @@ const InputView = ({ title, symbol, amount, tooltipText }) => {
           <h2 className="text-sm py-2 text-[#21272A] text-nowrap">{title}</h2>
           {tooltipText && <Tooltip Icon={<MdQuestionMark size={12} />} text={tooltipText} />}
         </div>
-        <h2 className="bg-[#E4EFFC] px-4 py-3 rounded-xl text-xl font-bold">
+        <h2 className="bg-[#E4EFFC] px-4 py-3 rounded-xl text-xl font-bold truncate">
           <span className="text-secondary">{symbol}</span>
           {amount}
         </h2>

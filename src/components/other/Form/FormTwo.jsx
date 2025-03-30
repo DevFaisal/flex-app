@@ -5,6 +5,7 @@ import Button from "../../ui/Button";
 import { api } from "../../../utils/api";
 import { getSource } from "../../../utils/getSource";
 import { getChannel } from "../../../utils/getChannel";
+import toast from "react-hot-toast";
 
 const FormTwo = () => {
   const { formMethods, nextStep, setIsSubmitting, submitStatus, setSubmitStatus, isSubmitting } = useFormContext();
@@ -49,6 +50,13 @@ const FormTwo = () => {
       nextStep();
     } catch (error) {
       console.error("Error Occurred:", error.response?.data || error.message);
+      toast.error(
+        error.response?.data?.message.includes("Authentication")
+          ? "Authentication Error"
+          : error.response?.data?.message.includes("already exists")
+          ? "Email already exists"
+          : error.response?.data?.message || "An error occurred while creating the contact"
+      );
       setSubmitStatus({
         type: "error",
         message: error.response?.data?.message || "An error occurred while creating the contact",
@@ -59,7 +67,7 @@ const FormTwo = () => {
   };
 
   return (
-    <div className="flex flex-col gap-6 bg-white">
+    <div className="flex flex-col gap-3">
       <h2 className="text-2xl md:text-3xl font-bold text-center md:text-left">Pre-Qualification Questions</h2>
 
       <div className="flex flex-col gap-4 mt-2">
@@ -180,9 +188,6 @@ const FormTwo = () => {
           className="px-8"
         />
       </div>
-      {submitStatus?.type == "error" && (
-        <h1 className="px-3 py-2 w-full overflow-x-scroll  bg-red-100 rounded-xl">{submitStatus?.message}</h1>
-      )}
     </div>
   );
 };

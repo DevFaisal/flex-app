@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import BackgroundVideo from "../components/other/BackgroundVideo";
 
 const HandleBGVideo = ({ children }) => {
-  const TIMEOUT_DURATION = 5000;
+  const TIMEOUT_DURATION = window.innerWidth <= 768 ? 1400 : 5000;
 
   const [play, setPlay] = useState(true);
   const [, setIsvideoEnded] = useState(false);

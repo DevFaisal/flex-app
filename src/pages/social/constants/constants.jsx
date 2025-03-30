@@ -100,10 +100,10 @@ export const faqData = [
     question: "How is Flex different from other credit cards?",
     answer: "Flex offers a more flexible repayment system without hidden fees.",
   },
-  {
-    question: "How do you keep my account safe?",
-    answer: "We use advanced encryption and fraud detection to protect your account.",
-  },
+  // {
+  //   question: "How do you keep my account safe?",
+  //   answer: "We use advanced encryption and fraud detection to protect your account.",
+  // },
 ];
 
 export const questions = [
