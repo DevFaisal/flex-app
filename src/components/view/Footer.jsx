@@ -1,5 +1,5 @@
 import React from "react";
-import { FaYoutube, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaYoutube, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa6";
 import { Link } from "react-router";
 import logo from "../../assets/logo/logo.svg";
@@ -10,10 +10,10 @@ import flexicon from "../../assets/icons/flexiconlighter.svg";
 const Footer = () => {
   const legalPrivacy = [
     { name: "Website Terms", link: "/terms" },
-    { name: "Privacy Policy", link: "/privacy" },
+    { name: "Privacy Policy", link: "/privacy-policy" },
     { name: "Legal Agreements", link: "/legal" },
     { name: "Cookie Policy", link: "/cookies" },
-    { name: "Customer Vulnerability", link: "/vulnerability" }, // Fixed typo in "Vulnerability"
+    { name: "Customer Vulnerability", link: "/vulnerability" },
     { name: "UK Modern Slavery Policy", link: "/modern-slavery" },
     { name: "Data Privacy for Candidates", link: "/candidate-privacy" },
   ];
@@ -21,7 +21,6 @@ const Footer = () => {
   const socialLinks = [
     { icon: FaYoutube, href: "https://youtube.com/flexcard" },
     { icon: FaFacebookF, href: "https://facebook.com/flexcard" },
-    { icon: FaTwitter, href: "https://twitter.com/flexcard" },
     { icon: FaInstagram, href: "https://instagram.com/flexcard" },
     { icon: FaLinkedinIn, href: "https://linkedin.com/company/flexcard" },
   ];
