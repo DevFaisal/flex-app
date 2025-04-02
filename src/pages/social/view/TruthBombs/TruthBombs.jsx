@@ -21,19 +21,19 @@ const TruthBombs = () => {
         </p>
       </div>
 
-      <Marquee pauseOnHover={true}>
-        <div className="relative z-10 mt-10 flex flex-nowrap overflow-x-auto gap-6 lg:pl-0 pl-5 snap-x">
-          {promoCards.map((promoCard, index) => (
-            <PromoCard
-              key={index}
-              title={promoCard.title}
-              onCtaClick={handleNextStepWithScroll}
-              description={promoCard.description}
-              icon={promoCard.icon}
-            />
-          ))}
-        </div>
-      </Marquee>
+      {/* <Marquee pauseOnHover={true}> */}
+      <div className="relative z-10 mt-10 flex flex-nowrap overflow-x-auto gap-6 lg:pl-0 pl-5 snap-x">
+        {promoCards.map((promoCard, index) => (
+          <PromoCard
+            key={index}
+            title={promoCard.title}
+            onCtaClick={handleNextStepWithScroll}
+            description={promoCard.description}
+            icon={promoCard.icon}
+          />
+        ))}
+      </div>
+      {/* </Marquee> */}
     </section>
   );
 };

@@ -1,15 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { MdOutlineDone } from "react-icons/md";
 import icon from "../../../assets/icons/flexicon.svg";
+import useFormStore from "./store/FormStore";
 
 const Success = () => {
-  function generateRandomNumberAccending() {
-    const launchDate = 1743315309691;
-    const today = Date.now();
-    const randomNumber = Math.floor((today - launchDate) / 1000);
-    return randomNumber;
-  }
+  const number = useFormStore((state) => state.number);
 
   return (
     <div className="flex flex-col justify-center items-center relative z-[1]">
@@ -24,9 +20,7 @@ const Success = () => {
         </span>
         <h1 className="text-2xl font-bold">Perfect</h1>
         <h3 className="text-xl text-nowrap">
-          You are number{" "}
-          <span className="font-bold text-secondary">{generateRandomNumberAccending().toLocaleString()}</span> on the
-          waitlist !
+          You are number <span className="font-bold text-secondary">{number}</span> on the waitlist !
         </h3>
         <p className="text-sm font-light">flexcard.app coming soon...</p>
       </motion.div>

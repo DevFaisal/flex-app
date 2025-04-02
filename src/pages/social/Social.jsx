@@ -4,9 +4,10 @@ const CreditCardCalculator = lazy(() => import("./view/CreditCardCalculator/Cred
 const TruthBombs = lazy(() => import("./view/TruthBombs/TruthBombs"));
 const TestCredit = lazy(() => import("./view/TestCredit/TestCredit"));
 const JoinTheFlex = lazy(() => import("./view/JoinTheFlex/JoinTheFlex"));
-const Join = lazy(() => import("./view/Join/Join"));
 const Feedback = lazy(() => import("./view/Feedback/Feedback"));
+const VideoPlayback = lazy(() => import("./view/VideoPlayback/VideoPlayback"));
 const FAQ = lazy(() => import("./view/FAQ/FAQ"));
+const Join = lazy(() => import("./view/Join/Join"));
 
 const Social = () => {
   return (
@@ -17,6 +18,7 @@ const Social = () => {
       <TestCredit />
       <JoinTheFlex />
       <Feedback />
+      <VideoPlayback />
       <FAQ />
       <Join />
     </main>

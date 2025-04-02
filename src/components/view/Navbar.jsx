@@ -3,6 +3,7 @@ import Button from "../ui/Button";
 import logo from "../../assets/logo/logo.svg";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router";
+import videoIcon from "../../assets/videos/bg.webm";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -53,6 +54,7 @@ const Navbar = () => {
       <div className="flex justify-between items-center max-w-9xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <Link to="/" className="z-50">
           <img src={logo} alt="FlexCard Logo" width={80} />
+          {/* <video className="w-60 " src={videoIcon} autoPlay muted playsInline /> */}
         </Link>
 
         {/* Mobile menu button */}

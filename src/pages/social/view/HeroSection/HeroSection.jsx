@@ -4,17 +4,26 @@ import Container from "../../../../components/view/Container";
 import Navbar from "../../../../components/view/Navbar";
 import Button from "../../../../components/ui/Button";
 import CardStack from "../../../../components/ui/CardStack";
+import { motion } from "motion/react";
 
 const HeroSection = () => {
   return (
-    <main className="relative min-h-screen overflow-clip">
+    <main className="relative h-[100vh] z-[10]">
       <Gradient>
         <Container>
           <Navbar />
-          <div className="flex mt-20 lg:mt-20 flex-row md:mt-70 pt-40 md:pt-10 gap-8">
-            {/* <div className="flex mt-20 lg:mt-20 md:mt-70 flex-col lg:flex-row justify-between items-center pt-40 md:pt-10"> */}
-            <LeftSection />
-            <CardStack />
+          <div className="flex mt-20 lg:mt-20 flex-row md:mt-70 pt-40 md:pt-10 gap-8 w-full">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1.2, delay: 5.1 }}
+              className="w-full xl:w-1/2 px-4 sm:px-6 lg:px-0 mt-6 sm:mt-8 lg:mt-35"
+            >
+              <LeftSection />
+            </motion.div>
+            <div>
+              <CardStack />
+            </div>
           </div>
         </Container>
       </Gradient>
@@ -26,9 +35,9 @@ export default HeroSection;
 
 function LeftSection() {
   return (
-    <section className="flex flex-col w-full xl:w-1/2 px-4 sm:px-6 lg:px-0 mt-6 sm:mt-8 lg:mt-35">
+    <section className="flex flex-col ">
       <div className="text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+        <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold text-white leading-tight">
           Pay For What You Owe <span className="block sm:inline">No More, No Less</span>
         </h2>
         <p className="text-white text-base sm:text-lg mt-3 sm:mt-4 lg:mt-6 opacity-90">

@@ -75,12 +75,12 @@ function Quiz() {
                 Question {currentQuestionIndex + 1} of {questions.length}
               </p>
               <p className="text-sm font-bold text-blue-600">
-                {Math.round((currentQuestionIndex / (questions.length - 1)) * 100)}% Complete
+                Score: {score}/{questions.length}
               </p>
             </div>
             <div className="w-full h-2 bg-gray-200 rounded-full">
               <div
-                className="h-2 bg-blue-500 rounded-full transition-all duration-300"
+                className="h-2 rounded-full transition-all duration-300"
                 style={{
                   width: `${(currentQuestionIndex / (questions.length - 1)) * 100}%`,
                 }}
