@@ -23,7 +23,7 @@ const CustomCookieConsent = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-6 right-6 z-[9999] max-w-md bg-white shadow-lg rounded-xl overflow-hidden border border-gray-200">
+    <div className="fixed bottom-0 md:bottom-6 right-0 md:right-6 z-[9999] w-full md:max-w-md bg-white shadow-lg rounded-t-xl md:rounded-xl overflow-hidden border border-gray-200">
       <div className="relative">
         {/* Header with accent color */}
         <div className="h-2 bg-gradient-to-r from-blue-600 to-green-500"></div>
