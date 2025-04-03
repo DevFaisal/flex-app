@@ -6,6 +6,7 @@ import { api } from "../../../utils/api";
 import { getSource } from "../../../utils/getSource";
 import { getChannel } from "../../../utils/getChannel";
 import toast from "react-hot-toast";
+import useFormStore from "./store/FormStore";
 
 const FormTwo = () => {
   const { formMethods, nextStep, setIsSubmitting, submitStatus, setSubmitStatus, isSubmitting } = useFormContext();
@@ -36,10 +37,12 @@ const FormTwo = () => {
     };
 
     try {
-      await api.post("create-contact", {
+      const response = await api.post("create-contact", {
         ContactObject,
         Auth: String(accessToken),
       });
+      const number = response?.data?.randomNumber;
+      useFormStore.getState().setWaitinglistNumber(number);
 
       setSubmitStatus({
         type: "success",
