@@ -7,11 +7,11 @@ import CustomCookieConsent from "../components/other/CustomCookieConsent";
 const RootLayout = () => {
   return (
     <div>
-      {/* <HandleBGVideo> */}
+      <HandleBGVideo>
         <Outlet />
         <Footer />
         <CustomCookieConsent />
-      {/* </HandleBGVideo> */}
+      </HandleBGVideo>
     </div>
   );
 };
