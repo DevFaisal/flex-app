@@ -10,7 +10,7 @@ const TruthBombs = () => {
   return (
     <section
       id="testimonials"
-      className="relative py-20 bg-gradient-to-r from-[#0569E8] to-[#76D232] md:h-[80vh] min-h-[80vh] overflow-hidden"
+      className="relative py-20 bg-gradient-to-r from-[#0569E8] to-[#76D232] overflow-hidden z-10"
     >
       <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: `url(${img})` }} />
 
@@ -22,7 +22,7 @@ const TruthBombs = () => {
       </div>
 
       {/* <Marquee pauseOnHover={true}> */}
-      <div className="relative z-10 mt-10 flex flex-nowrap overflow-x-auto gap-6 lg:pl-0 pl-5 snap-x">
+      <div className="relative z-10 mt-10 flex flex-nowrap overflow-x-auto gap-6 lg:pl-0 pl-5 snap-x px-40">
         {promoCards.map((promoCard, index) => (
           <PromoCard
             key={index}
@@ -55,12 +55,12 @@ function PromoCard({ icon, title, description, ctaText = "Take the Quiz", onCtaC
         </div>
       </div>
       <p className="text-gray-800 text-lg md:text-lg mb-6">{description}</p>
-      <button onClick={onCtaClick} className="flex items-center justify-center text-blue-500 font-medium ">
+      {/* <button onClick={onCtaClick} className="flex items-center justify-center text-blue-500 font-medium ">
         <span className="mr-2 text-xl md:text-2xl border-2 border-gray-200 rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center hover:bg-gray-50 transition-colors">
           +
         </span>
         {ctaText}
-      </button>
+      </button> */}
     </div>
   );
 }

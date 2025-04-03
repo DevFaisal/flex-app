@@ -43,17 +43,10 @@ function Quiz() {
   const currentQuestion = questions[currentQuestionIndex];
 
   // Correct answers for each question (index corresponds to questions array)
-  const correctAnswers = [
-    "Yes, on the full statement amount",
-    "No, they don't count towards your minimum payment",
-    "1-3%",
-    "Over 10 years",
-    "Early repayment fee",
-  ];
 
   function handleAnswerClick(selectedAnswer) {
     // Check if answer is correct and update score
-    if (selectedAnswer === correctAnswers[currentQuestionIndex]) {
+    if (selectedAnswer === currentQuestion.correctAnswer) {
       setScore(score + 1);
     }
 
@@ -98,7 +91,7 @@ function Quiz() {
                   onClick={() => handleAnswerClick(answer)}
                   className="px-5 py-4 font-medium text-base rounded-lg bg-[#F2F4F8] w-full border border-[#DDE1E6] text-left hover:bg-gray-200 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
-                  {answer}
+                  <span className="text-sm md:text-base">{answer}</span>
                 </button>
               ))}
             </div>
@@ -106,7 +99,7 @@ function Quiz() {
         </div>
       ) : (
         <div className="text-center py-10 px-4 flex flex-col justify-center items-center gap-4">
-          <span className="flex justify-center items-center bg-[#76D232] p-4 rounded-full">
+          <span className="flex justify-center items-center bg-[#76D232]/50 p-4 rounded-full">
             <MdOutlineDone size={90} className="text-white" />
           </span>
 

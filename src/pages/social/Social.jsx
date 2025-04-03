@@ -6,12 +6,12 @@ const TestCredit = lazy(() => import("./view/TestCredit/TestCredit"));
 const JoinTheFlex = lazy(() => import("./view/JoinTheFlex/JoinTheFlex"));
 const Feedback = lazy(() => import("./view/Feedback/Feedback"));
 const VideoPlayback = lazy(() => import("./view/VideoPlayback/VideoPlayback"));
-const FAQ = lazy(() => import("./view/FAQ/FAQ"));
+const FlexFAQ = lazy(() => import("./view/FlexFAQ/FlexFAQ"));
 const Join = lazy(() => import("./view/Join/Join"));
 
 const Social = () => {
   return (
-    <main className="relative">
+    <MainContainer>
       <HeroSection />
       <CreditCardCalculator />
       <TruthBombs />
@@ -19,10 +19,14 @@ const Social = () => {
       <JoinTheFlex />
       <Feedback />
       <VideoPlayback />
-      <FAQ />
+      <FlexFAQ />
       <Join />
-    </main>
+    </MainContainer>
   );
 };
 
 export default Social;
+
+function MainContainer({ children }) {
+  return <main className="relative">{children}</main>;
+}

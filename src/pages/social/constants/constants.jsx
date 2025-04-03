@@ -65,7 +65,6 @@ export const feedbackData = [
     profile: "./people/eduardo.png",
   },
 ];
-
 export const promoCards = [
   {
     title: `Partial Payments?
@@ -158,21 +157,25 @@ export const questions = [
   {
     question: "If you pay half of your credit card bill, how much interest do you pay?",
     answers: [
-      "Only on what’s left unpaid (Seems fair, right?)",
-      "On the full statement amount (Yes, really! Even if you paid half!",
+      "A) Only on what’s left unpaid (Seems fair, right?)",
+      "B) On the full statement amount (Yes, really! Even if you paid half!",
     ],
+    correctAnswer: "A) Only on what’s left unpaid (Seems fair, right?)",
   },
   {
     question: "You return an item, so your bill goes down… right?",
     answers: [
-      "Yes, refunds reduce what I owe (Logical, isn’t it?)",
+      "A) Yes, refunds reduce what I owe (Logical, isn’t it?)",
       `B) No, if it’s outside your statement cycle, YOU STILL HAVE TO PAY INTEREST!
 (Wait… what?!)`,
     ],
+    correctAnswer: `B) No, if it’s outside your statement cycle, YOU STILL HAVE TO PAY INTEREST!
+(Wait… what?!)`,
   },
   {
     question: "How long does it take to pay off £1,000 if you only make minimum payments?",
-    answers: ["2-3 years(Sounds bad, but manageable?)", "Over 10 years (Wait… 10 YEARS?!)"],
+    answers: ["A) 2-3 years(Sounds bad, but manageable?)", "B) Over 10 years (Wait… 10 YEARS?!)"],
+    correctAnswer: "B) Over 10 years (Wait… 10 YEARS?!)",
   },
   {
     question: "Ever noticed cashback and rewards never seem to suit you?",
@@ -180,9 +183,12 @@ export const questions = [
       "A) Yes, I’ve had to change my spending just to use them (Yep, we’ve all been there!)",
       "B) No, my card gives me the rewards I actually want (Are you sure? Or are you spending extra just to qualify? )",
     ],
+    correctAnswer:
+      "B) No, my card gives me the rewards I actually want (Are you sure? Or are you spending extra just to qualify? )",
   },
   {
     question: "How much more does a £1,000 purchase actually cost if you only make minimum payments at 30% APR?",
     answers: ["A) £1,400 (A little extra, right?)", "B) Over £3,000 (Wait… triple the price?!)"],
+    correctAnswer: "B) Over £3,000 (Wait… triple the price?!)",
   },
 ];
