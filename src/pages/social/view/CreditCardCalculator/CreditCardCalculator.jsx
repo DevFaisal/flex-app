@@ -7,7 +7,7 @@ const CreditCardCalculator = () => {
   return (
     <section
       id="calculator"
-      className="relative flex flex-col justify-center items-center p-4 md:p-15 max-w-5xl mx-auto"
+      className="relative flex flex-col justify-center items-center p-2 py-6 md:p-15 max-w-5xl mx-auto z-10"
     >
       <HeaderNote
         note={"Credit Card Calculator"}

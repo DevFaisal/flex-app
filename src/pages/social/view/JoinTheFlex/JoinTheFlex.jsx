@@ -33,7 +33,7 @@ const JoinTheFlex = () => {
   ];
 
   return (
-    <section className="relative py-10 md:py-20 flex flex-col xl:flex-row gap-10 bg-gray-900 bg-opacity-80 min-h-[70vh]">
+    <section className="relative py-10 md:py-20 flex flex-col xl:flex-row gap-10 bg-gray-900 bg-opacity-80">
       <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
         <div className="absolute h-full w-full bg-black/40" />
         <img className="w-full h-full object-cover" src={image} alt="Background" />
@@ -68,13 +68,13 @@ const JoinTheFlex = () => {
         <div className="flex-1 relative max-w-xl mx-auto rounded-lg ">
           <div className="hidden xl:block absolute translate-y-6 border-[3.5px] border-dashed border-white bg-opacity-50 rounded-lg -translate-x-5 h-full w-full -z-10" />
           <div className="bg-white p-4 justify-center items-center bg-opacity-80 rounded-lg z-10 h-full w-full">
-            <span className=" flex flex-col justify-center px-5 md:py-5  md:h-[65vh] overflow-hidden">
+            <span className=" flex flex-col justify-center px-2 md:py-5 h-[35rem] md:h-[35rem] overflow-hidden">
               <Form />
             </span>
           </div>
         </div>
 
-        <div className="hidden xl:block absolute -top-[12%] right-[40%]">
+        <div className="hidden xl:block absolute -top-[12%] right-[40%] z-[-10]">
           <svg width="81" height="364" viewBox="0 0 81 364" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M2 -293L2 90.5L2 283C2 326.63 37.3695 362 81 362V362"

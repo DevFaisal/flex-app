@@ -5,8 +5,8 @@ const VideoPlayback = () => {
   const url = "https://www.youtube.com/embed/C7BeFLqZRMY";
   return (
     <Container>
-      <section className="py-20 flex flex-col md:flex-row md:h-[60vh] items-center">
-        <div className="flex-1 bg-gray-200 rounded-2xl h-full flex justify-center items-center">
+      <section className="py-20 max-w-7xl mx-auto flex flex-col md:flex-row items-center px-0 sm:px-10">
+        <div className="flex-1 bg-gray-200 rounded-3xl h-[23rem] md:h-[30rem] flex justify-center items-center">
           <iframe
             src={`${url}?controls=0&modestbranding=1&rel=0`}
             className="rounded-3xl"
