@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import videoBg from "../../assets/videos/background.mp4";
+import videoBg from "../../assets/videos/background.webm";
 
 const BackgroundVideo = ({ handleEndVideo = () => {}, speed = 1.5 }) => {
   const videoRef = useRef(null);
