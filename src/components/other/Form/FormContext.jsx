@@ -6,7 +6,7 @@ const FormContext = createContext();
 
 // Provider component
 export const FormProvider = ({ children }) => {
-  const [currentStep, setCurrentStep] = useState(3);
+  const [currentStep, setCurrentStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 

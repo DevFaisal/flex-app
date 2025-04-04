@@ -14,7 +14,7 @@ const FlexFAQ = () => {
   };
 
   return (
-    <section id="faq" className="py-8 sm:py-6 md:py-10 relative px-4 sm:px-6 overflow-hidden">
+    <section id="faq" className="py-8 sm:py-10 md:py-15 relative px-4 sm:px-6 overflow-hidden">
       <HeaderNote note="FAQs" desc="Got Questions? We've Got Answers." />
 
       {/* FAQ List */}
