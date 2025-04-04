@@ -22,6 +22,7 @@ const CardStack = () => {
   }, []);
 
   return (
+<<<<<<< HEAD
     <section className="hidden xl:flex mt-12">
       <motion.img
         ref={greenCard}
@@ -63,6 +64,32 @@ const CardStack = () => {
           stroke-dasharray="6 6"
         />
       </svg>
+=======
+    <section className="">
+      <div className="absolute w-full h-full">
+        <motion.img
+          ref={greenCard}
+          className="absolute top-30 z-30"
+          initial={{ opacity: 0, y: 0 }}
+          src="/blue.svg"
+          alt=""
+        />
+        <motion.img
+          ref={goldenCard}
+          className="absolute top-80 z-20"
+          initial={{ opacity: 0 }}
+          src="/golden.svg"
+          alt=""
+        />
+        <motion.img
+          ref={blackCard}
+          className="absolute top-130 z-10"
+          initial={{ opacity: 0, y: 0 }}
+          src="/black.svg"
+          alt=""
+        />
+      </div>
+>>>>>>> testing
     </section>
   );
 };

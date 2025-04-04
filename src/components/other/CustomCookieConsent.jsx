@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Cookies from "js-cookie";
+<<<<<<< HEAD
+=======
+import Button from "../ui/Button";
+>>>>>>> testing
 
 const CustomCookieConsent = () => {
   const [showDetails, setShowDetails] = useState(false);
@@ -10,12 +14,20 @@ const CustomCookieConsent = () => {
     setIsVisible(!consent);
   }, []);
 
+<<<<<<< HEAD
   const handleAccept = () => {
+=======
+  const handleAcceptAll = () => {
+>>>>>>> testing
     Cookies.set("consent", "true", { expires: 150 });
     setIsVisible(false);
   };
 
+<<<<<<< HEAD
   const handleDecline = () => {
+=======
+  const handleReject = () => {
+>>>>>>> testing
     Cookies.set("consent", "false", { expires: 150 });
     setIsVisible(false);
   };
@@ -23,6 +35,7 @@ const CustomCookieConsent = () => {
   if (!isVisible) return null;
 
   return (
+<<<<<<< HEAD
     <div className="fixed bottom-0 md:bottom-6 right-0 md:right-6 z-[9999] w-full md:max-w-md bg-white shadow-lg rounded-t-xl md:rounded-xl overflow-hidden border border-gray-200">
       <div className="relative">
         {/* Header with accent color */}
@@ -86,4 +99,35 @@ const CustomCookieConsent = () => {
   );
 };
 
+=======
+    <section className="fixed inset-0 z-50 flex justify-end items-end md:items-end p-0 md:p-8 bg-black/40">
+      <div className="bg-white w-full md:max-w-sm rounded-t-2xl md:rounded-2xl shadow-lg md:mb-4 md:mr-4">
+        <div className="p-6">
+          <h2 className="text-md font-bold mb-4">Choose your cookies</h2>
+
+          <p className="text-gray-700 text-xs mb-4">
+            Cookies help us to enhance your experience, tailor ads to your interests, and improve our website.
+          </p>
+
+          <button className="text-gray-800 text-xs underline mb-4 block" onClick={() => window.open("#", "_blank")}>
+            Learn more and manage
+          </button>
+
+          <div className="flex flex-col gap-3">
+            <button className="btn-black" onClick={handleAcceptAll}>
+              Accept all
+            </button>
+            <button className="btn-white" onClick={handleReject}>
+              Reject non-essential cookies
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// +91 8825046934 ->
+
+>>>>>>> testing
 export default CustomCookieConsent;

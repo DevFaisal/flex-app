@@ -6,6 +6,7 @@ const HandleBGVideo = ({ children }) => {
   const SPEED = 2.5;
 
   const [play, setPlay] = useState(true);
+<<<<<<< HEAD
   const [, setIsvideoEnded] = useState(false);
 
   const handleEndVideo = () => {
@@ -31,6 +32,15 @@ const HandleBGVideo = ({ children }) => {
       )}
     </div>
   );
+=======
+
+  useEffect(() => {
+    const timer = setTimeout(() => setPlay(false), TIMEOUT_DURATION);
+    return () => clearTimeout(timer);
+  }, [TIMEOUT_DURATION]);
+
+  return play ? <BackgroundVideo speed={SPEED} /> : <>{children}</>;
+>>>>>>> testing
 };
 
 export default HandleBGVideo;

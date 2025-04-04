@@ -30,6 +30,7 @@ const Carousel = ({ children: slides, autoSlide = false, autoSlideInterval = 300
           <FaChevronRight className="w-4 h-4 md:w-5 md:h-5" />
         </button>
       </div>
+<<<<<<< HEAD
       <div className="absolute bottom-4 right-0 left-0">
         <div className="flex items-center justify-center gap-2">
           {slides.map((s, i) => (
@@ -40,6 +41,8 @@ const Carousel = ({ children: slides, autoSlide = false, autoSlideInterval = 300
           ))}
         </div>
       </div>
+=======
+>>>>>>> testing
     </div>
   );
 };

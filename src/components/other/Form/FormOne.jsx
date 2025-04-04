@@ -21,8 +21,13 @@ const FormOne = () => {
   return (
     <div className="flex flex-col gap-6 h-full justify-evenly">
       <div>
+<<<<<<< HEAD
         <h2 className="text-2xl md:text-4xl font-bold text-center md:text-left">Join the Waitlist</h2>
         <p className="text-sm md:text-xl mt-3 text-center md:text-left">Be the first to get your FlexCard when we launch.</p>
+=======
+        <h2 className="font-bold text-center md:text-left">Join the Waitlist</h2>
+        <p className="mt-3 text-center md:text-left">Be the first to get your FlexCard when we launch.</p>
+>>>>>>> testing
       </div>
 
       <div className="flex flex-col gap-4 mt-2">
@@ -65,7 +70,11 @@ const FormOne = () => {
           iconPosition="right"
           onClick={handleNext}
           label="Next"
+<<<<<<< HEAD
           className="px-8 py-3 mt-4 text-md"
+=======
+          className="px-8 py-3 mt-4 text-sm md:text-md"
+>>>>>>> testing
         />
       </div>
     </div>
