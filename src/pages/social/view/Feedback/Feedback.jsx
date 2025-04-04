@@ -5,7 +5,6 @@ import feedbackIcon from "../../../../assets/svg/feedback.svg";
 import Carousel from "../../../../components/ui/Carousel";
 
 const Feedback = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleCards, setVisibleCards] = useState(1);
 
   useEffect(() => {
@@ -13,25 +12,27 @@ const Feedback = () => {
       setVisibleCards(window.innerWidth >= 1024 ? 2 : 1);
     };
 
-    handleResize(); // Set initial value
+    handleResize();
     window.addEventListener("resize", handleResize);
-
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Calculate the indices of the cards to display
-  const cardIndices = Array.from({ length: visibleCards }, (_, i) => (currentIndex + i) % feedbackData.length);
+  // Split feedbackData into chunks of `visibleCards` size
+  const groupedFeedback = [];
+  for (let i = 0; i < feedbackData.length; i += visibleCards) {
+    groupedFeedback.push(feedbackData.slice(i, i + visibleCards));
+  }
 
   return (
     <section className="py-5 md:py-10 bg-gray-50">
       <HeaderNote note="What People Are Saying" desc="Pay For What You Owe" />
       <div className="container mx-auto px-4 md:px-8 py-6 md:py-10">
         <Carousel autoSlide={true} autoSlideInterval={5000}>
-          {feedbackData.map((card, idx) => (
-            <div key={Math.random() * idx} className="min-w-full ">
-              <div className="grid grid-cols-1 lg:grid-cols-2 p-10 lg:px-30">
-                {cardIndices.map((idx) => (
-                  <FeedbackCard key={`${idx}-${feedbackData[idx].author}`} {...feedbackData[idx]} />
+          {groupedFeedback.map((group, index) => (
+            <div key={index} className="min-w-full">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-10 lg:px-30">
+                {group.map((card, idx) => (
+                  <FeedbackCard key={idx} {...card} />
                 ))}
               </div>
             </div>
@@ -52,14 +53,12 @@ const FeedbackCard = ({ text, author, role, profile }) => (
         {text}
       </p>
     </div>
-
-    <div className="flex flex-col  mt-2 md:mt-4 justify-center items-center space-y-2 md:space-y-3">
+    <div className="flex flex-col mt-2 md:mt-4 justify-center items-center space-y-2 md:space-y-3">
       <div className="rounded-full bg-gray-100">
         <img src={profile} width={40} className="rounded-full" />
-        {/* <CgProfile className="text-gray-500 text-3xl md:text-4xl" /> */}
       </div>
       <h3 className="font-bold text-gray-900 text-lg md:text-xl">{author}</h3>
-      <h6 className="text-gray-800 capitalise tracking-wider">{role}</h6>
+      <h6 className="text-gray-800 capitalize tracking-wider">{role}</h6>
     </div>
   </div>
 );

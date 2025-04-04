@@ -1,4 +1,3 @@
-import { ImCog } from "react-icons/im";
 import refunds from "../../../assets/icons/cards/refund.svg";
 import rewards from "../../../assets/icons/cards/rewards.svg";
 import partial from "../../../assets/icons/cards/partialpayment.svg";
