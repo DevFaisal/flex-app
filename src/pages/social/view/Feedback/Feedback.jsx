@@ -30,7 +30,7 @@ const Feedback = () => {
         <Carousel autoSlide={true} autoSlideInterval={5000}>
           {groupedFeedback.map((group, index) => (
             <div key={index} className="min-w-full">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-10 lg:px-30">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-10 lg:px-8">
                 {group.map((card, idx) => (
                   <FeedbackCard key={idx} {...card} />
                 ))}
@@ -44,7 +44,7 @@ const Feedback = () => {
 };
 
 const FeedbackCard = ({ text, author, role, profile }) => (
-  <div className="mx-1 sm:mx-1 md:mx-2 bg-white rounded-md shadow-lg p-4 md:p-8 flex flex-col text-left justify-between h-[500px] md:min-h-[450px] transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+  <div className="mx-1 sm:mx-1 md:mx-2 bg-white rounded-md shadow-lg p-4 md:p-8 flex flex-col text-left justify-between h-full md:min-h-[450px] transition-all duration-300 hover:-translate-y-2 border border-gray-100">
     <div className="flex md:h-full flex-col justify-center items-center space-y-4 md:space-y-6">
       <div className="text-blue-600 transform hover:scale-105 transition-transform">
         <img src={feedbackIcon} alt="Feedback icon" className="w-12 h-12 md:w-16 md:h-16" />
@@ -55,7 +55,13 @@ const FeedbackCard = ({ text, author, role, profile }) => (
     </div>
     <div className="flex flex-col mt-2 md:mt-4 justify-center items-center space-y-2 md:space-y-3">
       <div className="rounded-full bg-gray-100">
-        <img src={profile} width={40} className="rounded-full" />
+        <img
+          src={profile}
+          alt={`${author} profile`}
+          width={40}
+          height={40}
+          className="rounded-full"
+        />
       </div>
       <h3 className="font-bold text-gray-900 text-lg md:text-xl">{author}</h3>
       <h6 className="text-gray-800 capitalize tracking-wider">{role}</h6>
