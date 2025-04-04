@@ -61,7 +61,7 @@ const LeftSection = memo(() => {
     >
       <span className="text-nowrap">
         {titleText[0].split(' ').map((word, index) => (
-          <motion.span key={index} variants={textItem} className="inline-block mr-2 md:mr-4">
+          <motion.span key={index} variants={textItem} className="md:inline-block mr-2 md:mr-4">
             {word}
           </motion.span>
         ))}
@@ -69,7 +69,7 @@ const LeftSection = memo(() => {
       <br />
       <span className="block xl:inline bg-clip-text text-white">
         {titleText[1].split(' ').map((word, index) => (
-          <motion.span key={index} variants={textItem} className="inline-block mr-2 md:mr-4">
+          <motion.span key={index} variants={textItem} className="md:inline-block mr-2 md:mr-4">
             {word}
           </motion.span>
         ))}
@@ -116,7 +116,7 @@ const LeftSection = memo(() => {
 
   return (
     <section className="flex flex-col xl:items-start justify-center items-center xl:text-left w-[100%]">
-      <div className="text-center lg:text-left max-w-2xl mx-auto lg:mx-0 px-5 md:px-0">
+      <div className="text-center lg:text-left max-w-2xl mx-auto lg:mx-0 md:px-0">
         {title}
         {description}
       </div>
