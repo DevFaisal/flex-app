@@ -12,7 +12,7 @@ const HeroSection = () => {
       <Container>
         <Navbar />
         <section className="flex items-center justify-center md:h-[70vh] h-[100vh]">
-          <div className="flex-1 lg:px-0 mt-6 sm:mt-8 lg:mt-35 md:mt-70 xl:ml-16 px-4">
+          <div className="flex-1 lg:px-0 mt-6 sm:mt-8 lg:mt-35 md:mt-70 xl:ml-16 px-10">
             <LeftSection />
           </div>
           <div className="flex-1 hidden xl:block relative md:pb-[700px]">
@@ -135,10 +135,12 @@ const LeftSection = memo(() => {
       initial="hidden"
       animate="show"
       transition={{ delay: 0.5 }}
-      className="text-white text-base sm:text-lg mt-3 sm:mt-4 lg:mt-6 opacity-90"
+      className="text-white mt-3 sm:mt-4 lg:mt-6 opacity-90 text-center xl:text-left text-wrap lg:mb-6"
     >
-      Join <span className="font-extrabold">1,527</span> people who are redefining credit—fairer, smarter, and built for
-      you.
+      <h4>
+        Join <span className="font-extrabold">1,527</span> people who are redefining credit—fairer, smarter, and built
+        for you.
+      </h4>
     </motion.p>
   );
 
@@ -152,13 +154,13 @@ const LeftSection = memo(() => {
       <Button
         type="white"
         label="Learn More"
-        className="w-full sm:w-auto text-xs"
+        className="w-full sm:w-auto text-sm md:text-base"
         onClick={() => handleScroll("calculator")}
       />
       <Button
         type="outline"
         label="Join The Waitlist"
-        className="w-full sm:w-auto text-xs"
+        className="w-full sm:w-auto text-sm md:text-base"
         onClick={() => handleScroll("join")}
       />
     </motion.div>
