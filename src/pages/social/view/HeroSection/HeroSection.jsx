@@ -113,7 +113,7 @@ const LeftSection = memo(() => {
     >
       <span className="text-nowrap">
         {titleText[0].split(" ").map((word, index) => (
-          <motion.span key={index} variants={textItem} className="inline-block mr-1">
+          <motion.span key={index} variants={textItem} className="inline-block mr-2 md:mr-4">
             {word}
           </motion.span>
         ))}
