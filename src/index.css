@@ -20,3 +20,47 @@
   --color-secondary: #096ce3;
   --color-primary: #ffffff;
 }
+
+h1 {
+  @apply text-2xl md:text-3xl;
+}
+
+h2 {
+  @apply text-xl md:text-2xl;
+}
+
+h3 {
+  @apply text-lg md:text-xl;
+}
+
+h4 {
+  @apply text-base md:text-lg;
+}
+
+h5 {
+  @apply text-sm md:text-base;
+}
+
+h6 {
+  @apply text-xs md:text-sm;
+}
+
+p {
+  @apply text-xs md:text-sm;
+}
+
+li {
+  @apply text-xs md:text-sm;
+}
+
+.title {
+  @apply text-4xl md:text-5xl xl:text-5xl 2xl:text-6xl;
+}
+
+.medium {
+  @apply text-[3px] md:text-[15px];
+}
+
+.minute {
+  @apply text-[12px] md:text-[13px];
+}

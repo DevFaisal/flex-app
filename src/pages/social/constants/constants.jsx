@@ -3,6 +3,7 @@ import refunds from "../../../assets/icons/cards/refund.svg";
 import rewards from "../../../assets/icons/cards/rewards.svg";
 import partial from "../../../assets/icons/cards/partialpayment.svg";
 import creditcard from "../../../assets/icons/cards/creditcard.svg";
+import { FaSmile, FaLightbulb, FaMobileAlt, FaQuestion, FaExchangeAlt, FaLock } from "react-icons/fa";
 export const feedbackData = [
   {
     text: "Going back to university for an MBA meant no salary for a while. I knew I had to plan my finances carefully, but in our focus group, I realised just how unfair standard credit cards are. If FlexCard existed, I’d have had a way to make partial repayments without getting hit with interest on my full balance. It’s exactly what students and career changers need—I can’t wait for it to go live!",
@@ -93,63 +94,128 @@ Card That’s Fair`,
     icon: creditcard,
   },
 ];
-
-// export const faqData = [
-//   { question: "Why the name Flex?", answer: "Flex represents flexibility in payments and financial freedom." },
-//   {
-//     question: "What does Pay For What You Owe actually mean?",
-//     answer: "It means you only pay for what you've spent, ensuring transparency.",
-//   },
-//   { question: "Can I get Flex now?", answer: "Yes, you can sign up and check your eligibility on our platform." },
-//   {
-//     question: "Will joining the waitlist affect my credit score?",
-//     answer: "No, joining the waitlist does not impact your credit score.",
-//   },
-//   {
-//     question: "How is Flex different from other credit cards?",
-//     answer: "Flex offers a more flexible repayment system without hidden fees.",
-//   },
-//   // {
-//   //   question: "How do you keep my account safe?",
-//   //   answer: "We use advanced encryption and fraud detection to protect your account.",
-//   // },
-// ];
 export const faqData = [
   {
-    question: "😎 Why the name Flex?",
-    answer:
-      "<ul class='list-disc pl-5 space-y-2 text-gray-600'><li><strong>Because credit should bend, not break you.</strong></li><li>Picture two wallets, facing each other.</li><li>Or two coins, having a chat across the front desk.</li><li>It’s about give and take — a fair way to borrow, repay, and move on.</li><li><strong>Flex means freedom. Flex means choice.</strong></li><li><strong>Flex means you’re in control — and you only pay for what you owe.</strong></li><li>That’s it. No tricks, no stress. Just credit that fits you.</li></ul>",
-    isOpen: false,
+    icon: <FaSmile className="text-purple-600 text-xl" />,
+    question: "Why the name Flex?",
+    answer: (
+      <div className="text-gray-700">
+        <p>Because credit should bend, not break you.</p>
+        <p>Picture two wallets, facing each other.</p>
+        <p>Or two coins, having a chat across the front desk.</p>
+        <p>It's about give and take — a fair way to borrow, repay, and move on.</p>
+        <p>Flex means freedom. Flex means choice.</p>
+        <p>Flex means you're in control — and you only pay for what you owe.</p>
+        <p>That's it. No tricks, no stress. Just credit that fits you.</p>
+      </div>
+    ),
   },
   {
-    question: "💡 What does Pay For What You Owe actually mean?",
-    answer:
-      "<ul class='list-disc pl-5 space-y-2 text-gray-600'><li><strong>Most credit cards make you jump through hoops</strong> — you pay some off, but still get charged interest on the whole amount. Not with Flex.</li><li><strong>With Flex, you only pay interest on what’s left.</strong></li><li>Let’s say you’ve spent £1,000 and you repay £300.</li><li><strong>You’ll only pay interest on the remaining £700.</strong> That’s it.</li><li>You also get to choose how much to repay — <strong>10%, 25%, 50%, 75%, or even a custom amount</strong> — and we’ll show you exactly how much interest you’ll pay and how much you’ll save with each option.</li><li><strong>You stay in control, every step of the way.</strong></li></ul>",
-    isOpen: false,
+    icon: <FaLightbulb className="text-yellow-500 text-xl" />,
+    question: "What does Pay For What You Owe actually mean?",
+    answer: (
+      <div className="text-gray-700">
+        <p>
+          Most credit cards make you jump through hoops — you pay some off, but still get charged interest on the whole
+          amount. Not with Flex.
+        </p>
+        <p>With Flex, you only pay interest on what's left.</p>
+        <p>Let's say you've spent £1,000 and you repay £300.</p>
+        <p>You'll only pay interest on the remaining £700. That's it.</p>
+        <p>
+          You also get to choose how much to repay — 10%, 25%, 50%, 75%, or even a custom amount — and we'll show you
+          exactly how much interest you'll pay and how much you'll save with each option.
+        </p>
+        <p>You stay in control, every step of the way.</p>
+      </div>
+    ),
   },
   {
-    question: "📱 Can I get Flex now?",
-    answer:
-      "<ul class='list-disc pl-5 space-y-2 text-gray-600'><li><strong>Not just yet — but we’re working on it!</strong></li><li>We’re getting ready for Phase 1 of our launch, and we’re doing things properly. That means going through the <strong>official FCA application process</strong>, so we can launch with the right protections in place.</li><li>Wish us luck — and thanks for being part of the journey.</li><li>If you join the waitlist now, <strong>you’ll be one of the first to know when Flex goes live.</strong> No obligations, no pressure.</li></ul>",
-    isOpen: false,
+    icon: <FaMobileAlt className="text-blue-500 text-xl" />,
+    question: "Can I get Flex now?",
+    answer: (
+      <div className="text-gray-700">
+        <p>Not just yet — but we're working on it!</p>
+        <p>
+          We're getting ready for Phase 1 of our launch, and we're doing things properly. That means going through the
+          official FCA application process, so we can launch with the right protections in place.
+        </p>
+        <p>Wish us luck — and thanks for being part of the journey.</p>
+        <p>
+          If you join the waitlist now, you'll be one of the first to know when Flex goes live. No obligations, no
+          pressure.
+        </p>
+      </div>
+    ),
   },
   {
-    question: "🤔 Will joining the waitlist affect my credit score?",
-    answer:
-      "<ul class='list-disc pl-5 space-y-2 text-gray-600'><li><strong>Nope.</strong></li><li>Joining the waitlist is totally safe — <strong>there’s no credit check and no impact on your credit score.</strong></li><li>We’ll only run a check if (and when) you apply later — and even then, <strong>we’ll make everything crystal clear before you go ahead.</strong></li></ul>",
-    isOpen: false,
+    icon: <FaQuestion className="text-green-500 text-xl" />,
+    question: "Will joining the waitlist affect my credit score?",
+    answer: (
+      <div className="text-gray-700">
+        <p>Nope.</p>
+        <p>Joining the waitlist is totally safe — there's no credit check and no impact on your credit score.</p>
+        <p>
+          We'll only run a check if (and when) you apply later — and even then, we'll make everything crystal clear
+          before you go ahead.
+        </p>
+      </div>
+    ),
   },
   {
-    question: "🔄 How is Flex different from other credit cards?",
-    answer:
-      "<ul class='list-disc pl-5 space-y-2 text-gray-600'><li>We built Flex because we’ve made partial repayments, thought we were doing the right thing — only to be hit with interest we didn’t expect.</li><li>So, we listened. We spoke to people like us, and built Flex for all of us — because <strong>real life isn’t one-size-fits-all.</strong> And credit shouldn’t be either.</li><li>Let’s break it down:</li><li><strong>With traditional credit cards:</strong></li><li>You spend £1,000 on 8 March. Your statement closes on 10 March. You repay £500 on 20 March.</li><li>Sounds fair enough, right?</li><li><strong>But here’s the catch:</strong></li><li>You’ll still be charged <strong>interest on the full £1,000</strong> — not just the £500 you didn’t repay.</li><li>And not just from your statement date — but <strong>from the day you made the purchase.</strong></li><li>That interest keeps compounding daily until you clear the full balance.</li><li>So even when you’re trying to do the right thing, <strong>you can end up paying more than you expected.</strong></li><li><strong>Flex works differently — because we think differently:</strong></li><li><strong>You choose how much to repay</strong> — 10%, 25%, 50%, 75%, or a custom amount</li><li><strong>We only charge interest on what’s left, not your full statement</strong></li><li><strong>You’ll see exactly how much interest you’re being charged</strong> — and how much you’re saving — before you commit</li><li><strong>Late fees are capped at £5, not £12 or more</strong></li><li><strong>And yes, we’re app-only, built for your phone and your lifestyle</strong></li><li>We built Flex to make credit work for real people — not just the system.</li><li><strong>No tricks. No compounding traps. Just credit that makes sense.</strong></li></ul>",
-    isOpen: false,
+    icon: <FaExchangeAlt className="text-red-500 text-xl" />,
+    question: "How is Flex different from other credit cards?",
+    answer: (
+      <div className="text-gray-700">
+        <p>
+          We built Flex because we've made partial repayments, thought we were doing the right thing — only to be hit
+          with interest we didn't expect.
+        </p>
+        <p>
+          So, we listened. We spoke to people like us, and built Flex for all of us — because real life isn't
+          one-size-fits-all. And credit shouldn't be either.
+        </p>
+        <p>Let's break it down:</p>
+        <p className="font-bold mt-2">With traditional credit cards:</p>
+        <p>You spend £1,000 on 8 March. Your statement closes on 10 March. You repay £500 on 20 March.</p>
+        <p>Sounds fair enough, right?</p>
+        <p>But here's the catch:</p>
+        <p>You'll still be charged interest on the full £1,000 — not just the £500 you didn't repay.</p>
+        <p>And not just from your statement date — but from the day you made the purchase.</p>
+        <p>That interest keeps compounding daily until you clear the full balance.</p>
+        <p>So even when you're trying to do the right thing, you can end up paying more than you expected.</p>
+        <p className="font-bold mt-2">Flex works differently — because we think differently:</p>
+        <ul className="list-disc pl-5 space-y-1 mt-1">
+          <li>You choose how much to repay — 10%, 25%, 50%, 75%, or a custom amount</li>
+          <li>We only charge interest on what's left, not your full statement</li>
+          <li>
+            You'll see exactly how much interest you're being charged — and how much you're saving — before you commit
+          </li>
+          <li>Late fees are capped at £5, not £12 or more</li>
+          <li>And yes, we're app-only, built for your phone and your lifestyle</li>
+        </ul>
+        <p className="mt-2">We built Flex to make credit work for real people — not just the system.</p>
+        <p>No tricks. No compounding traps. Just credit that makes sense.</p>
+      </div>
+    ),
   },
   {
-    question: "🔒 How do you keep my account safe?",
-    answer:
-      "<ul class='list-disc pl-5 space-y-2 text-gray-600'><li><strong>Flex is a digital-only credit card, and your security is baked into everything we do.</strong></li><li>Here’s how we look after you:</li><li><strong>We use bank-grade encryption to protect your data</strong></li><li><strong>3D Secure (3DS) adds an extra layer of safety to your online payments</strong></li><li><strong>You’ll get real-time transaction alerts, so you’re always in the know</strong></li><li><strong>Lost your card? Just freeze it instantly in the app</strong></li><li><strong>Something suspicious? Our UK-based team is here to help</strong></li><li><strong>You’re always in control — and we’ve got your back.</strong></li></ul>",
-    isOpen: false,
+    icon: <FaLock className="text-gray-700 text-xl" />,
+    question: "How do you keep my account safe?",
+    answer: (
+      <div className="text-gray-700">
+        <p>Flex is a digital-only credit card, and your security is baked into everything we do.</p>
+        <p>Here's how we look after you:</p>
+        <ul className="list-disc pl-5 space-y-1 mt-1">
+          <li>We use bank-grade encryption to protect your data</li>
+          <li>3D Secure (3DS) adds an extra layer of safety to your online payments</li>
+          <li>You'll get real-time transaction alerts, so you're always in the know</li>
+          <li>Lost your card? Just freeze it instantly in the app</li>
+          <li>Something suspicious? Our UK-based team is here to help</li>
+        </ul>
+        <p className="mt-2">You're always in control — and we've got your back.</p>
+      </div>
+    ),
   },
 ];
 

@@ -7,13 +7,13 @@ const InputView = ({ title, symbol, amount, tooltipText }) => {
     <div>
       <div>
         <div className="flex justify-between items-center">
-          <h2 className="text-sm py-2 text-[#21272A] text-nowrap">{title}</h2>
+          <p className="py-2 minute text-[#21272A] text-nowrap">{title}</p>
           {tooltipText && <Tooltip Icon={<MdQuestionMark size={12} />} text={tooltipText} />}
         </div>
-        <h2 className="bg-[#E4EFFC] px-4 py-3 rounded-xl text-xl font-bold truncate">
+        <h5 className="bg-[#E4EFFC] px-4 py-2 md:py-2.5 rounded-xl font-bold truncate">
           <span className="text-secondary">{symbol}</span>
           {amount}
-        </h2>
+        </h5>
       </div>
     </div>
   );

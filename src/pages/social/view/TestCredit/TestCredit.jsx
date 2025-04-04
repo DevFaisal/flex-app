@@ -11,7 +11,14 @@ const TestCredit = () => {
   const StepContent = () => {
     switch (currentStep) {
       case 0:
-        return <Button type="secondary" label={"Take The Quiz ->"} onClick={() => handleNextStep()} />;
+        return (
+          <Button
+            type="secondary"
+            className="text-sm md:text-ms"
+            label={"Take The Quiz ->"}
+            onClick={() => handleNextStep()}
+          />
+        );
       case 1:
         return <Quiz />;
       default:
@@ -38,6 +45,7 @@ function Quiz() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [isCompleted, setIsCompleted] = useState(false);
   const [score, setScore] = useState(0);
+  const { resetQuiz } = useTakeQuizStore((state) => state);
 
   // Get the current question object
   const currentQuestion = questions[currentQuestionIndex];
@@ -82,16 +90,16 @@ function Quiz() {
           </div>
 
           <div className="w-full">
-            <h2 className="text-xl md:text-2xl font-bold text-center mb-8">{currentQuestion.question}</h2>
+            <h5 className="text-xl md:text-2xl font-bold text-center mb-8">{currentQuestion.question}</h5>
 
             <div className="w-full space-y-4">
               {currentQuestion.answers.map((answer, index) => (
                 <button
                   key={index}
                   onClick={() => handleAnswerClick(answer)}
-                  className="px-5 py-4 font-medium text-base rounded-lg bg-[#F2F4F8] w-full border border-[#DDE1E6] text-left hover:bg-gray-200 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="px-5 py-4 rounded-lg bg-[#F2F4F8] w-full text-nowrap border border-[#DDE1E6] text-left hover:bg-gray-200 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
-                  <span className="text-sm md:text-base">{answer}</span>
+                  <h6 className="">{answer}</h6>
                 </button>
               ))}
             </div>
@@ -112,7 +120,7 @@ function Quiz() {
           </p>
           <div className="flex gap-4">
             <Button type="secondary" label={`Share Your Score ->`} />
-            <Button type="black" label={`Return to Facts`} />
+            <Button type="black" label={`Return to Facts`} onClick={() => resetQuiz()} />
           </div>
         </div>
       )}

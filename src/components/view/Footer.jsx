@@ -37,31 +37,31 @@ const Footer = () => {
         <div className="flex justify-between flex-wrap gap-8 mb-8">
           {/* Legal & Policy Column */}
           <div>
-            <h2 className="font-bold text-xl mb-6">Legal & Policy</h2>
+            <h2 className="font-bold  mb-6">Legal & Policy</h2>
             {legalPrivacy.map((link, idx) => (
               <Link key={idx} to={link.link} className="block py-1 text-gray-400 hover:text-white transition-colors">
-                {link.name}
+                <h6>{link.name}</h6>
               </Link>
             ))}
           </div>
 
           {/* Customer Support Column */}
           <div>
-            <h2 className="font-bold text-xl mb-6">Customer Support</h2>
+            <h2 className="font-bold  mb-6">Customer Support</h2>
             <Link to="/help" className="block py-1 text-gray-400 hover:text-white transition-colors">
-              Help Centre
+              <h6>Help Centre</h6>
             </Link>
             <Link to="/live-chat" className="block py-1 text-gray-400 hover:text-white transition-colors">
-              Live Chat in the FlexCard App
+              <h6>Live Chat in the FlexCard App</h6>
             </Link>
             <Link to="/contact" className="block py-1 text-gray-400 hover:text-white transition-colors">
-              Email Us
+              <h6>Email Us</h6>
             </Link>
           </div>
 
           {/* Mobile App Column */}
           <div>
-            <h2 className="font-bold text-xl mb-6">Flex Mobile App</h2>
+            <h2 className="font-bold  mb-6">Flex Mobile App</h2>
             <div className="flex gap-2">
               <a href="https://apps.apple.com/app/flexcard" target="_blank" rel="noopener noreferrer">
                 <img
@@ -88,10 +88,10 @@ const Footer = () => {
         <hr className="border-gray-700 my-8" />
 
         {/* Bottom Section */}
-        <div className="flex flex-col md:flex-row justify-between items-end">
-          <div className="flex flex-col gap-2 text-sm text-gray-400 max-w-7xl">
+        <div className="flex flex-col md:flex-row justify-between items-end minute">
+          <div className="flex  flex-col gap-2 text-gray-400 max-w-7xl">
             <p>
-              <span className="text-white">© {new Date().getFullYear()} FlexCard Ltd. All rights reserved. -</span>{" "}
+              <span className="text-white ">© {new Date().getFullYear()} FlexCard Ltd. All rights reserved. -</span>
               "Flex: Pay For What You Owe" is a registered trademark of FlexCard Ltd.
             </p>
             <p>For further details about our policies and services, please refer to the links above or contact us.</p>

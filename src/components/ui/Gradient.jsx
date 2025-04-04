@@ -35,12 +35,12 @@ import { motion } from "framer-motion";
 
 const Gradient = () => {
   return (
-    <motion.div className="absolute h-screen w-full z-[-1] overflow-hidden flex items-center justify-center">
+    <motion.div className="absolute h-screen w-full z-[-1] overflow-hidden flex items-center justify-center">     
       {/* Gradient Background */}
       <motion.div
-        className="absolute top-0 xl:top-[-40%] lg:top-[-30%] lg:right-[-3%] w-full lg:w-[110%] h-full 
+        className="absolute top-0 xl:top-[-45%] lg:top-[-30%] lg:right-[-3%] w-full lg:w-[110%] h-full 
                    bg-gradient-to-r from-blue-500 to-green-500 
-                   lg:rounded-4xl lg:-rotate-12 xl:-rotate-25 overflow-hidden transition-all duration-300"
+                   lg:rounded-4xl lg:-rotate-12 xl:-rotate-30 overflow-hidden transition-all duration-300"
       >
         {/* Background Image (Centered & Unrotated) */}
         <motion.img
@@ -48,7 +48,7 @@ const Gradient = () => {
           animate={{ y: 0 }}
           transition={{ duration: 1 }}
           src={centerImage}
-          className="absolute transition-opacity duration-300 xl:top-[35%] lg:rotate-[12deg] xl:rotate-[25deg] w-full h-full lg:top-[25%] xl:[top-15%] lg:right-[3%] object-cover opacity-50"
+          className="absolute transition-opacity duration-300 xl:top-[40%] lg:rotate-[12deg] xl:rotate-[30deg] w-full h-full lg:top-[25%] xl:[top-15%] lg:right-[5%] object-cover opacity-50"
           alt="background"
           loading="lazy"
         />

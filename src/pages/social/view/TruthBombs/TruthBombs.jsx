@@ -10,7 +10,7 @@ const TruthBombs = () => {
   return (
     <section
       id="testimonials"
-      className="relative py-20 bg-gradient-to-r from-[#0569E8] to-[#76D232] overflow-hidden z-10"
+      className="relative pt-8 pb-10 bg-gradient-to-r from-[#0569E8] to-[#76D232] overflow-hidden z-20 flex flex-col justify-center items-center"
     >
       <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: `url(${img})` }} />
 
@@ -43,18 +43,18 @@ export default TruthBombs;
 function PromoCard({ icon, title, description, ctaText = "Take the Quiz", onCtaClick = () => {}, className = "" }) {
   return (
     <div
-      className={`bg-white flex-shrink-0 flex-col rounded-md h-auto w-[280px] md:w-[400px] md:h-[400px] flex items-start justify-between py-3 px-6 md:py-5 md:px-8 snap-start max-w-md ${className} shadow-[0_8px_30px_rgb(0,0,0,0.12)] border-[1px] border-gray-200 md:even:mt-13`}
+      className={`bg-white flex-shrink-0 flex-col rounded-md h-auto w-[240px] md:w-[350px] md:h-[350px] flex items-start justify-start gap-10 py-1 px-2 md:py-1 md:px-4 snap-start max-w-md ${className} shadow-[0_8px_30px_rgb(0,0,0,0.12)] border-[1px] border-gray-200 md:even:mt-13`}
     >
-      <div className="flex items-start mb-4 pt-6">
+      <div className="flex items-start  pt-5 justify-center  ">
         <div className="mr-2">
-          <img src={icon} alt="icon" className="w-50 h-30" />
+          <img src={icon} alt="icon" className="w-30 h-30" />
         </div>
 
         <div>
-          <h2 className="text-xl md:text-2xl font-bold mb-1 text-black">{title}</h2>
+          <h4 className="font-bold  text-black ">{title}</h4>
         </div>
       </div>
-      <p className="text-gray-800 text-lg md:text-lg mb-6">{description}</p>
+      <h5 className=" text-gray-800">{description}</h5>
       {/* <button onClick={onCtaClick} className="flex items-center justify-center text-blue-500 font-medium ">
         <span className="mr-2 text-xl md:text-2xl border-2 border-gray-200 rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center hover:bg-gray-50 transition-colors">
           +
