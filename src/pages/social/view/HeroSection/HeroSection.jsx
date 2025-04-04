@@ -97,7 +97,7 @@ const LeftSection = memo(() => {
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5, delay: 1 }}
-      className="flex flex-col px-10 sm:flex-row items-center justify-center xl:justify-start gap-3 mt-8 sm:mt-3 w-full"
+      className="flex flex-col px-10 md:px-0 sm:flex-row items-center justify-center xl:justify-start gap-3 mt-8 sm:mt-3 w-full"
     >
       <Button
         type="white"
@@ -116,7 +116,7 @@ const LeftSection = memo(() => {
 
   return (
     <section className="flex flex-col xl:items-start justify-center items-center xl:text-left w-[100%]">
-      <div className="text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
+      <div className="text-center lg:text-left max-w-2xl mx-auto lg:mx-0 px-5 md:px-0">
         {title}
         {description}
       </div>
