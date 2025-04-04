@@ -11,9 +11,6 @@ const TestCredit = () => {
   const StepContent = () => {
     switch (currentStep) {
       case 0:
-<<<<<<< HEAD
-        return <Button type="secondary" label={"Take The Quiz ->"} onClick={() => handleNextStep()} />;
-=======
         return (
           <Button
             type="secondary"
@@ -22,7 +19,6 @@ const TestCredit = () => {
             onClick={() => handleNextStep()}
           />
         );
->>>>>>> testing
       case 1:
         return <Quiz />;
       default:
@@ -49,10 +45,7 @@ function Quiz() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [isCompleted, setIsCompleted] = useState(false);
   const [score, setScore] = useState(0);
-<<<<<<< HEAD
-=======
   const { resetQuiz } = useTakeQuizStore((state) => state);
->>>>>>> testing
 
   // Get the current question object
   const currentQuestion = questions[currentQuestionIndex];
@@ -72,8 +65,6 @@ function Quiz() {
     }
   }
 
-<<<<<<< HEAD
-=======
   function handleLearnMore() {
     window.scrollTo({
       top: document.getElementById("calculator").offsetTop,
@@ -81,7 +72,6 @@ function Quiz() {
     });
   }
 
->>>>>>> testing
   return (
     <div className="w-full max-w-3xl mx-auto">
       {!isCompleted ? (
@@ -107,50 +97,31 @@ function Quiz() {
           </div>
 
           <div className="w-full">
-<<<<<<< HEAD
-            <h2 className="text-xl md:text-2xl font-bold text-center mb-8">{currentQuestion.question}</h2>
-=======
             <h5 className="text-xl md:text-2xl font-bold text-center mb-5 md:mb-8">{currentQuestion.question}</h5>
->>>>>>> testing
 
             <div className="w-full space-y-4">
               {currentQuestion.answers.map((answer, index) => (
                 <button
                   key={index}
                   onClick={() => handleAnswerClick(answer)}
-<<<<<<< HEAD
-                  className="px-5 py-4 font-medium text-base rounded-lg bg-[#F2F4F8] w-full border border-[#DDE1E6] text-left hover:bg-gray-200 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
-                >
-                  <span className="text-sm md:text-base">{answer}</span>
-=======
                   className="px-3 py-2 md:px-5 md:py-4 rounded-lg bg-[#F2F4F8] w-full border border-[#DDE1E6] text-left hover:bg-gray-200 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                   <h6 className="">
                     <span className="font-bold">{answer.split("(")[0]}</span>
                     <span className="">{"(" + answer.split("(")[1]}</span>
                   </h6>
->>>>>>> testing
                 </button>
               ))}
             </div>
           </div>
         </div>
       ) : (
-<<<<<<< HEAD
-        <div className="text-center py-10 px-4 flex flex-col justify-center items-center gap-4">
-          <span className="flex justify-center items-center bg-[#76D232]/50 p-4 rounded-full">
-            <MdOutlineDone size={90} className="text-white" />
-          </span>
-
-          <h2 className="text-2xl font-bold mb-4">Quiz Completed!</h2>
-=======
         <div className="text-center py-8 px-4 flex flex-col justify-center items-center gap-2">
           <span className="flex justify-center items-center bg-[#76D232]/50 p-4 rounded-full">
             <MdOutlineDone className="text-white text-3xl lg:text-7xl" />
           </span>
 
           <h2 className="text-2xl font-bold mb-2">Quiz Completed!</h2>
->>>>>>> testing
           <p className="text-xl font-bold text-blue-600 mb-4">
             Your Score: {score}/{questions.length}
           </p>
@@ -158,10 +129,6 @@ function Quiz() {
             There's a lot the credit card industry doesn't tell you. FlexCard is designed to be transparent and fair.
           </p>
           <div className="flex gap-4">
-<<<<<<< HEAD
-            <Button type="secondary" label={`Share Your Score ->`} />
-            <Button type="black" label={`Return to Facts`} />
-=======
             <Button
               type="secondary"
               label="Learn More"
@@ -174,7 +141,6 @@ function Quiz() {
               className="w-full sm:w-auto text-xs"
               onClick={() => resetQuiz()}
             />
->>>>>>> testing
           </div>
         </div>
       )}

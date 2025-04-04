@@ -2,12 +2,9 @@ import { createBrowserRouter } from "react-router";
 import RootLayout from "../layout/RootLayout";
 import TrafficRedirect from "../layout/TrafficRedirect";
 import NotFound from "../pages/not-found";
-<<<<<<< HEAD
 import Navbar from "../components/view/Navbar";
 import { useEffect } from "react";
-=======
 import FooterRoutes from "./FooterRoutes";
->>>>>>> testing
 
 const router = createBrowserRouter([
   {
@@ -17,45 +14,6 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <TrafficRedirect />,
-<<<<<<< HEAD
-      },
-      {
-        path: "terms",
-        element: <OtherPage title="Terms" />,
-      },
-      {
-        path: "privacy-policy",
-        element: <OtherPage title="Privacy Policy" />,
-      },
-      {
-        path: "legal",
-        element: <OtherPage title="Legal" />,
-      },
-      {
-        path: "vulnerability",
-        element: <OtherPage title="Vulnerability" />,
-      },
-      {
-        path: "cookies",
-        element: <OtherPage title="Cookies" />,
-      },
-      {
-        path: "modern-slavery",
-        element: <OtherPage title="Modern Slavery" />,
-      },
-      {
-        path: "candidate-privacy",
-        element: <OtherPage title="Data Protection" />,
-      },
-      {
-        path: "help",
-        element: <OtherPage title="Help" />,
-      },
-      {
-        path: "contact",
-        element: <OtherPage title="Contact" />,
-=======
->>>>>>> testing
       },
       ...FooterRoutes.map((Route) => ({
         path: Route.path,

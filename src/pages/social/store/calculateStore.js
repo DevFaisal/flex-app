@@ -15,15 +15,9 @@ const useCalculateStore = create((set) => ({
 
 const useTakeQuizStore = create((set) => ({
   currentStep: 0,
-<<<<<<< HEAD
-  handleNextStep: () => {
-    set((state) => ({
-      currentStep: state.currentStep + 1,
-=======
   handleNextStep: (num) => {
     set((state) => ({
       currentStep: state.currentStep + 1 || num,
->>>>>>> testing
     }));
   },
   handleNextStepWithScroll: () => {
@@ -35,14 +29,11 @@ const useTakeQuizStore = create((set) => ({
       currentStep: (state.currentStep = 1),
     }));
   },
-<<<<<<< HEAD
-=======
   resetQuiz: () => {
     set((state) => ({
       currentStep: (state.currentStep = 0),
     }));
   },
->>>>>>> testing
 }));
 
 export { useCalculateStore, useTakeQuizStore };

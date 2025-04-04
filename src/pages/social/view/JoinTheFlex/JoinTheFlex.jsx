@@ -1,10 +1,6 @@
 import React from "react";
 import image from "../../../../assets/png/image.png";
-<<<<<<< HEAD
-import { MdDone } from "react-icons/md";
-=======
 import { motion } from "motion/react";
->>>>>>> testing
 import Form from "../../../../components/other/Form/Form";
 
 const JoinTheFlex = () => {
@@ -36,41 +32,15 @@ const JoinTheFlex = () => {
     },
   ];
 
-<<<<<<< HEAD
-  return (
-    <section className="relative py-10 md:py-20 flex flex-col xl:flex-row gap-10 bg-gray-900 bg-opacity-80">
-=======
   // bg-gray-900
 
   return (
     <section id="join" className="relative py-10 md:py-19 flex flex-col xl:flex-row gap-10 bg-opacity-80">
->>>>>>> testing
       <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
         <div className="absolute h-full w-full bg-black/40" />
         <img className="w-full h-full object-cover" src={image} alt="Background" />
       </div>
 
-<<<<<<< HEAD
-      <div className="relative z-10 container mx-auto px-4 flex flex-col xl:flex-row md:gap-10 items-center">
-        <div className="flex-1 flex flex-col gap-6 bg-opacity-80 p-6">
-          <h1 className="self-stretch font-bold text-white text-4xl md:text-[42px] md:leading-[46.2px] [font-family:'Manrope',Helvetica]">
-            Join the FlexCard <br />
-            Revolution
-          </h1>
-          <p className="self-stretch font-medium text-lg tracking-[1.00px] text-white leading-normal [font-family:'Manrope',Helvetica]">
-            Be among the first to get your hands on a credit card that's <br />
-            designed to be fair and transparent.
-          </p>
-          <div className="flex flex-1 flex-col items-start gap-5 mt-4 ">
-            {features.map((feature, index) => (
-              <div key={index} className="flex items-start gap-4 text-white">
-                <img src={feature.icon} alt={feature.title} className="w-10 h-10 md:w-15 md:h-15" />
-                <div className="flex flex-col gap-1">
-                  <span className="font-extrabold text-xl md:text-2xl tracking-[0.36px]">{feature.title}</span>
-                  <span
-                    dangerouslySetInnerHTML={{ __html: feature.description }}
-                    className="text-sm md:text-base tracking-[0.16px] font-normal"
-=======
       <div className="relative mx-w-5xl lg:max-w-[1500px] mx-auto z-10 w-full flex flex-col px-5 md:px-8 lg:flex-row md:gap-10 items-center gap-10">
         <div className="flex-1 flex flex-col gap-6 bg-opacity-80 w-full px-5 md:px-8">
           <div className="w-full">
@@ -92,7 +62,6 @@ const JoinTheFlex = () => {
                   <p
                     dangerouslySetInnerHTML={{ __html: feature.description }}
                     className="text-sm md:text-base text-gray-300 tracking-[0.16px] font-normal"
->>>>>>> testing
                   />
                 </div>
               </div>
@@ -100,18 +69,6 @@ const JoinTheFlex = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
-        <div className="flex-1 relative max-w-xl mx-auto rounded-lg ">
-          <div className="hidden xl:block absolute translate-y-6 border-[3.5px] border-dashed border-white bg-opacity-50 rounded-lg -translate-x-5 h-full w-full -z-10" />
-          <div className="bg-white p-4 justify-center items-center bg-opacity-80 rounded-lg z-10 h-full w-full">
-            <span className=" flex flex-col justify-center px-2 md:py-5 h-[35rem] md:h-[35rem] overflow-hidden">
-              <Form />
-            </span>
-          </div>
-        </div>
-
-        <div className="hidden xl:block absolute -top-[12%] right-[40%] z-[-10]">
-=======
         <div className="flex-1 relative w-full md:max-w-xl mx-auto rounded-lg">
           <div className="hidden xl:block absolute translate-y-6 border-[3.5px] border-dashed border-white bg-opacity-50 rounded-lg -translate-x-5 h-full w-full -z-10" />
           <motion.div
@@ -126,7 +83,6 @@ const JoinTheFlex = () => {
         </div>
 
         <div className="hidden xl:block absolute -top-[13%] xl:right-[42.5%]  z-[-10]">
->>>>>>> testing
           <svg width="81" height="364" viewBox="0 0 81 364" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M2 -293L2 90.5L2 283C2 326.63 37.3695 362 81 362V362"

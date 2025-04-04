@@ -19,8 +19,6 @@
 @theme {
   --color-secondary: #096ce3;
   --color-primary: #ffffff;
-<<<<<<< HEAD
-=======
 }
 
 h1 {
@@ -91,5 +89,4 @@ li {
   .btn:focus {
     @apply outline-none ring-2 ring-gray-900;
   }
->>>>>>> testing
 }

@@ -70,65 +70,38 @@ const FormTwo = () => {
   };
 
   return (
-<<<<<<< HEAD
-    <div className="flex flex-col gap-3">
-=======
     <div className="flex flex-col gap-3 px-4 py-3">
->>>>>>> testing
       <h2 className="text-2xl md:text-3xl font-bold text-center md:text-left">Pre-Qualification Questions</h2>
 
       <div className="flex flex-col gap-4 mt-2">
         <div>
-<<<<<<< HEAD
-          <label className="block mb-2">Are you 18 older and a UK resident?</label>
-=======
           <h5 className="block mb-2">Are you 18 older and a UK resident?</h5>
->>>>>>> testing
           <Controller
             name="eighteenAndUK"
             control={control}
             rules={{ required: "This field is required" }}
             render={({ field }) => (
               <div className="flex md:flex-col gap-4">
-<<<<<<< HEAD
-                <label className="flex items-center">
-=======
                 <h5 className="flex items-center">
->>>>>>> testing
                   <input
                     {...field}
                     type="radio"
                     value="yes"
                     checked={field.value === "yes"}
-<<<<<<< HEAD
-                    className="w-5 h-5 mr-2 accent-secondary cursor-pointer border-2 border-secondary"
-                  />
-                  Yes
-                </label>
-                <label className="flex items-center">
-=======
                     className="w-4 h-4 mr-2 accent-secondary cursor-pointer border-2 border-secondary"
                   />
                   Yes
                 </h5>
                 <h5 className="flex items-center">
->>>>>>> testing
                   <input
                     {...field}
                     type="radio"
                     value="no"
                     checked={field.value === "no"}
-<<<<<<< HEAD
-                    className="w-5 h-5 mr-2 accent-secondary cursor-pointer border-2 border-secondary"
-                  />
-                  No
-                </label>
-=======
                     className="w-4 h-4 mr-2 accent-secondary cursor-pointer border-2 border-secondary"
                   />
                   No
                 </h5>
->>>>>>> testing
               </div>
             )}
           />
@@ -136,56 +109,33 @@ const FormTwo = () => {
         </div>
 
         <div>
-<<<<<<< HEAD
-          <label className="block mb-2">Are you currently employed?</label>
-=======
           <h5 className="block mb-2">Are you currently employed?</h5>
->>>>>>> testing
           <Controller
             name="employed"
             control={control}
             rules={{ required: "This field is required" }}
             render={({ field }) => (
               <div className="flex md:flex-col gap-4">
-<<<<<<< HEAD
-                <label className="flex items-center">
-=======
                 <h5 className="flex items-center">
->>>>>>> testing
                   <input
                     {...field}
                     type="radio"
                     value="yes"
                     checked={field.value === "yes"}
-<<<<<<< HEAD
-                    className="w-5 h-5 mr-2 accent-secondary cursor-pointer border-2 border-secondary"
-                  />
-                  Yes
-                </label>
-                <label className="flex items-center">
-=======
                     className="w-4 h-4 mr-2 accent-secondary cursor-pointer border-2 border-secondary"
                   />
                   Yes
                 </h5>
                 <h5 className="flex items-center">
->>>>>>> testing
                   <input
                     {...field}
                     type="radio"
                     value="no"
                     checked={field.value === "no"}
-<<<<<<< HEAD
-                    className="w-5 h-5 mr-2 accent-secondary cursor-pointer border-2 border-secondary"
-                  />
-                  No
-                </label>
-=======
                     className="w-4 h-4 mr-2 accent-secondary cursor-pointer border-2 border-secondary"
                   />
                   No
                 </h5>
->>>>>>> testing
               </div>
             )}
           />
@@ -193,56 +143,33 @@ const FormTwo = () => {
         </div>
 
         <div>
-<<<<<<< HEAD
-          <label className="block mb-2">Do you usually make partial repayments on your credit card(s)?</label>
-=======
           <h5 className="block mb-2">Do you usually make partial repayments on your credit card(s)?</h5>
->>>>>>> testing
           <Controller
             name="partialRepayments"
             control={control}
             rules={{ required: "This field is required" }}
             render={({ field }) => (
               <div className="flex md:flex-col gap-4">
-<<<<<<< HEAD
-                <label className="flex items-center">
-=======
                 <h5 className="flex items-center">
->>>>>>> testing
                   <input
                     {...field}
                     type="radio"
                     value="yes"
                     checked={field.value === "yes"}
-<<<<<<< HEAD
-                    className="w-5 h-5 mr-2 accent-secondary cursor-pointer border-2 border-secondary"
-                  />
-                  Yes
-                </label>
-                <label className="flex items-center">
-=======
                     className="w-4 h-4 mr-2 accent-secondary cursor-pointer border-2 border-secondary"
                   />
                   Yes
                 </h5>
                 <h5 className="flex items-center">
->>>>>>> testing
                   <input
                     {...field}
                     type="radio"
                     value="no"
                     checked={field.value === "no"}
-<<<<<<< HEAD
-                    className="w-5 h-5 mr-2 accent-secondary cursor-pointer border-2 border-secondary"
-                  />
-                  No
-                </label>
-=======
                     className="w-4 h-4 mr-2 accent-secondary cursor-pointer border-2 border-secondary"
                   />
                   No
                 </h5>
->>>>>>> testing
               </div>
             )}
           />
@@ -250,11 +177,7 @@ const FormTwo = () => {
         </div>
       </div>
 
-<<<<<<< HEAD
-      <p className="text-sm text-gray-600 mt-2">
-=======
       <p className=" text-gray-600 mt-2">
->>>>>>> testing
         By joining the waitlist, you agree to receive updates about FlexCard. We respect your privacy and will never
         share your information.
       </p>

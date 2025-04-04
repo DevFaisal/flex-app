@@ -58,29 +58,6 @@ const Navbar = () => {
         </Link>
 
         {/* Mobile menu button */}
-<<<<<<< HEAD
-        <div className="block md:hidden z-50">
-          <button
-            onClick={toggleMenu}
-            className="flex items-center p-2 rounded-lg text-white hover:bg-white/10 transition-colors"
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
-          >
-            {/* {menuOpen ? <FaTimes size={20} color="white" /> : "" />} */}
-          </button>
-        </div>
-
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-5 lg:space-x-8">
-          {navLinks.map((link) => (
-            <button
-              onClick={() => handleScrollTo(link.link)}
-              className="font-semibold text-white hover:text-white/80 transition-colors"
-            >
-              {link.label}
-            </button>
-          ))}
-          <Button type="outline" label="Check if you qualify" className="ml-4" />
-=======
         {/* <div className="block md:hidden z-50">
           <button
             onClick={toggleMenu}
@@ -103,16 +80,11 @@ const Navbar = () => {
             </button>
           ))}
           <Button type="outline" label={"Check if you qualify"} className="w-full sm:w-auto text-xs" />
->>>>>>> testing
         </div>
       </div>
 
       {/* Mobile Navigation */}
-<<<<<<< HEAD
-      <div
-=======
       {/* <div
->>>>>>> testing
         className={`md:hidden fixed inset-0 bg-black/95 backdrop-blur-sm transition-all duration-300 transform z-50 ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
@@ -134,11 +106,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-      </div>
-=======
       </div> */}
->>>>>>> testing
     </nav>
   );
 };

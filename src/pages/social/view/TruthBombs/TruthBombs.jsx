@@ -10,11 +10,7 @@ const TruthBombs = () => {
   return (
     <section
       id="testimonials"
-<<<<<<< HEAD
-      className="relative py-20 bg-gradient-to-r from-[#0569E8] to-[#76D232] overflow-hidden z-10"
-=======
       className="relative pt-8 pb-10 bg-gradient-to-r from-[#0569E8] to-[#76D232] overflow-hidden z-20 flex flex-col justify-center items-center"
->>>>>>> testing
     >
       <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: `url(${img})` }} />
 
@@ -26,11 +22,7 @@ const TruthBombs = () => {
       </div>
 
       {/* <Marquee pauseOnHover={true}> */}
-<<<<<<< HEAD
-      <div className="relative z-10 mt-10 flex flex-nowrap overflow-x-auto gap-6 lg:pl-0 pl-5 snap-x px-40">
-=======
       <div className="relative z-10 mt-10 flex md:max-w-7xl mx-auto  flex-nowrap overflow-x-auto gap-6 lg:pl-0 pl-5 snap-x px-40">
->>>>>>> testing
         {promoCards.map((promoCard, index) => (
           <PromoCard
             key={index}
@@ -51,20 +43,6 @@ export default TruthBombs;
 function PromoCard({ icon, title, description, ctaText = "Take the Quiz", onCtaClick = () => {}, className = "" }) {
   return (
     <div
-<<<<<<< HEAD
-      className={`bg-white flex-shrink-0 flex-col rounded-md h-auto w-[280px] md:w-[400px] md:h-[400px] flex items-start justify-between py-3 px-6 md:py-5 md:px-8 snap-start max-w-md ${className} shadow-[0_8px_30px_rgb(0,0,0,0.12)] border-[1px] border-gray-200 md:even:mt-13`}
-    >
-      <div className="flex items-start mb-4 pt-6">
-        <div className="mr-2">
-          <img src={icon} alt="icon" className="w-50 h-30" />
-        </div>
-
-        <div>
-          <h2 className="text-xl md:text-2xl font-bold mb-1 text-black">{title}</h2>
-        </div>
-      </div>
-      <p className="text-gray-800 text-lg md:text-lg mb-6">{description}</p>
-=======
       className={`bg-white flex-shrink-0 flex-col rounded-md h-auto w-[240px] md:w-[350px] md:h-[350px] flex items-start justify-start md:gap-6 py-8 md:py-0  px-5 md:px-4 snap-start max-w-md ${className} shadow-[0_8px_30px_rgb(0,0,0,0.12)] border-[1px] border-gray-200 md:even:mt-13`}
     >
       <div className="flex items-center justify-start 0 pt-5  ">
@@ -77,7 +55,6 @@ function PromoCard({ icon, title, description, ctaText = "Take the Quiz", onCtaC
         </div>
       </div>
       <h5 className=" text-gray-800">{description}</h5>
->>>>>>> testing
       {/* <button onClick={onCtaClick} className="flex items-center justify-center text-blue-500 font-medium ">
         <span className="mr-2 text-xl md:text-2xl border-2 border-gray-200 rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center hover:bg-gray-50 transition-colors">
           +

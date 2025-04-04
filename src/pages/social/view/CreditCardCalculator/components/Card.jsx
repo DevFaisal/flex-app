@@ -49,39 +49,6 @@ const Card = () => {
   };
 
   return (
-<<<<<<< HEAD
-    <div className="p-4 md:p-8 border-[#C1C7CD] border-[3.5px] border-dashed rounded-3xl bg-white z-[9999] w-full max-w-xl">
-      {/* Inputs - Stacked on mobile, side-by-side on larger screens */}
-      <div className="flex flex-col md:flex-row gap-3 mb-4">
-        <div className="w-full md:w-1/2">
-          <label htmlFor="" className="text-sm mb-2 block text-gray-500">
-            Spending
-          </label>
-          <div className="relative">
-            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">£</span>
-            <input
-              value={balance}
-              onChange={(e) => setBalance(e.target.value)}
-              type="number"
-              className="w-full bg-[#F2F4F8] pl-7 pr-3 py-2 rounded-md outline-none appearance-none shadow-[0px_2px_0px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]"
-            />
-          </div>
-        </div>
-        <div className="w-full md:w-1/2">
-          <label htmlFor="" className="text-sm mb-2 block">
-            Credit Limit
-          </label>
-          <div className="relative">
-            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">£</span>
-            <input
-              value={interestRate}
-              onChange={(e) => setInterestRate(e.target.value)}
-              type="number"
-              className="w-full bg-[#F2F4F8] pl-7 pr-3 py-2 rounded-md outline-none appearance-none shadow-[0px_2px_0px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]"
-            />
-          </div>
-        </div>
-=======
     <div className="p-3 md:p-5 px-5 md:px-6 border-[#C1C7CD] border-[3.5px] border-dashed rounded-3xl bg-white z-[9999] w-full max-w-xl">
       {/* Inputs - Stacked on mobile, side-by-side on larger screens */}
       <div className="flex flex-col md:flex-row gap-3 mb-4">
@@ -93,27 +60,18 @@ const Card = () => {
           symbol={"£"}
           type={"number"}
         />
->>>>>>> testing
       </div>
 
       {/* Slider Section */}
       <div className="mb:5 md:mb-15 w-full bg-white">
         <div className="flex flex-wrap items-center justify-between text-gray-600 mb-2">
-<<<<<<< HEAD
-          <h2 className="flex items-center gap-1 w-full mb-2">
-=======
           <h6 className="flex items-center gap-1 w-full mb-2">
->>>>>>> testing
             Min Payment
             <Tooltip
               Icon={<MdQuestionMark size={12} />}
               text={"This is the minimum payment you need to make to avoid late fees."}
             />
-<<<<<<< HEAD
-          </h2>
-=======
           </h6>
->>>>>>> testing
 
           <div className="flex justify-between w-full">
             {steps.map((step) => (
@@ -126,15 +84,9 @@ const Card = () => {
 
         {/* Slider Track */}
         <div className="relative w-full h-2 mt-2">
-<<<<<<< HEAD
-          <div className="absolute py-2.5 w-full h-full bg-gray-300 rounded-full"></div>
-          <div
-            className="absolute py-2.5 h-full bg-gradient-to-r from-[#096CE3] to-[#0A55B0] rounded-full ease-linear duration-400"
-=======
           <div className="absolute py-2 md:py-2.5 w-full h-full bg-gray-300 rounded-full"></div>
           <div
             className="absolute py-2 md:py-2.5 h-full bg-gradient-to-r from-[#096CE3] to-[#0A55B0] rounded-full ease-linear duration-400"
->>>>>>> testing
             style={{ width: `${progress}%` }}
           ></div>
 
@@ -144,11 +96,7 @@ const Card = () => {
                 key={step}
                 onClick={() => handleSliderChange(step)}
                 className={`
-<<<<<<< HEAD
-                    w-3 h-3 -top-[-3.5px] rounded-full border-2 border-white shadow-md 
-=======
                     w-[10px] h-[10px] md:w-[12px] md:h-[12px] -top-[-3.5px] rounded-full border-2 border-white shadow-md 
->>>>>>> testing
                     ${progress >= step ? "bg-white" : "bg-gray-300"}
                     absolute
                   `}
@@ -163,17 +111,10 @@ const Card = () => {
       </div>
 
       {/* Divider */}
-<<<<<<< HEAD
-      <span className="block p-[0.5px] mb-6 bg-gray-300"></span>
-
-      {/* Financial Insights - Stacked on mobile */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-=======
       <span className="block p-[0.5px] mb-4 md:mb-5 bg-gray-300"></span>
 
       {/* Financial Insights - Stacked on mobile */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-1 md:gap-2">
->>>>>>> testing
         <InputView symbol={"£"} title={"Monthly Repayments"} amount={monthlyRepayment} />
         <InputView
           symbol={"%"}
@@ -185,17 +126,6 @@ const Card = () => {
       </div>
 
       {/* Savings Section */}
-<<<<<<< HEAD
-      <div className="mt-6">
-        <h2 className="text-sm py-2 text-[#21272A]">Monthly interest saved</h2>
-        <div className="flex flex-col md:flex-row justify-between items-center bg-secondary p-3 rounded-xl">
-          <h2 className="text-3xl font-bold text-white truncate">
-            £{parseFloat(monthlySavings).toFixed(2).toLocaleString("en-GB")}
-          </h2>
-          <Button type="white" label={"Find out who"} />
-        </div>
-        <p className="text-sm py-2 text-[#7B838B]">
-=======
       <div className="mt-4 md:mt-6">
         <h6 className="py-2 text-[#21272A]">Monthly interest saved</h6>
         <div className="flex flex-col md:flex-row justify-between items-center bg-secondary p-3 rounded-xl">
@@ -205,7 +135,6 @@ const Card = () => {
           <Button type="white" className="text-xs md:text-sm" label={"Find Out More"} />
         </div>
         <p className="pt-4 text-[#7B838B]">
->>>>>>> testing
           <strong>Note:</strong> This calculator is a guide only and illustrates how "Pay For What You Owe" interest
           works.
         </p>
@@ -215,8 +144,6 @@ const Card = () => {
 };
 
 export default Card;
-<<<<<<< HEAD
-=======
 
 function LabelledInput({ label, value, setValue, symbol, type }) {
   return (
@@ -236,4 +163,3 @@ function LabelledInput({ label, value, setValue, symbol, type }) {
     </div>
   );
 }
->>>>>>> testing
