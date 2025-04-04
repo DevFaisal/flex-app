@@ -27,7 +27,7 @@ const TruthBombs = () => {
       </div>
 
       {/* <Marquee pauseOnHover={true}> */}
-      <div className="relative z-10 mt-10 flex md:max-w-7xl mx-auto  flex-nowrap overflow-x-auto gap-6 lg:pl-0 pl-5 snap-x px-40">
+      <div className="relative z-10 mt-10 flex max-w-full mx-auto flex-nowrap overflow-x-auto gap-6 lg:pl-0 pl-5 snap-x px-40 overflow-y-scroll">
         {promoCards.map((promoCard, index) => (
           <PromoCard
             key={index}
