@@ -121,7 +121,7 @@ const LeftSection = memo(() => {
       <br />
       <span className="block xl:inline bg-clip-text text-white">
         {titleText[1].split(" ").map((word, index) => (
-          <motion.span key={index} variants={textItem} className="inline-block mr-1">
+          <motion.span key={index} variants={textItem} className="inline-block mr-2 md:mr-4">
             {word}
           </motion.span>
         ))}
