@@ -1,6 +1,6 @@
-import { capitalize } from "./capitalize";
+import { capitalize } from './capitalize';
 
 export function getSource() {
-  let source = localStorage.getItem("traffic_source");
+  let source = localStorage.getItem('traffic_source');
   return capitalize(source);
 }

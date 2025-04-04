@@ -1,68 +1,75 @@
-import refunds from "../../../assets/icons/cards/refund.svg";
-import rewards from "../../../assets/icons/cards/rewards.svg";
-import partial from "../../../assets/icons/cards/partialpayment.svg";
-import creditcard from "../../../assets/icons/cards/creditcard.svg";
-import { FaSmile, FaLightbulb, FaMobileAlt, FaQuestion, FaExchangeAlt, FaLock } from "react-icons/fa";
+import refunds from '../../../assets/icons/cards/refund.svg';
+import rewards from '../../../assets/icons/cards/rewards.svg';
+import partial from '../../../assets/icons/cards/partialpayment.svg';
+import creditcard from '../../../assets/icons/cards/creditcard.svg';
+import {
+  FaSmile,
+  FaLightbulb,
+  FaMobileAlt,
+  FaQuestion,
+  FaExchangeAlt,
+  FaLock,
+} from 'react-icons/fa';
 export const feedbackData = [
   {
-    text: "Going back to university for an MBA meant no salary for a while. I knew I had to plan my finances carefully, but in our focus group, I realised just how unfair standard credit cards are. If FlexCard existed, I’d have had a way to make partial repayments without getting hit with interest on my full balance. It’s exactly what students and career changers need—I can’t wait for it to go live!",
-    author: "Chris",
-    role: "MBA Student, Career Change",
-    profile: "./people/chris.png",
+    text: 'Going back to university for an MBA meant no salary for a while. I knew I had to plan my finances carefully, but in our focus group, I realised just how unfair standard credit cards are. If FlexCard existed, I’d have had a way to make partial repayments without getting hit with interest on my full balance. It’s exactly what students and career changers need—I can’t wait for it to go live!',
+    author: 'Chris',
+    role: 'MBA Student, Career Change',
+    profile: './people/chris.png',
   },
   {
-    text: "Running a startup means cash flow can be unpredictable. Some months are great, others are tight. I never realised that most credit cards lock you into a rigid repayment system—making you pay interest on money you’ve already cleared. If FlexCard existed, it would be a game-changer for founders like me. Can’t wait to get my hands on it!",
-    author: "Jovi",
-    role: "Startup Founder, Cash Flow Challenges",
-    profile: "./people/jovi.png",
+    text: 'Running a startup means cash flow can be unpredictable. Some months are great, others are tight. I never realised that most credit cards lock you into a rigid repayment system—making you pay interest on money you’ve already cleared. If FlexCard existed, it would be a game-changer for founders like me. Can’t wait to get my hands on it!',
+    author: 'Jovi',
+    role: 'Startup Founder, Cash Flow Challenges',
+    profile: './people/jovi.png',
   },
   {
     text: "I love shopping, and I return a lot of stuff. But I never thought twice about how refunds actually work—until our focus group. Turns out, if a refund happens after your statement cycle, it doesn't count as a payment—meaning you still get charged interest on something you don’t even own anymore! WTF?! If FlexCard existed, I wouldn’t have wasted so much money on interest for things I returned. Now I’m just waiting for it to launch!",
-    author: "Liz",
-    role: "Impulse Buyer, Heavy Month-End Shopping & Refunds",
-    profile: "./people/liz.png",
+    author: 'Liz',
+    role: 'Impulse Buyer, Heavy Month-End Shopping & Refunds',
+    profile: './people/liz.png',
   },
   {
-    text: "I love the flexibility of working for six months and then taking six months off, but managing cash flow can be tricky. In our focus group, I learned how traditional credit cards charge interest on the full balance—even when you’re making repayments. If FlexCard existed, it would be perfect for people like me who need financial flexibility without being punished with interest. I can’t wait for it to launch!",
-    author: "Henry",
-    role: "6-Months Work/6-Months Off Lifestyle",
-    profile: "./people/henry.png",
+    text: 'I love the flexibility of working for six months and then taking six months off, but managing cash flow can be tricky. In our focus group, I learned how traditional credit cards charge interest on the full balance—even when you’re making repayments. If FlexCard existed, it would be perfect for people like me who need financial flexibility without being punished with interest. I can’t wait for it to launch!',
+    author: 'Henry',
+    role: '6-Months Work/6-Months Off Lifestyle',
+    profile: './people/henry.png',
   },
   {
-    text: "I always buy a few sizes when I shop online—who doesn’t? But I never realised that if my refund doesn’t hit before the statement cycle closes, I still get charged interest on it. In our focus group, I found out that even though I returned the items, my credit card acted like I still owed the money. That’s insane! If FlexCard existed, it would finally fix this unfair system. Seriously, I need this card in my life!",
-    author: "Maya",
-    role: "Gen Z, Online Shopper – Size Tester & Frequent Returns",
-    profile: "./people/maya.png",
+    text: 'I always buy a few sizes when I shop online—who doesn’t? But I never realised that if my refund doesn’t hit before the statement cycle closes, I still get charged interest on it. In our focus group, I found out that even though I returned the items, my credit card acted like I still owed the money. That’s insane! If FlexCard existed, it would finally fix this unfair system. Seriously, I need this card in my life!',
+    author: 'Maya',
+    role: 'Gen Z, Online Shopper – Size Tester & Frequent Returns',
+    profile: './people/maya.png',
   },
   {
-    text: "When I went on maternity leave, my income dropped overnight, but my expenses didn’t. In our focus group, I realised how unfair it is that traditional credit cards charge interest on the full balance—even when you make repayments. If FlexCard existed, I would have had a fairer way to manage my payments. I can’t wait for it to launch!",
-    author: "Beulah",
-    role: "Management Consultant, New Mum",
-    profile: "./people/beulah.png",
+    text: 'When I went on maternity leave, my income dropped overnight, but my expenses didn’t. In our focus group, I realised how unfair it is that traditional credit cards charge interest on the full balance—even when you make repayments. If FlexCard existed, I would have had a fairer way to manage my payments. I can’t wait for it to launch!',
+    author: 'Beulah',
+    role: 'Management Consultant, New Mum',
+    profile: './people/beulah.png',
   },
   {
-    text: "Working for yourself is amazing, but the unpredictable income makes managing cash flow tricky. In our discussions, it became clear that if FlexCard was around, it would have been the perfect solution—allowing me to adjust my repayments without worrying about crazy interest charges. I love that it actually rewards responsible borrowers. I’ll be one of the first in line when it launches!",
-    author: "Lorena",
-    role: "Gig Worker, Self-Employed",
-    profile: "./people/lorena.png",
+    text: 'Working for yourself is amazing, but the unpredictable income makes managing cash flow tricky. In our discussions, it became clear that if FlexCard was around, it would have been the perfect solution—allowing me to adjust my repayments without worrying about crazy interest charges. I love that it actually rewards responsible borrowers. I’ll be one of the first in line when it launches!',
+    author: 'Lorena',
+    role: 'Gig Worker, Self-Employed',
+    profile: './people/lorena.png',
   },
   {
     text: "Before our focus group, I never really thought about how credit cards work—I just assumed they were all the same. Now I know that most of them are designed to trap you with unfair interest charges. If FlexCard existed when I got my first job, I would have had a much better way to manage my money. I'm proud to be an early supporter!",
-    author: "Pavika",
-    role: "Fresh Graduate, First Job",
-    profile: "./people/pavika.png",
+    author: 'Pavika',
+    role: 'Fresh Graduate, First Job',
+    profile: './people/pavika.png',
   },
   {
-    text: "Working part-time means my income isn’t always the same each month, so I assumed making partial payments on my credit card was enough. In our focus group, I found out the shocking truth—most cards still charge you full interest even when you’re paying off a big chunk. If FlexCard existed, it would finally give people like me a fairer way to manage credit. It’s about time!",
-    author: "Michael",
-    role: "Part-Time Worker, Variable Income",
-    profile: "./people/michael.png",
+    text: 'Working part-time means my income isn’t always the same each month, so I assumed making partial payments on my credit card was enough. In our focus group, I found out the shocking truth—most cards still charge you full interest even when you’re paying off a big chunk. If FlexCard existed, it would finally give people like me a fairer way to manage credit. It’s about time!',
+    author: 'Michael',
+    role: 'Part-Time Worker, Variable Income',
+    profile: './people/michael.png',
   },
   {
-    text: "I took a short career break to travel before starting a new job. Money was tight, and I had to be careful with spending. In the focus group, I learned how traditional credit cards punish you with full interest, even if you pay off most of your balance. If FlexCard were available, it would have been a game-changer for me. I’m excited to be part of the early adopters!",
-    author: "Eduardo",
-    role: "Architect, Career Break",
-    profile: "./people/eduardo.png",
+    text: 'I took a short career break to travel before starting a new job. Money was tight, and I had to be careful with spending. In the focus group, I learned how traditional credit cards punish you with full interest, even if you pay off most of your balance. If FlexCard were available, it would have been a game-changer for me. I’m excited to be part of the early adopters!',
+    author: 'Eduardo',
+    role: 'Architect, Career Break',
+    profile: './people/eduardo.png',
   },
 ];
 export const promoCards = [
@@ -96,7 +103,7 @@ Card That’s Fair`,
 export const faqData = [
   {
     icon: <FaSmile className="text-purple-600 text-xl" />,
-    question: "Why the name Flex?",
+    question: 'Why the name Flex?',
     answer: (
       <div className="text-gray-700">
         <p>Because credit should bend, not break you.</p>
@@ -111,19 +118,20 @@ export const faqData = [
   },
   {
     icon: <FaLightbulb className="text-yellow-500 text-xl" />,
-    question: "What does Pay For What You Owe actually mean?",
+    question: 'What does Pay For What You Owe actually mean?',
     answer: (
       <div className="text-gray-700">
         <p>
-          Most credit cards make you jump through hoops — you pay some off, but still get charged interest on the whole
-          amount. Not with Flex.
+          Most credit cards make you jump through hoops — you pay some off, but still get charged
+          interest on the whole amount. Not with Flex.
         </p>
         <p>With Flex, you only pay interest on what's left.</p>
         <p>Let's say you've spent £1,000 and you repay £300.</p>
         <p>You'll only pay interest on the remaining £700. That's it.</p>
         <p>
-          You also get to choose how much to repay — 10%, 25%, 50%, 75%, or even a custom amount — and we'll show you
-          exactly how much interest you'll pay and how much you'll save with each option.
+          You also get to choose how much to repay — 10%, 25%, 50%, 75%, or even a custom amount —
+          and we'll show you exactly how much interest you'll pay and how much you'll save with each
+          option.
         </p>
         <p>You stay in control, every step of the way.</p>
       </div>
@@ -131,76 +139,91 @@ export const faqData = [
   },
   {
     icon: <FaMobileAlt className="text-blue-500 text-xl" />,
-    question: "Can I get Flex now?",
+    question: 'Can I get Flex now?',
     answer: (
       <div className="text-gray-700">
         <p>Not just yet — but we're working on it!</p>
         <p>
-          We're getting ready for Phase 1 of our launch, and we're doing things properly. That means going through the
-          official FCA application process, so we can launch with the right protections in place.
+          We're getting ready for Phase 1 of our launch, and we're doing things properly. That means
+          going through the official FCA application process, so we can launch with the right
+          protections in place.
         </p>
         <p>Wish us luck — and thanks for being part of the journey.</p>
         <p>
-          If you join the waitlist now, you'll be one of the first to know when Flex goes live. No obligations, no
-          pressure.
+          If you join the waitlist now, you'll be one of the first to know when Flex goes live. No
+          obligations, no pressure.
         </p>
       </div>
     ),
   },
   {
     icon: <FaQuestion className="text-green-500 text-xl" />,
-    question: "Will joining the waitlist affect my credit score?",
+    question: 'Will joining the waitlist affect my credit score?',
     answer: (
       <div className="text-gray-700">
         <p>Nope.</p>
-        <p>Joining the waitlist is totally safe — there's no credit check and no impact on your credit score.</p>
         <p>
-          We'll only run a check if (and when) you apply later — and even then, we'll make everything crystal clear
-          before you go ahead.
+          Joining the waitlist is totally safe — there's no credit check and no impact on your
+          credit score.
+        </p>
+        <p>
+          We'll only run a check if (and when) you apply later — and even then, we'll make
+          everything crystal clear before you go ahead.
         </p>
       </div>
     ),
   },
   {
     icon: <FaExchangeAlt className="text-red-500 text-xl" />,
-    question: "How is Flex different from other credit cards?",
+    question: 'How is Flex different from other credit cards?',
     answer: (
       <div className="text-gray-700">
         <p>
-          We built Flex because we've made partial repayments, thought we were doing the right thing — only to be hit
-          with interest we didn't expect.
+          We built Flex because we've made partial repayments, thought we were doing the right thing
+          — only to be hit with interest we didn't expect.
         </p>
         <p>
-          So, we listened. We spoke to people like us, and built Flex for all of us — because real life isn't
-          one-size-fits-all. And credit shouldn't be either.
+          So, we listened. We spoke to people like us, and built Flex for all of us — because real
+          life isn't one-size-fits-all. And credit shouldn't be either.
         </p>
         <p>Let's break it down:</p>
         <p className="font-bold mt-2">With traditional credit cards:</p>
-        <p>You spend £1,000 on 8 March. Your statement closes on 10 March. You repay £500 on 20 March.</p>
+        <p>
+          You spend £1,000 on 8 March. Your statement closes on 10 March. You repay £500 on 20
+          March.
+        </p>
         <p>Sounds fair enough, right?</p>
         <p>But here's the catch:</p>
-        <p>You'll still be charged interest on the full £1,000 — not just the £500 you didn't repay.</p>
+        <p>
+          You'll still be charged interest on the full £1,000 — not just the £500 you didn't repay.
+        </p>
         <p>And not just from your statement date — but from the day you made the purchase.</p>
         <p>That interest keeps compounding daily until you clear the full balance.</p>
-        <p>So even when you're trying to do the right thing, you can end up paying more than you expected.</p>
+        <p>
+          So even when you're trying to do the right thing, you can end up paying more than you
+          expected.
+        </p>
         <p className="font-bold mt-2">Flex works differently — because we think differently:</p>
         <ul className="list-disc pl-5 space-y-1 mt-1">
           <li>You choose how much to repay — 10%, 25%, 50%, 75%, or a custom amount</li>
           <li>We only charge interest on what's left, not your full statement</li>
           <li>
-            You'll see exactly how much interest you're being charged — and how much you're saving — before you commit
+            You'll see exactly how much interest you're being charged — and how much you're saving —
+            before you commit
           </li>
           <li>Late fees are capped at £5, not £12 or more</li>
           <li>And yes, we're app-only, built for your phone and your lifestyle</li>
         </ul>
-        <p className="mt-2">We built Flex to make credit work for real people — not just the system.</p>
+        <p className="mt-2">
+          We built Flex to make credit work for real people — not just the system.
+        </p>
         <p>No tricks. No compounding traps. Just credit that makes sense.</p>
       </div>
     ),
   },
   {
     icon: <FaLock className="text-gray-700 text-xl" />,
-    question: "How do you keep my account safe?",
+    question: 'How do you keep my account safe?',
     answer: (
       <div className="text-gray-700">
         <p>Flex is a digital-only credit card, and your security is baked into everything we do.</p>
@@ -220,17 +243,17 @@ export const faqData = [
 
 export const questions = [
   {
-    question: "If you pay half of your credit card bill, how much interest do you pay?",
+    question: 'If you pay half of your credit card bill, how much interest do you pay?',
     answers: [
-      "A) Only on what’s left unpaid  (Seems fair, right?)",
-      "B) On the full statement amount (Yes, really! Even if you paid half!)",
+      'A) Only on what’s left unpaid  (Seems fair, right?)',
+      'B) On the full statement amount (Yes, really! Even if you paid half!)',
     ],
-    correctAnswer: "A) Only on what’s left unpaid (Seems fair, right?)",
+    correctAnswer: 'A) Only on what’s left unpaid (Seems fair, right?)',
   },
   {
-    question: "You return an item, so your bill goes down… right?",
+    question: 'You return an item, so your bill goes down… right?',
     answers: [
-      "A) Yes, refunds reduce what I owe (Logical, isn’t it?)",
+      'A) Yes, refunds reduce what I owe (Logical, isn’t it?)',
       `B) No, if it’s outside your statement cycle, YOU STILL HAVE TO PAY INTEREST!
 (Wait… what?!)`,
     ],
@@ -238,22 +261,23 @@ export const questions = [
 (Wait… what?!)`,
   },
   {
-    question: "How long does it take to pay off £1,000 if you only make minimum payments?",
-    answers: ["A) 2-3 years(Sounds bad, but manageable?)", "B) Over 10 years (Wait… 10 YEARS?!)"],
-    correctAnswer: "B) Over 10 years (Wait… 10 YEARS?!)",
+    question: 'How long does it take to pay off £1,000 if you only make minimum payments?',
+    answers: ['A) 2-3 years(Sounds bad, but manageable?)', 'B) Over 10 years (Wait… 10 YEARS?!)'],
+    correctAnswer: 'B) Over 10 years (Wait… 10 YEARS?!)',
   },
   {
-    question: "Ever noticed cashback and rewards never seem to suit you?",
+    question: 'Ever noticed cashback and rewards never seem to suit you?',
     answers: [
-      "A) Yes, I’ve had to change my spending just to use them (Yep, we’ve all been there!)",
-      "B) No, my card gives me the rewards I actually want (Are you sure? Or are you spending extra just to qualify? )",
+      'A) Yes, I’ve had to change my spending just to use them (Yep, we’ve all been there!)',
+      'B) No, my card gives me the rewards I actually want (Are you sure? Or are you spending extra just to qualify? )',
     ],
     correctAnswer:
-      "B) No, my card gives me the rewards I actually want (Are you sure? Or are you spending extra just to qualify? )",
+      'B) No, my card gives me the rewards I actually want (Are you sure? Or are you spending extra just to qualify? )',
   },
   {
-    question: "How much more does a £1,000 purchase actually cost if you only make minimum payments at 30% APR?",
-    answers: ["A) £1,400 (A little extra, right?)", "B) Over £3,000 (Wait… triple the price?!)"],
-    correctAnswer: "B) Over £3,000 (Wait… triple the price?!)",
+    question:
+      'How much more does a £1,000 purchase actually cost if you only make minimum payments at 30% APR?',
+    answers: ['A) £1,400 (A little extra, right?)', 'B) Over £3,000 (Wait… triple the price?!)'],
+    correctAnswer: 'B) Over £3,000 (Wait… triple the price?!)',
   },
 ];

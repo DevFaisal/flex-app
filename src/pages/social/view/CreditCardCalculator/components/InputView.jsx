@@ -1,6 +1,6 @@
-import React from "react";
-import Tooltip from "../../../../../components/ui/Tooltip";
-import { MdQuestionMark } from "react-icons/md";
+import React from 'react';
+import Tooltip from '../../../../../components/ui/Tooltip';
+import { MdQuestionMark } from 'react-icons/md';
 
 const InputView = ({ title, symbol, amount, tooltipText }) => {
   return (

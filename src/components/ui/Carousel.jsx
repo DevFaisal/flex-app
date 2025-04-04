@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import React, { useState, useEffect } from 'react';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const Carousel = ({ children: slides, autoSlide = false, autoSlideInterval = 3000 }) => {
   const [curr, setCurr] = useState(0);

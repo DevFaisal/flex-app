@@ -1,37 +1,37 @@
-import { useEffect, useState } from "react";
-import Social from "../pages/social/Social";
-import Organic from "../pages/organic/Organic";
+import { useEffect, useState } from 'react';
+import Social from '../pages/social/Social';
+import Organic from '../pages/organic/Organic';
 
 function TrafficRedirect() {
-  const [source, setSource] = useState(() => localStorage.getItem("traffic_source") || "");
+  const [source, setSource] = useState(() => localStorage.getItem('traffic_source') || '');
 
   useEffect(() => {
     if (source) return;
 
-    const referrer = document.referrer ? document.referrer.toLowerCase() : "";
+    const referrer = document.referrer ? document.referrer.toLowerCase() : '';
 
     const socialDomains = new Set([
-      "twitter.com",
-      "t.co",
-      "facebook.com",
-      "instagram.com",
-      "linkedin.com",
-      "pinterest.com",
-      "reddit.com",
-      "tiktok.com",
-      "snapchat.com",
-      "youtube.com",
-      "whatsapp.com",
-      "t.me",
-      "discord.com",
-      "quora.com",
+      'twitter.com',
+      't.co',
+      'facebook.com',
+      'instagram.com',
+      'linkedin.com',
+      'pinterest.com',
+      'reddit.com',
+      'tiktok.com',
+      'snapchat.com',
+      'youtube.com',
+      'whatsapp.com',
+      't.me',
+      'discord.com',
+      'quora.com',
     ]);
 
     const isSocial = referrer && [...socialDomains].some((domain) => referrer.includes(domain));
-    const trafficSource = isSocial ? "social" : "organic";
+    const trafficSource = isSocial ? 'social' : 'organic';
 
-    localStorage.setItem("traffic_source", trafficSource);
-    if (referrer) localStorage.setItem("channel", referrer);
+    localStorage.setItem('traffic_source', trafficSource);
+    if (referrer) localStorage.setItem('channel', referrer);
 
     setSource(trafficSource);
   }, [source]);

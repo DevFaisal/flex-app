@@ -1,5 +1,5 @@
-import React, { createContext, useState, useContext } from "react";
-import { useForm } from "react-hook-form";
+import React, { createContext, useState, useContext } from 'react';
+import { useForm } from 'react-hook-form';
 
 // Create context
 const FormContext = createContext();
@@ -13,8 +13,8 @@ export const FormProvider = ({ children }) => {
   // Form methods
   const formMethods = useForm({
     defaultValues: {
-      fullname: "",
-      email: "",
+      fullname: '',
+      email: '',
       eighteenAndUK: null,
       employed: null,
       partialRepayments: null,
@@ -52,7 +52,7 @@ export const FormProvider = ({ children }) => {
 export const useFormContext = () => {
   const context = useContext(FormContext);
   if (context === undefined) {
-    throw new Error("useFormContext must be used within a FormProvider");
+    throw new Error('useFormContext must be used within a FormProvider');
   }
   return context;
 };

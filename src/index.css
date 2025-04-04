@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 /* @font-face {
   font-family: "Manrope", sans-serif;
@@ -6,7 +6,7 @@
 } */
 
 :root {
-  font-family: "Manrope", sans-serif;
+  font-family: 'Manrope', sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
 

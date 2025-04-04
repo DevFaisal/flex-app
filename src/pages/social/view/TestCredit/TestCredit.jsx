@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import HeaderNote from "../../../../components/ui/HeaderNote";
-import Button from "../../../../components/ui/Button";
-import { MdOutlineDone } from "react-icons/md";
-import { questions } from "../../constants/constants";
-import { useTakeQuizStore } from "../../store/calculateStore";
+import React, { useState } from 'react';
+import HeaderNote from '../../../../components/ui/HeaderNote';
+import Button from '../../../../components/ui/Button';
+import { MdOutlineDone } from 'react-icons/md';
+import { questions } from '../../constants/constants';
+import { useTakeQuizStore } from '../../store/calculateStore';
 
 const TestCredit = () => {
   const { handleNextStep, currentStep } = useTakeQuizStore((state) => state);
@@ -15,7 +15,7 @@ const TestCredit = () => {
           <Button
             type="secondary"
             className="text-sm md:text-ms"
-            label={"Take The Quiz ->"}
+            label={'Take The Quiz ->'}
             onClick={() => handleNextStep()}
           />
         );
@@ -67,8 +67,8 @@ function Quiz() {
 
   function handleLearnMore() {
     window.scrollTo({
-      top: document.getElementById("calculator").offsetTop,
-      behavior: "smooth",
+      top: document.getElementById('calculator').offsetTop,
+      behavior: 'smooth',
     });
   }
 
@@ -97,7 +97,9 @@ function Quiz() {
           </div>
 
           <div className="w-full">
-            <h5 className="text-xl md:text-2xl font-bold text-center mb-5 md:mb-8">{currentQuestion.question}</h5>
+            <h5 className="text-xl md:text-2xl font-bold text-center mb-5 md:mb-8">
+              {currentQuestion.question}
+            </h5>
 
             <div className="w-full space-y-4">
               {currentQuestion.answers.map((answer, index) => (
@@ -107,8 +109,8 @@ function Quiz() {
                   className="px-3 py-2 md:px-5 md:py-4 rounded-lg bg-[#F2F4F8] w-full border border-[#DDE1E6] text-left hover:bg-gray-200 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                   <h6 className="">
-                    <span className="font-bold">{answer.split("(")[0]}</span>
-                    <span className="">{"(" + answer.split("(")[1]}</span>
+                    <span className="font-bold">{answer.split('(')[0]}</span>
+                    <span className="">{'(' + answer.split('(')[1]}</span>
                   </h6>
                 </button>
               ))}
@@ -126,7 +128,8 @@ function Quiz() {
             Your Score: {score}/{questions.length}
           </p>
           <p className="mb-6">
-            There's a lot the credit card industry doesn't tell you. FlexCard is designed to be transparent and fair.
+            There's a lot the credit card industry doesn't tell you. FlexCard is designed to be
+            transparent and fair.
           </p>
           <div className="flex gap-4">
             <Button

@@ -1,11 +1,11 @@
-import React from "react";
-import Container from "../../../components/view/Container";
-import Form from "../../../components/other/Form/Form";
+import React from 'react';
+import Container from '../../../components/view/Container';
+import Form from '../../../components/other/Form/Form';
 
 const JoinWaitlist = () => {
   const info = [
-    "So we built FlexCard.app—a card that truly charges interest only on what you owe.",
-    "We reward healthy repayment behavior: If you consistently pay more than the minimum, we reduce your interest rate over time.",
+    'So we built FlexCard.app—a card that truly charges interest only on what you owe.',
+    'We reward healthy repayment behavior: If you consistently pay more than the minimum, we reduce your interest rate over time.',
     "We are in beta stage and looking to disrupt unfair lending. Why pay full interest when you've made partial payments?",
   ];
 

@@ -1,14 +1,14 @@
-import { createBrowserRouter } from "react-router";
-import RootLayout from "../layout/RootLayout";
-import TrafficRedirect from "../layout/TrafficRedirect";
-import NotFound from "../pages/not-found";
-import Navbar from "../components/view/Navbar";
-import { useEffect } from "react";
-import FooterRoutes from "./FooterRoutes";
+import { createBrowserRouter } from 'react-router';
+import RootLayout from '../layout/RootLayout';
+import TrafficRedirect from '../layout/TrafficRedirect';
+import NotFound from '../pages/not-found';
+import Navbar from '../components/view/Navbar';
+import { useEffect } from 'react';
+import FooterRoutes from './FooterRoutes';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <RootLayout />,
     children: [
       {
@@ -21,14 +21,14 @@ const router = createBrowserRouter([
       })),
     ],
   },
-  { path: "*", element: <NotFound /> },
+  { path: '*', element: <NotFound /> },
 ]);
 
 export default router;
 
-function OtherPage({ title = "" }) {
+function OtherPage({ title = '' }) {
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [title]);
 
   return (

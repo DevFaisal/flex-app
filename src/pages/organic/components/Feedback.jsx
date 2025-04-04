@@ -1,49 +1,46 @@
-import React from "react";
-import HeaderNote from "../../../components/ui/HeaderNote";
-import { SiTheboringcompany } from "react-icons/si";
-import { section } from "motion/react-m";
+import React from 'react';
+import HeaderNote from '../../../components/ui/HeaderNote';
+import { SiTheboringcompany } from 'react-icons/si';
+import { section } from 'motion/react-m';
 
 const Feedback = () => {
   const testimonials = [
     {
       description:
-        "Non risus viverra enim, quis. Eget vitae arcu vivamus sit tellus, viverra turpis lorem. Varius a turpis urna id porttitor.",
-      name: "Sarah Johnson",
-      title: "Marketing Director",
+        'Non risus viverra enim, quis. Eget vitae arcu vivamus sit tellus, viverra turpis lorem. Varius a turpis urna id porttitor.',
+      name: 'Sarah Johnson',
+      title: 'Marketing Director',
     },
     {
       description:
-        "Non risus viverra enim, quis. Eget vitae arcu vivamus sit tellus, viverra quis. Eget vitae arcu vivamus sit tellus, viverra quis. Eget vitae arcu vivamus sit tellus, viverra turpis lorem. Varius a turpis urna id porttitor.",
-      name: "Michael Chen",
-      title: "Team Lead",
+        'Non risus viverra enim, quis. Eget vitae arcu vivamus sit tellus, viverra quis. Eget vitae arcu vivamus sit tellus, viverra quis. Eget vitae arcu vivamus sit tellus, viverra turpis lorem. Varius a turpis urna id porttitor.',
+      name: 'Michael Chen',
+      title: 'Team Lead',
     },
     {
       description:
-        "Non risus viverra enim, quis. Eget vitae arcu vivamus sit tellus, viverra turpis lorem. Varius a turpis urna id porttitor.",
-      name: "Alex Rodriguez",
-      title: "Product Manager",
+        'Non risus viverra enim, quis. Eget vitae arcu vivamus sit tellus, viverra turpis lorem. Varius a turpis urna id porttitor.',
+      name: 'Alex Rodriguez',
+      title: 'Product Manager',
     },
     {
       description:
-        "Non risus viverra enim, quis. Eget vitae arcu vivamus sit tellus, viverra turpis lorem. Varius a turpis urna id porttitor.",
-      name: "Alex Rodriguez",
-      title: "Product Manager",
+        'Non risus viverra enim, quis. Eget vitae arcu vivamus sit tellus, viverra turpis lorem. Varius a turpis urna id porttitor.',
+      name: 'Alex Rodriguez',
+      title: 'Product Manager',
     },
     {
       description:
-        "Non risus viverra enim, quis. Eget vitae arcu vivamus sit tellus, viverra turpis lorem. Varius a turpis urna id porttitor.",
-      name: "Alex Rodriguez",
-      title: "Product Manager",
+        'Non risus viverra enim, quis. Eget vitae arcu vivamus sit tellus, viverra turpis lorem. Varius a turpis urna id porttitor.',
+      name: 'Alex Rodriguez',
+      title: 'Product Manager',
     },
   ];
 
   return (
     <section className="bg-[#F2F4F8] py-12 md:py-20 px-4">
       <div className="">
-        <HeaderNote
-          title="PAY FOR WHAT YOU OWE"
-          note="What Early Users Are Saying"
-        />
+        <HeaderNote title="PAY FOR WHAT YOU OWE" note="What Early Users Are Saying" />
 
         <div className="mt-10 flex flex-nowrap overflow-scroll gap-6 pb-4 -mx-4 px-4 md:px-0 md:-mx-0 snap-x">
           {testimonials.map((testimonial, index) => (
@@ -63,7 +60,7 @@ const Feedback = () => {
 
 export default Feedback;
 
-function Card({ Icon = null, description = "", name = "", title = "" }) {
+function Card({ Icon = null, description = '', name = '', title = '' }) {
   return (
     <section className="even:h-[400px] odd:h-[420px] flex items-center justify-center">
       <div className="flex-shrink-0 snap-center w-[280px] sm:w-[350px] md:w-[380px] bg-white flex flex-col rounded-2xl shadow-lg">
@@ -73,9 +70,7 @@ function Card({ Icon = null, description = "", name = "", title = "" }) {
           </div>
 
           <div className="flex-grow overflow-y-auto mb-6">
-            <p className="text-start text-base md:text-lg text-gray-800">
-              "{description}"
-            </p>
+            <p className="text-start text-base md:text-lg text-gray-800">"{description}"</p>
           </div>
 
           <div className="flex items-center gap-4 mt-auto">

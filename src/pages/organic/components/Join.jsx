@@ -1,5 +1,5 @@
-import React from "react";
-import Button from "../../../components/ui/Button";
+import React from 'react';
+import Button from '../../../components/ui/Button';
 
 const Join = () => {
   return (
@@ -10,10 +10,9 @@ const Join = () => {
             Join the Waitlist & Get a Free Card Today!
           </h1>
           <p className="text-white text-center text-sm md:text-base w-full md:max-w-3xl lg:max-w-5xl">
-            FlexCard is preparing to enter the FCA Sandbox for regulatory
-            approval. All sign-ups are for early access and product testing
-            purposes. Credit issuance is subject to FCA approval and final
-            licensing
+            FlexCard is preparing to enter the FCA Sandbox for regulatory approval. All sign-ups are
+            for early access and product testing purposes. Credit issuance is subject to FCA
+            approval and final licensing
           </p>
           <Button
             type="secondary"

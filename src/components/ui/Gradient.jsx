@@ -29,9 +29,9 @@
 // };
 
 // export default Gradient;
-import React from "react";
-import centerImage from "../../assets/png/background.png";
-import { motion } from "framer-motion";
+import React from 'react';
+import centerImage from '../../assets/png/background.png';
+import { motion } from 'framer-motion';
 
 const Gradient = () => {
   return (

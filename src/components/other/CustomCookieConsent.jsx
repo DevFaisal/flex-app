@@ -1,23 +1,21 @@
-import React, { useEffect, useState } from "react";
-import Cookies from "js-cookie";
-import Button from "../ui/Button";
+import React, { useEffect, useState } from 'react';
+import Cookies from 'js-cookie';
 
 const CustomCookieConsent = () => {
-  const [showDetails, setShowDetails] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const consent = Cookies.get("consent");
+    const consent = Cookies.get('consent');
     setIsVisible(!consent);
   }, []);
 
   const handleAcceptAll = () => {
-    Cookies.set("consent", "true", { expires: 150 });
+    Cookies.set('consent', 'true', { expires: 150 });
     setIsVisible(false);
   };
 
   const handleReject = () => {
-    Cookies.set("consent", "false", { expires: 150 });
+    Cookies.set('consent', 'false', { expires: 150 });
     setIsVisible(false);
   };
 
@@ -30,10 +28,14 @@ const CustomCookieConsent = () => {
           <h2 className="text-md font-bold mb-4">Choose your cookies</h2>
 
           <p className="text-gray-700 text-xs mb-4">
-            Cookies help us to enhance your experience, tailor ads to your interests, and improve our website.
+            Cookies help us to enhance your experience, tailor ads to your interests, and improve
+            our website.
           </p>
 
-          <button className="text-gray-800 text-xs underline mb-4 block" onClick={() => window.open("#", "_blank")}>
+          <button
+            className="text-gray-800 text-xs underline mb-4 block"
+            onClick={() => window.open('#', '_blank')}
+          >
             Learn more and manage
           </button>
 

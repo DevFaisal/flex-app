@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "react-router";
-import Button from "../components/ui/Button";
+import React from 'react';
+import { Link } from 'react-router';
+import Button from '../components/ui/Button';
 
 const NotFound = () => {
   return (
@@ -9,7 +9,10 @@ const NotFound = () => {
             bg-gradient-to-br from-blue-600 to-green-500 
             text-white overflow-hidden"
     >
-      <div className="text-center max-w-md px-4" style={{ userSelect: "none", pointerEvents: "none" }}>
+      <div
+        className="text-center max-w-md px-4"
+        style={{ userSelect: 'none', pointerEvents: 'none' }}
+      >
         <div className="relative">
           <h1
             className="text-[12rem] md:text-[20rem] font-black 
@@ -29,7 +32,7 @@ const NotFound = () => {
         </div>
       </div>
       <div className="flex justify-center space-x-4">
-        <Button onClick={() => window.location.replace("/")} type="white" label={"Go Home"} />
+        <Button onClick={() => window.location.replace('/')} type="white" label={'Go Home'} />
       </div>
     </div>
   );

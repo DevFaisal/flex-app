@@ -27,12 +27,14 @@ FlexCard is a modern web application that redefines credit card services with tr
 ## 🔧 Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/DevFaisal/flex-card.git
 cd flex-card
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 # or
@@ -40,11 +42,13 @@ yarn install
 ```
 
 3. Create a `.env` file in the root directory:
+
 ```env
 VITE_ACCESS_TOKEN=your_access_token
 ```
 
 4. Start the development server:
+
 ```bash
 npm run dev
 # or
@@ -53,13 +57,14 @@ yarn dev
 
 ## 🔑 Environment Variables
 
-| Variable | Description |
-|----------|-------------|
+| Variable          | Description                            |
+| ----------------- | -------------------------------------- |
 | VITE_ACCESS_TOKEN | API access token for external services |
 
 ## 📱 Responsive Design
 
 The application is fully responsive and optimized for:
+
 - Mobile devices
 - Tablets
 - Desktop screens
@@ -68,6 +73,7 @@ The application is fully responsive and optimized for:
 ## 🧪 Testing
 
 Run tests:
+
 ```bash
 npm run test
 # or
@@ -77,6 +83,7 @@ yarn test
 ## 📦 Building for Production
 
 Build the application:
+
 ```bash
 npm run build
 # or

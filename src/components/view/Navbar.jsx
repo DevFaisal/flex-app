@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
-import Button from "../ui/Button";
-import logo from "../../assets/logo/logo.svg";
-import { FaBars, FaTimes } from "react-icons/fa";
-import { Link } from "react-router";
-import videoIcon from "../../assets/videos/bg.webm";
+import React, { useState, useEffect } from 'react';
+import Button from '../ui/Button';
+import logo from '../../assets/logo/logo.svg';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import { Link } from 'react-router';
+import videoIcon from '../../assets/videos/bg.webm';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,20 +11,20 @@ const Navbar = () => {
 
   const navLinks = [
     {
-      label: "Calculator",
-      link: "calculator",
+      label: 'Calculator',
+      link: 'calculator',
     },
     {
-      label: "Take the Quiz",
-      link: "quiz",
+      label: 'Take the Quiz',
+      link: 'quiz',
     },
     {
-      label: "Testimonials",
-      link: "testimonials",
+      label: 'Testimonials',
+      link: 'testimonials',
     },
     {
-      label: "FAQ",
-      link: "faq",
+      label: 'FAQ',
+      link: 'faq',
     },
   ];
 
@@ -33,8 +33,8 @@ const Navbar = () => {
       setScrolled(window.scrollY > 20);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const toggleMenu = () => {
@@ -44,13 +44,15 @@ const Navbar = () => {
   const handleScrollTo = (link) => {
     const element = document.getElementById(link);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({ behavior: 'smooth' });
       setMenuOpen(false);
     }
   };
 
   return (
-    <nav className={`absolute top-0 left-0 right-0 w-full transition-all duration-300 bg-transparent z-50`}>
+    <nav
+      className={`absolute top-0 left-0 right-0 w-full transition-all duration-300 bg-transparent z-50`}
+    >
       <div className="flex justify-between items-center max-w-9xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <Link to="/" className="z-50">
           <img src={logo} alt="FlexCard Logo" width={80} />
@@ -79,7 +81,11 @@ const Navbar = () => {
               <h6>{link.label}</h6>
             </button>
           ))}
-          <Button type="outline" label={"Check if you qualify"} className="w-full sm:w-auto text-xs" />
+          <Button
+            type="outline"
+            label={'Check if you qualify'}
+            className="w-full sm:w-auto text-xs"
+          />
         </div>
       </div>
 

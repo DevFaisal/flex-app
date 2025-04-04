@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import HeaderNote from "../../../../components/ui/HeaderNote";
-import ProgressIndicator from "../../../../components/ui/ProgressIndicator";
-import CheckQualifyForm from "./components/CheckQualifyForm";
-import Calculator from "./components/Calculator";
-import Qualify from "./components/Qualify";
+import React, { useState } from 'react';
+import HeaderNote from '../../../../components/ui/HeaderNote';
+import ProgressIndicator from '../../../../components/ui/ProgressIndicator';
+import CheckQualifyForm from './components/CheckQualifyForm';
+import Calculator from './components/Calculator';
+import Qualify from './components/Qualify';
 
 const CreditCardCalc = () => {
-  const steps = ["card details", "calculate", "qualify"];
+  const steps = ['card details', 'calculate', 'qualify'];
   const [currentStep, setCurrentStep] = useState(0);
 
   const handleNextStep = () => {
@@ -24,18 +24,10 @@ const CreditCardCalc = () => {
   const StepContent = () => {
     switch (currentStep) {
       case 0:
-        return (
-          <CheckQualifyForm
-            handleNextStep={handleNextStep}
-            currentStep={currentStep}
-          />
-        );
+        return <CheckQualifyForm handleNextStep={handleNextStep} currentStep={currentStep} />;
       case 1:
         return (
-          <Calculator
-            handleNextStep={handleNextStep}
-            handlePreviousStep={handlePreviousStep}
-          />
+          <Calculator handleNextStep={handleNextStep} handlePreviousStep={handlePreviousStep} />
         );
       case 2:
         return <Qualify />;
@@ -47,8 +39,8 @@ const CreditCardCalc = () => {
   return (
     <section className="flex flex-col justify-center items-center p-6 md:p-10 max-w-5xl mx-auto">
       <HeaderNote
-        title={""}
-        note={"Credit Card Calculator"}
+        title={''}
+        note={'Credit Card Calculator'}
         desc={`Discover how much interest you're really paying and how FlexCard can help you save.`}
       />
       <ProgressIndicator

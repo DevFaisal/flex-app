@@ -1,7 +1,7 @@
-import React from "react";
-import HeaderNote from "../../../../components/ui/HeaderNote";
-import Card from "./components/Card";
-import Section from "./components/Section";
+import React from 'react';
+import HeaderNote from '../../../../components/ui/HeaderNote';
+import Card from './components/Card';
+import Section from './components/Section';
 
 const CreditCardCalculator = () => {
   return (
@@ -10,7 +10,7 @@ const CreditCardCalculator = () => {
       className="relative flex flex-col justify-center items-center max-w-4xl mx-auto z-11 pt-5 pb-20"
     >
       <HeaderNote
-        note={"Credit Card Calculator"}
+        note={'Credit Card Calculator'}
         desc={`Discover how much interest you&#39;re really paying <br /> and how FlexCard can help you save.`}
       />
 

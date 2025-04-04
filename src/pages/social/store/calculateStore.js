@@ -1,10 +1,10 @@
-import { create } from "zustand";
+import { create } from 'zustand';
 
 const initialState = {
-  balance: "",
-  minimum: "",
-  apr: "",
-  spending: "",
+  balance: '',
+  minimum: '',
+  apr: '',
+  spending: '',
 };
 
 const useCalculateStore = create((set) => ({
@@ -22,8 +22,8 @@ const useTakeQuizStore = create((set) => ({
   },
   handleNextStepWithScroll: () => {
     window.scrollTo({
-      top: document.getElementById("quiz").offsetTop,
-      behavior: "smooth",
+      top: document.getElementById('quiz').offsetTop,
+      behavior: 'smooth',
     });
     set((state) => ({
       currentStep: (state.currentStep = 1),

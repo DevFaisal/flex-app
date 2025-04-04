@@ -1,9 +1,9 @@
-import React from "react";
-import { FormProvider } from "./FormContext";
-import { useFormContext } from "./FormContext";
-import FormOne from "./FormOne";
-import FormTwo from "./FormTwo";
-import Success from "./Success";
+import React from 'react';
+import { FormProvider } from './FormContext';
+import { useFormContext } from './FormContext';
+import FormOne from './FormOne';
+import FormTwo from './FormTwo';
+import Success from './Success';
 
 const FormContent = () => {
   const { currentStep } = useFormContext();

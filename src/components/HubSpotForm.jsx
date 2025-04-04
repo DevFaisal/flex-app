@@ -1,12 +1,12 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
 const HubSpotForm = () => {
   useEffect(() => {
-    if (!document.querySelector("#hubspot-script")) {
-      const script = document.createElement("script");
-      script.src = "https://js-na2.hsforms.net/forms/embed/242302234.js";
+    if (!document.querySelector('#hubspot-script')) {
+      const script = document.createElement('script');
+      script.src = 'https://js-na2.hsforms.net/forms/embed/242302234.js';
       script.defer = true;
-      script.id = "hubspot-script";
+      script.id = 'hubspot-script';
       document.body.appendChild(script);
     }
   }, []);

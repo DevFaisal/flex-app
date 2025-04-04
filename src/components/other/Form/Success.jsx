@@ -1,8 +1,8 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { MdOutlineDone } from "react-icons/md";
-import icon from "../../../assets/icons/flexicon.svg";
-import useFormStore from "./store/FormStore";
+import React from 'react';
+import { motion } from 'motion/react';
+import { MdOutlineDone } from 'react-icons/md';
+import icon from '../../../assets/icons/flexicon.svg';
+import useFormStore from './store/FormStore';
 
 const Success = () => {
   const number = useFormStore((state) => state.number);
@@ -20,7 +20,8 @@ const Success = () => {
         </span>
         <h4 className=" font-bold">Perfect</h4>
         <h6 className=" text-nowrap">
-          You are number <span className="font-bold text-secondary">{number}</span> on the waitlist !
+          You are number <span className="font-bold text-secondary">{number}</span> on the waitlist
+          !
         </h6>
         <p className="text-sm font-light">flexcard.app coming soon...</p>
       </motion.div>

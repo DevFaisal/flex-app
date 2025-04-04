@@ -1,43 +1,43 @@
-import React from "react";
-import { useEffect } from "react";
-import Navbar from "../components/view/Navbar";
+import React from 'react';
+import { useEffect } from 'react';
+import Navbar from '../components/view/Navbar';
 
 const FooterRoutes = [
   {
-    path: "terms",
-    element: () => PageWrapper("Terms of Service"),
+    path: 'terms',
+    element: () => PageWrapper('Terms of Service'),
   },
   {
-    path: "privacy-policy",
-    element: () => PageWrapper("Privacy Policy"),
+    path: 'privacy-policy',
+    element: () => PageWrapper('Privacy Policy'),
   },
   {
-    path: "legal",
-    element: () => PageWrapper("Legal"),
+    path: 'legal',
+    element: () => PageWrapper('Legal'),
   },
   {
-    path: "vulnerability",
-    element: () => PageWrapper("Vulnerability"),
+    path: 'vulnerability',
+    element: () => PageWrapper('Vulnerability'),
   },
   {
-    path: "cookies",
-    element: () => PageWrapper("Cookies"),
+    path: 'cookies',
+    element: () => PageWrapper('Cookies'),
   },
   {
-    path: "modern-slavery",
-    element: () => PageWrapper("Modern Slavery"),
+    path: 'modern-slavery',
+    element: () => PageWrapper('Modern Slavery'),
   },
   {
-    path: "candidate-privacy",
-    element: () => PageWrapper("Candidate Privacy"),
+    path: 'candidate-privacy',
+    element: () => PageWrapper('Candidate Privacy'),
   },
   {
-    path: "help",
-    element: () => PageWrapper("Help"),
+    path: 'help',
+    element: () => PageWrapper('Help'),
   },
   {
-    path: "contact",
-    element: () => PageWrapper("Contact"),
+    path: 'contact',
+    element: () => PageWrapper('Contact'),
   },
 ];
 
@@ -47,7 +47,7 @@ function PageWrapper(title) {
   useEffect(() => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   }, []);
 

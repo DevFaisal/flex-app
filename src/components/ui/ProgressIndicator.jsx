@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react';
 
-const ProgressIndicator = ({ steps, currentStep, className = "" }) => {
+const ProgressIndicator = ({ steps, currentStep, className = '' }) => {
   // Helper function to determine the color based on step status
   const getStepColor = (currentStep, index) => {
     if (index < currentStep) {
-      return "bg-green-500"; // Completed step
+      return 'bg-green-500'; // Completed step
     } else if (index === currentStep) {
-      return "bg-blue-500"; // Current step
+      return 'bg-blue-500'; // Current step
     } else {
-      return "bg-gray-300"; // Future step
+      return 'bg-gray-300'; // Future step
     }
   };
 
@@ -30,9 +30,7 @@ const ProgressIndicator = ({ steps, currentStep, className = "" }) => {
             >
               {index + 1}
             </div>
-            <span className="text-xs md:text-sm font-bold mt-2 uppercase text-center">
-              {step}
-            </span>
+            <span className="text-xs md:text-sm font-bold mt-2 uppercase text-center">{step}</span>
           </div>
         ))}
 
@@ -40,7 +38,7 @@ const ProgressIndicator = ({ steps, currentStep, className = "" }) => {
           className="absolute top-5 md:top-6 left-4 right-0 h-1.5 bg-gray-200 z-0"
           style={{
             width: `calc(93% - ${steps.length > 1 ? 24 : 0}px)`,
-            margin: "0 auto",
+            margin: '0 auto',
           }}
         ></div>
 
@@ -52,8 +50,8 @@ const ProgressIndicator = ({ steps, currentStep, className = "" }) => {
           style={{
             width: `${progressPercentage}%`,
             maxWidth: `calc(94% - ${steps.length > 1 ? 24 : 0}px)`,
-            margin: "0 auto",
-            transform: "translateX(12px)",
+            margin: '0 auto',
+            transform: 'translateX(12px)',
           }}
         ></div>
       </div>

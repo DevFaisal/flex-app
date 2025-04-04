@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import HeaderNote from "../../../../components/ui/HeaderNote";
-import { feedbackData } from "../../constants/constants";
-import feedbackIcon from "../../../../assets/svg/feedback.svg";
-import Carousel from "../../../../components/ui/Carousel";
+import React, { useState, useEffect } from 'react';
+import HeaderNote from '../../../../components/ui/HeaderNote';
+import { feedbackData } from '../../constants/constants';
+import feedbackIcon from '../../../../assets/svg/feedback.svg';
+import Carousel from '../../../../components/ui/Carousel';
 
 const Feedback = () => {
   const [visibleCards, setVisibleCards] = useState(1);
@@ -13,8 +13,8 @@ const Feedback = () => {
     };
 
     handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   // Split feedbackData into chunks of `visibleCards` size

@@ -1,5 +1,5 @@
-import React from "react";
-import logo from "../assets/logo/logo.svg";
+import React from 'react';
+import logo from '../assets/logo/logo.svg';
 
 const Index = () => {
   return (

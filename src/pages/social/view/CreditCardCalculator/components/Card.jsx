@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
-import InputView from "./InputView";
-import { MdQuestionMark } from "react-icons/md";
-import Tooltip from "../../../../../components/ui/Tooltip";
-import Button from "../../../../../components/ui/Button";
+import React, { useEffect, useState } from 'react';
+import InputView from './InputView';
+import { MdQuestionMark } from 'react-icons/md';
+import Tooltip from '../../../../../components/ui/Tooltip';
+import Button from '../../../../../components/ui/Button';
 
 const Card = () => {
-  const [balance, setBalance] = useState("");
-  const [interestRate, setInterestRate] = useState("");
+  const [balance, setBalance] = useState('');
+  const [interestRate, setInterestRate] = useState('');
   const [progress, setProgress] = useState(50);
   const [apr, setApr] = useState(25);
 
@@ -52,13 +52,19 @@ const Card = () => {
     <div className="p-3 md:p-5 px-5 md:px-6 border-[#C1C7CD] border-[3.5px] border-dashed rounded-3xl bg-white z-[9999] w-full max-w-xl">
       {/* Inputs - Stacked on mobile, side-by-side on larger screens */}
       <div className="flex flex-col md:flex-row gap-3 mb-4">
-        <LabelledInput label={"Spending"} value={balance} setValue={setBalance} symbol={"£"} type={"number"} />
         <LabelledInput
-          label={"Credit Limit"}
+          label={'Spending'}
+          value={balance}
+          setValue={setBalance}
+          symbol={'£'}
+          type={'number'}
+        />
+        <LabelledInput
+          label={'Credit Limit'}
           value={interestRate}
           setValue={setInterestRate}
-          symbol={"£"}
-          type={"number"}
+          symbol={'£'}
+          type={'number'}
         />
       </div>
 
@@ -69,7 +75,7 @@ const Card = () => {
             Min Payment
             <Tooltip
               Icon={<MdQuestionMark size={12} />}
-              text={"This is the minimum payment you need to make to avoid late fees."}
+              text={'This is the minimum payment you need to make to avoid late fees.'}
             />
           </h6>
 
@@ -97,12 +103,12 @@ const Card = () => {
                 onClick={() => handleSliderChange(step)}
                 className={`
                     w-[10px] h-[10px] md:w-[12px] md:h-[12px] -top-[-3.5px] rounded-full border-2 border-white shadow-md 
-                    ${progress >= step ? "bg-white" : "bg-gray-300"}
+                    ${progress >= step ? 'bg-white' : 'bg-gray-300'}
                     absolute
                   `}
                 style={{
                   left: `${step}%`,
-                  transform: "translateX(-210%)",
+                  transform: 'translateX(-210%)',
                 }}
               />
             ))}
@@ -115,14 +121,18 @@ const Card = () => {
 
       {/* Financial Insights - Stacked on mobile */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-1 md:gap-2">
-        <InputView symbol={"£"} title={"Monthly Repayments"} amount={monthlyRepayment} />
+        <InputView symbol={'£'} title={'Monthly Repayments'} amount={monthlyRepayment} />
         <InputView
-          symbol={"%"}
-          title={"Interest Rate (APR %)"}
+          symbol={'%'}
+          title={'Interest Rate (APR %)'}
           amount={apr || 0}
           tooltipText={`This is the interest rate you're charged on your credit card. It's usually expressed as an annual percentage rate (APR).`}
         />
-        <InputView symbol={"£"} title={"Monthly Interest Charged"} amount={monthlyInterestCharged} />
+        <InputView
+          symbol={'£'}
+          title={'Monthly Interest Charged'}
+          amount={monthlyInterestCharged}
+        />
       </div>
 
       {/* Savings Section */}
@@ -130,13 +140,13 @@ const Card = () => {
         <h6 className="py-2 text-[#21272A]">Monthly interest saved</h6>
         <div className="flex flex-col md:flex-row justify-between items-center bg-secondary p-3 rounded-xl">
           <h2 className="font-bold text-white truncate">
-            £{parseFloat(monthlySavings).toFixed(2).toLocaleString("en-GB")}
+            £{parseFloat(monthlySavings).toFixed(2).toLocaleString('en-GB')}
           </h2>
-          <Button type="white" className="text-xs md:text-sm" label={"Find Out More"} />
+          <Button type="white" className="text-xs md:text-sm" label={'Find Out More'} />
         </div>
         <p className="pt-4 text-[#7B838B]">
-          <strong>Note:</strong> This calculator is a guide only and illustrates how "Pay For What You Owe" interest
-          works.
+          <strong>Note:</strong> This calculator is a guide only and illustrates how "Pay For What
+          You Owe" interest works.
         </p>
       </div>
     </div>

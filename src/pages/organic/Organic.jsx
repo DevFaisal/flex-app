@@ -1,10 +1,10 @@
-import React from "react";
-import HeroSection from "./components/HeroSection";
-import CheckQaulify from "./components/CheckQaulify";
-import BetaPerks from "./components/BetaPerks";
-import JoinWaitlist from "./components/JoinWaitlist";
-import Feedback from "./components/Feedback";
-import Join from "./components/Join";
+import React from 'react';
+import HeroSection from './components/HeroSection';
+import CheckQaulify from './components/CheckQaulify';
+import BetaPerks from './components/BetaPerks';
+import JoinWaitlist from './components/JoinWaitlist';
+import Feedback from './components/Feedback';
+import Join from './components/Join';
 
 const Organic = () => {
   return (

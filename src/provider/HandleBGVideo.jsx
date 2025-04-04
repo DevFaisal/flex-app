@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import BackgroundVideo from "../components/other/BackgroundVideo";
+import { useEffect, useState } from 'react';
+import BackgroundVideo from '../components/other/BackgroundVideo';
 
 const HandleBGVideo = ({ children }) => {
   const TIMEOUT_DURATION = window.innerWidth <= 768 ? 600 : 1400;

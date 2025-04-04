@@ -1,41 +1,46 @@
-import React from "react";
-import image from "../../../../assets/png/image.png";
-import { motion } from "motion/react";
-import Form from "../../../../components/other/Form/Form";
+import React from 'react';
+import image from '../../../../assets/png/image.png';
+import { motion } from 'motion/react';
+import Form from '../../../../components/other/Form/Form';
 
 const JoinTheFlex = () => {
   const features = [
     {
-      icon: "/cash.svg",
-      title: "Pay For What You Owe",
+      icon: '/cash.svg',
+      title: 'Pay For What You Owe',
       description: `Save interest when you make partial repayments. <br /> Only pay for what you actually owe – not your full statement.`,
     },
     {
-      icon: "/percent.svg",
-      title: "Representative 25% APR (Variable)",
-      description: "We cap your interest rate at 25%. No sneaky jumps. <br /> Subject to credit status.",
+      icon: '/percent.svg',
+      title: 'Representative 25% APR (Variable)',
+      description:
+        'We cap your interest rate at 25%. No sneaky jumps. <br /> Subject to credit status.',
     },
     {
-      icon: "/cashback.svg",
-      title: "1% Cashback on All Purchases (12 Months)",
-      description: "Earn 1% cashback on every purchase – up to £15/month, <br /> for your first year.*",
+      icon: '/cashback.svg',
+      title: '1% Cashback on All Purchases (12 Months)',
+      description:
+        'Earn 1% cashback on every purchase – up to £15/month, <br /> for your first year.*',
     },
     {
-      icon: "/credit-limit.svg",
-      title: "Up to £1,200 Credit Limit*",
-      description: "Credit subject to status",
+      icon: '/credit-limit.svg',
+      title: 'Up to £1,200 Credit Limit*',
+      description: 'Credit subject to status',
     },
     {
-      icon: "/metal-card.svg",
-      title: "Free Metal Card",
-      description: "The first 1,500 customers get our premium metal card – on us.*",
+      icon: '/metal-card.svg',
+      title: 'Free Metal Card',
+      description: 'The first 1,500 customers get our premium metal card – on us.*',
     },
   ];
 
   // bg-gray-900
 
   return (
-    <section id="join" className="relative py-10 md:py-19 flex flex-col xl:flex-row gap-10 bg-opacity-80">
+    <section
+      id="join"
+      className="relative py-10 md:py-19 flex flex-col xl:flex-row gap-10 bg-opacity-80"
+    >
       <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
         <div className="absolute h-full w-full bg-black/40" />
         <img className="w-full h-full object-cover" src={image} alt="Background" />
@@ -74,7 +79,7 @@ const JoinTheFlex = () => {
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0, ease: "easeInOut", stiffness: 100 }}
+            transition={{ duration: 0.6, delay: 0, ease: 'easeInOut', stiffness: 100 }}
             exit={{ opacity: 0, scale: 0.8 }}
             className="bg-white p-4 justify-center items-center bg-opacity-80 rounded-lg z-10 mx-4 md:h-[600px] md:px-7"
           >
@@ -83,7 +88,13 @@ const JoinTheFlex = () => {
         </div>
 
         <div className="hidden xl:block absolute -top-[13%] xl:right-[42.5%]  z-[-10]">
-          <svg width="81" height="364" viewBox="0 0 81 364" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            width="81"
+            height="364"
+            viewBox="0 0 81 364"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <path
               d="M2 -293L2 90.5L2 283C2 326.63 37.3695 362 81 362V362"
               stroke="white"

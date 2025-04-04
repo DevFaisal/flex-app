@@ -1,5 +1,5 @@
-import { motion, useAnimate } from "motion/react";
-import { useEffect } from "react";
+import { motion, useAnimate } from 'motion/react';
+import { useEffect } from 'react';
 
 const CardStack = () => {
   const [greenCard, animate] = useAnimate();

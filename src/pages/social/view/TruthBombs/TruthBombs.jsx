@@ -1,8 +1,8 @@
-import React from "react";
-import img from "../../../../assets/png/creditcard.png";
-import { promoCards } from "../../constants/constants";
-import { useTakeQuizStore } from "../../store/calculateStore";
-import Marquee from "react-fast-marquee";
+import React from 'react';
+import img from '../../../../assets/png/creditcard.png';
+import { promoCards } from '../../constants/constants';
+import { useTakeQuizStore } from '../../store/calculateStore';
+import Marquee from 'react-fast-marquee';
 
 const TruthBombs = () => {
   const { handleNextStepWithScroll } = useTakeQuizStore((state) => state);
@@ -12,10 +12,15 @@ const TruthBombs = () => {
       id="testimonials"
       className="relative pt-8 pb-10 bg-gradient-to-r from-[#0569E8] to-[#76D232] overflow-hidden z-20 flex flex-col justify-center items-center"
     >
-      <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: `url(${img})` }} />
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-20"
+        style={{ backgroundImage: `url(${img})` }}
+      />
 
       <div className="flex flex-col justify-center items-center z-50">
-        <h2 className="text-3xl md:text-4xl font-bold text-white relative z-50">Credit Card Truth Bombs</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-white relative z-50">
+          Credit Card Truth Bombs
+        </h2>
         <p className="text-sm md:text-xl mt-2 text-gray-300 relative z-50">
           Things the credit card industry doesn't want you to know.
         </p>
@@ -40,7 +45,14 @@ const TruthBombs = () => {
 
 export default TruthBombs;
 
-function PromoCard({ icon, title, description, ctaText = "Take the Quiz", onCtaClick = () => {}, className = "" }) {
+function PromoCard({
+  icon,
+  title,
+  description,
+  ctaText = 'Take the Quiz',
+  onCtaClick = () => {},
+  className = '',
+}) {
   return (
     <div
       className={`bg-white flex-shrink-0 flex-col rounded-md h-auto w-[240px] md:w-[350px] md:h-[350px] flex items-start justify-start md:gap-6 py-8 md:py-0  px-5 md:px-4 snap-start max-w-md ${className} shadow-[0_8px_30px_rgb(0,0,0,0.12)] border-[1px] border-gray-200 md:even:mt-13`}

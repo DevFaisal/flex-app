@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import HeaderNote from "../../../../components/ui/HeaderNote";
-import { FaPlus, FaMinus, FaArrowRight } from "react-icons/fa";
-import Button from "../../../../components/ui/Button";
-import { faqData } from "../../constants/constants";
-import Model from "../../../../components/ui/Model";
+import React, { useState } from 'react';
+import HeaderNote from '../../../../components/ui/HeaderNote';
+import { FaPlus, FaMinus, FaArrowRight } from 'react-icons/fa';
+import Button from '../../../../components/ui/Button';
+import { faqData } from '../../constants/constants';
+import Model from '../../../../components/ui/Model';
 
 const FlexFAQ = () => {
   const [openFaq, setOpenFaq] = useState(null);
@@ -24,7 +24,7 @@ const FlexFAQ = () => {
         <div className="">
           <Button
             type="secondary"
-            label={"Read All FAQs"}
+            label={'Read All FAQs'}
             icon={<FaArrowRight />}
             onClick={() => {
               setIsOpen(true);
@@ -33,7 +33,7 @@ const FlexFAQ = () => {
         </div>
       </div>
 
-      <Model onClose={() => setIsOpen(!isOpen)} isOpen={isOpen} title={"FAQ"}>
+      <Model onClose={() => setIsOpen(!isOpen)} isOpen={isOpen} title={'FAQ'}>
         <RenderFAQ faqData={faqData} openFaq={openFaq} toggleFaq={toggleFaq} />
       </Model>
 
@@ -61,12 +61,14 @@ function RenderFAQ({ faqData, openFaq, toggleFaq }) {
               <span>{faq.icon}</span>
               <h5 className="font-medium">{faq.question}</h5>
             </div>
-            <span className="text-xl text-gray-600">{openFaq === index ? <FaMinus /> : <FaPlus />}</span>
+            <span className="text-xl text-gray-600">
+              {openFaq === index ? <FaMinus /> : <FaPlus />}
+            </span>
           </button>
 
           <div
             className={`px-4 pb-4 pt-0 transition-all duration-300 space-y-2 ${
-              openFaq === index ? "block opacity-100" : "hidden opacity-0"
+              openFaq === index ? 'block opacity-100' : 'hidden opacity-0'
             }`}
           >
             <div className="ml-12">{faq.answer}</div>

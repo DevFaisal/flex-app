@@ -1,6 +1,6 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { IoClose } from "react-icons/io5";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { IoClose } from 'react-icons/io5';
 
 const Model = ({ title, children, isOpen, onClose }) => {
   if (!isOpen) return null;
@@ -25,7 +25,7 @@ const Model = ({ title, children, isOpen, onClose }) => {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.8, y: -40 }}
           transition={{
-            type: "spring",
+            type: 'spring',
             damping: 25,
             stiffness: 300,
             duration: 0.5,
