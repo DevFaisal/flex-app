@@ -70,8 +70,9 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-3 lg:space-x-5">
-          {navLinks.map((link) => (
+          {navLinks.map((link, idx) => (
             <button
+              key={Math.random() * idx}
               onClick={() => handleScrollTo(link.link)}
               className="font-semibold text-white hover:text-white/80 transition-colors"
             >

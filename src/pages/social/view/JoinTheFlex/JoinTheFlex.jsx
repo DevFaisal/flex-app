@@ -35,7 +35,7 @@ const JoinTheFlex = () => {
   // bg-gray-900
 
   return (
-    <section id="join" className="relative py-10 md:py-10 flex flex-col xl:flex-row gap-10 bg-opacity-80">
+    <section id="join" className="relative py-10 md:py-19 flex flex-col xl:flex-row gap-10 bg-opacity-80">
       <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
         <div className="absolute h-full w-full bg-black/40" />
         <img className="w-full h-full object-cover" src={image} alt="Background" />
@@ -69,20 +69,20 @@ const JoinTheFlex = () => {
           </div>
         </div>
 
-        <div className="flex-1 relative max-w-xl mx-auto rounded-lg">
+        <div className="flex-1 relative w-full md:max-w-xl mx-auto rounded-lg">
           <div className="hidden xl:block absolute translate-y-6 border-[3.5px] border-dashed border-white bg-opacity-50 rounded-lg -translate-x-5 h-full w-full -z-10" />
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0, ease: "easeInOut", stiffness: 100 }}
             exit={{ opacity: 0, scale: 0.8 }}
-            className="bg-white p-4 justify-center items-center bg-opacity-80 rounded-lg z-10 mx-4"
+            className="bg-white p-4 justify-center items-center bg-opacity-80 rounded-lg z-10 mx-4 md:h-[600px] md:px-7"
           >
             <Form />
           </motion.div>
         </div>
 
-        <div className="hidden xl:block absolute -top-[6%] xl:right-[40.5%]  z-[-10]">
+        <div className="hidden xl:block absolute -top-[13%] xl:right-[42.5%]  z-[-10]">
           <svg width="81" height="364" viewBox="0 0 81 364" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M2 -293L2 90.5L2 283C2 326.63 37.3695 362 81 362V362"

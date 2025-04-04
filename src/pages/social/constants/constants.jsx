@@ -223,8 +223,8 @@ export const questions = [
   {
     question: "If you pay half of your credit card bill, how much interest do you pay?",
     answers: [
-      "A) Only on what’s left unpaid (Seems fair, right?)",
-      "B) On the full statement amount (Yes, really! Even if you paid half!",
+      "A) Only on what’s left unpaid  (Seems fair, right?)",
+      "B) On the full statement amount (Yes, really! Even if you paid half!)",
     ],
     correctAnswer: "A) Only on what’s left unpaid (Seems fair, right?)",
   },

@@ -27,8 +27,8 @@ const Feedback = () => {
       <HeaderNote note="What People Are Saying" desc="Pay For What You Owe" />
       <div className="container mx-auto px-4 md:px-8 py-6 md:py-10">
         <Carousel autoSlide={true} autoSlideInterval={5000}>
-          {feedbackData.map((card) => (
-            <div key={card.id} className="min-w-full ">
+          {feedbackData.map((card, idx) => (
+            <div key={Math.random() * idx} className="min-w-full ">
               <div className="grid grid-cols-1 lg:grid-cols-2 p-10 lg:px-30">
                 {cardIndices.map((idx) => (
                   <FeedbackCard key={`${idx}-${feedbackData[idx].author}`} {...feedbackData[idx]} />

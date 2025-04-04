@@ -65,6 +65,13 @@ function Quiz() {
     }
   }
 
+  function handleLearnMore() {
+    window.scrollTo({
+      top: document.getElementById("calculator").offsetTop,
+      behavior: "smooth",
+    });
+  }
+
   return (
     <div className="w-full max-w-3xl mx-auto">
       {!isCompleted ? (
@@ -90,28 +97,31 @@ function Quiz() {
           </div>
 
           <div className="w-full">
-            <h5 className="text-xl md:text-2xl font-bold text-center mb-8">{currentQuestion.question}</h5>
+            <h5 className="text-xl md:text-2xl font-bold text-center mb-5 md:mb-8">{currentQuestion.question}</h5>
 
             <div className="w-full space-y-4">
               {currentQuestion.answers.map((answer, index) => (
                 <button
                   key={index}
                   onClick={() => handleAnswerClick(answer)}
-                  className="px-5 py-4 rounded-lg bg-[#F2F4F8] w-full text-nowrap border border-[#DDE1E6] text-left hover:bg-gray-200 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="px-3 py-2 md:px-5 md:py-4 rounded-lg bg-[#F2F4F8] w-full border border-[#DDE1E6] text-left hover:bg-gray-200 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
-                  <h6 className="">{answer}</h6>
+                  <h6 className="">
+                    <span className="font-bold">{answer.split("(")[0]}</span>
+                    <span className="">{"(" + answer.split("(")[1]}</span>
+                  </h6>
                 </button>
               ))}
             </div>
           </div>
         </div>
       ) : (
-        <div className="text-center py-10 px-4 flex flex-col justify-center items-center gap-4">
+        <div className="text-center py-8 px-4 flex flex-col justify-center items-center gap-2">
           <span className="flex justify-center items-center bg-[#76D232]/50 p-4 rounded-full">
-            <MdOutlineDone size={90} className="text-white" />
+            <MdOutlineDone className="text-white text-3xl lg:text-7xl" />
           </span>
 
-          <h2 className="text-2xl font-bold mb-4">Quiz Completed!</h2>
+          <h2 className="text-2xl font-bold mb-2">Quiz Completed!</h2>
           <p className="text-xl font-bold text-blue-600 mb-4">
             Your Score: {score}/{questions.length}
           </p>
@@ -119,8 +129,18 @@ function Quiz() {
             There's a lot the credit card industry doesn't tell you. FlexCard is designed to be transparent and fair.
           </p>
           <div className="flex gap-4">
-            <Button type="secondary" label={`Share Your Score ->`} />
-            <Button type="black" label={`Return to Facts`} onClick={() => resetQuiz()} />
+            <Button
+              type="secondary"
+              label="Learn More"
+              className="w-full sm:w-auto text-xs"
+              onClick={() => handleLearnMore()}
+            />
+            <Button
+              type="black"
+              label={`Return to Facts`}
+              className="w-full sm:w-auto text-xs"
+              onClick={() => resetQuiz()}
+            />
           </div>
         </div>
       )}

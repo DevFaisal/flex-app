@@ -43,15 +43,15 @@ export default TruthBombs;
 function PromoCard({ icon, title, description, ctaText = "Take the Quiz", onCtaClick = () => {}, className = "" }) {
   return (
     <div
-      className={`bg-white flex-shrink-0 flex-col rounded-md h-auto w-[240px] md:w-[350px] md:h-[350px] flex items-start justify-start gap-10 py-1 px-2 md:py-1 md:px-4 snap-start max-w-md ${className} shadow-[0_8px_30px_rgb(0,0,0,0.12)] border-[1px] border-gray-200 md:even:mt-13`}
+      className={`bg-white flex-shrink-0 flex-col rounded-md h-auto w-[240px] md:w-[350px] md:h-[350px] flex items-start justify-start md:gap-6 py-8 md:py-0  px-5 md:px-4 snap-start max-w-md ${className} shadow-[0_8px_30px_rgb(0,0,0,0.12)] border-[1px] border-gray-200 md:even:mt-13`}
     >
-      <div className="flex items-start  pt-5 justify-center  ">
+      <div className="flex items-center justify-start 0 pt-5  ">
         <div className="mr-2">
           <img src={icon} alt="icon" className="w-30 h-30" />
         </div>
 
         <div>
-          <h4 className="font-bold  text-black ">{title}</h4>
+          <h4 className="font-bold  text-black">{title}</h4>
         </div>
       </div>
       <h5 className=" text-gray-800">{description}</h5>
