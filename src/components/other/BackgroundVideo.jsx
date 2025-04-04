@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import videoWebm from "../../assets/videos/background.webm";
 import Index from "../../pages/social/Social";
 
-const BackgroundVideo = ({ handleEndVideo = () => {}, speed = 1.5 }) => {
+const BackgroundVideo = ({ handleEndVideo = () => {}, speed = 2.5 }) => {
   const videoRef = useRef(null);
   const videoError = useRef(false);
 
