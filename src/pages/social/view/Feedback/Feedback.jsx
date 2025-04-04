@@ -49,9 +49,9 @@ const FeedbackCard = ({ text, author, role, profile }) => (
       <div className="text-blue-600 transform hover:scale-105 transition-transform">
         <img src={feedbackIcon} alt="Feedback icon" className="w-12 h-12 md:w-16 md:h-16" />
       </div>
-      <p className="flex-1 text-gray-800 text-base md:text-lg leading-relaxed text-center font-light tracking-wide">
+      <h5 className="flex-1 text-gray-800 text-base md:text-xl leading-relaxed text-center font-light tracking-wide">
         {text}
-      </p>
+      </h5>
     </div>
     <div className="flex flex-col mt-2 md:mt-4 justify-center items-center space-y-2 md:space-y-3">
       <div className="rounded-full bg-gray-100">
