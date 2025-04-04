@@ -27,6 +27,13 @@ const HeroSection = () => {
 export default memo(HeroSection);
 
 const LeftSection = memo(() => {
+  function handleScroll(target) {
+    window.scrollTo({
+      top: document.getElementById(target).offsetTop,
+      behavior: "smooth",
+    });
+  }
+
   const title = (
     <h1 className="title font-bold text-white leading-tight tracking-tight text-center xl:text-left">
       <span className="text-nowrap">Pay For What You Owe</span>{" "}
@@ -43,8 +50,18 @@ const LeftSection = memo(() => {
 
   const buttons = (
     <div className="flex flex-col sm:flex-row items-center justify-center xl:justify-start gap-3 mt-8 sm:mt-3 w-full">
-      <Button type="white" label="Learn More" className="w-full sm:w-auto text-xs" />
-      <Button type="outline" label="Join The Waitlist" className="w-full sm:w-auto text-xs" />
+      <Button
+        type="white"
+        label="Learn More"
+        className="w-full sm:w-auto text-xs"
+        onClick={() => handleScroll("calculator")}
+      />
+      <Button
+        type="outline"
+        label="Join The Waitlist"
+        className="w-full sm:w-auto text-xs"
+        onClick={() => handleScroll("join")}
+      />
     </div>
   );
 

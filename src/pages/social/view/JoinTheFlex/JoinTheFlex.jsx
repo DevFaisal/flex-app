@@ -1,6 +1,6 @@
 import React from "react";
 import image from "../../../../assets/png/image.png";
-import { MdDone } from "react-icons/md";
+import { motion } from "motion/react";
 import Form from "../../../../components/other/Form/Form";
 
 const JoinTheFlex = () => {
@@ -35,22 +35,24 @@ const JoinTheFlex = () => {
   // bg-gray-900
 
   return (
-    <section className="relative py-10 md:py-10 flex flex-col xl:flex-row gap-10 bg-opacity-80">
+    <section id="join" className="relative py-10 md:py-10 flex flex-col xl:flex-row gap-10 bg-opacity-80">
       <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
         <div className="absolute h-full w-full bg-black/40" />
         <img className="w-full h-full object-cover" src={image} alt="Background" />
       </div>
 
-      <div className="relative mx-w-5xl lg:max-w-[1900px] mx-auto z-10 w-full flex flex-col px-5 md:px-8 lg:flex-row md:gap-10 items-center gap-10">
+      <div className="relative mx-w-5xl lg:max-w-[1500px] mx-auto z-10 w-full flex flex-col px-5 md:px-8 lg:flex-row md:gap-10 items-center gap-10">
         <div className="flex-1 flex flex-col gap-6 bg-opacity-80 w-full px-5 md:px-8">
-          <h1 className="self-stretch font-bold text-white md:leading-[46.2px] [font-family:'Manrope',Helvetica]">
-            Join the FlexCard <br />
-            Revolution
-          </h1>
-          <p className="self-stretch font-medium text-lg tracking-[1.00px] text-white leading-normal [font-family:'Manrope',Helvetica]">
-            Be among the first to get your hands on a credit card that's <br />
-            designed to be fair and transparent.
-          </p>
+          <div className="w-full">
+            <h1 className="subtitle self-stretch font-bold text-white leading-tight [font-family:'Manrope',Helvetica]">
+              Join the FlexCard <br />
+              Revolution
+            </h1>
+            <p className="pt-2 self-stretch font-medium text-lg tracking-[1.00px] text-white leading-normal [font-family:'Manrope',Helvetica]">
+              Be among the first to get your hands on a credit card that's <br />
+              designed to be fair and transparent.
+            </p>
+          </div>
           <div className="flex flex-1 flex-col items-start gap-4 md:gap-7 mt-4">
             {features.map((feature, index) => (
               <div key={index} className="flex items-start gap-4 text-white">
@@ -69,17 +71,18 @@ const JoinTheFlex = () => {
 
         <div className="flex-1 relative max-w-xl mx-auto rounded-lg">
           <div className="hidden xl:block absolute translate-y-6 border-[3.5px] border-dashed border-white bg-opacity-50 rounded-lg -translate-x-5 h-full w-full -z-10" />
-          {/* <div className="bg-white p-4 justify-center items-center bg-opacity-80 rounded-lg z-10">
-            <span className=" flex flex-col justify-center px-2 md:py-5 h-[30rem] md:h-[25rem] overflow-hidden">
-              <Form />
-            </span>
-          </div> */}
-          <div className="bg-white p-4 justify-center items-center bg-opacity-80 rounded-lg z-10 mx-4">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0, ease: "easeInOut", stiffness: 100 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            className="bg-white p-4 justify-center items-center bg-opacity-80 rounded-lg z-10 mx-4"
+          >
             <Form />
-          </div>
+          </motion.div>
         </div>
 
-        <div className="hidden xl:block absolute -top-[12%] right-[48%] z-[-10]">
+        <div className="hidden xl:block absolute -top-[6%] xl:right-[40.5%]  z-[-10]">
           <svg width="81" height="364" viewBox="0 0 81 364" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M2 -293L2 90.5L2 283C2 326.63 37.3695 362 81 362V362"

@@ -57,10 +57,36 @@ li {
   @apply text-4xl md:text-5xl xl:text-5xl 2xl:text-6xl;
 }
 
+.subtitle {
+  @apply text-xl md:text-2xl xl:text-3xl 2xl:text-4xl;
+}
+
 .medium {
   @apply text-[3px] md:text-[15px];
 }
 
 .minute {
   @apply text-[12px] md:text-[13px];
+}
+
+@layer components {
+  .btn {
+    @apply py-3 px-4 rounded-full w-full font-semibold transition-colors;
+  }
+
+  .btn-black {
+    @apply py-3 px-4 rounded-full w-full text-xs md:text-sm font-semibold transition-colors bg-gray-900 text-white hover:bg-gray-800;
+  }
+
+  .btn-white {
+    @apply py-3 px-4 rounded-full w-full text-xs md:text-sm font-semibold transition-colors bg-white text-gray-900 hover:bg-gray-100 border border-gray-300;
+  }
+
+  .btn:hover {
+    @apply bg-gray-800;
+  }
+
+  .btn:focus {
+    @apply outline-none ring-2 ring-gray-900;
+  }
 }
