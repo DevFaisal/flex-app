@@ -51,15 +51,15 @@ function RenderFAQ({ faqData, openFaq, toggleFaq }) {
       {faqData.map((faq, index) => (
         <div
           key={index}
-          className="bg-white border-[0.3px] border-gray-400 rounded-lg cursor-pointer transition-all duration-300 hover:shadow-md"
+          className={`${openFaq == index ? 'bg-green-50' : 'bg-white'} border-[0.3px] border-gray-400 rounded-lg cursor-pointer transition-all duration-300 hover:shadow-md hover:scale-[1.01]`}
         >
           <button
             className="flex items-center justify-between w-full p-4 text-left focus:outline-none"
             onClick={() => toggleFaq(index)}
           >
             <div className="flex items-center gap-4">
-              <span>{faq.icon}</span>
-              <h5 className="font-medium">{faq.question}</h5>
+              {/* <span>{faq.icon}</span> */}
+              <h5 className="font-bold">{faq.question}</h5>
             </div>
             <span className="text-xl text-gray-600">
               {openFaq === index ? <FaMinus /> : <FaPlus />}
@@ -67,11 +67,11 @@ function RenderFAQ({ faqData, openFaq, toggleFaq }) {
           </button>
 
           <div
-            className={`px-4 pb-4 pt-0 transition-all duration-300 space-y-2 ${
-              openFaq === index ? 'block opacity-100' : 'hidden opacity-0'
+            className={`overflow-hidden transition-all duration-500 ease-in-out ${
+              openFaq === index ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
             }`}
           >
-            <div className="ml-12">{faq.answer}</div>
+            <div className="px-4 pb-4 pt-0 space-y-2 ml-12">{faq.answer}</div>
           </div>
         </div>
       ))}

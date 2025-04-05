@@ -4,6 +4,7 @@ const Button = ({
   type = 'primary',
   label,
   onClick,
+  cursor = 'pointer',
   className = '',
   disabled = false,
   fullWidth = false,
@@ -15,8 +16,7 @@ const Button = ({
   ariaLabel,
 }) => {
   // Shared button styles
-  const baseStyles =
-    'font-semibold rounded-lg transition-all duration-200 flex items-center justify-center cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary';
+  const baseStyles = `font-semibold rounded-lg transition-all duration-200 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary cursor-${cursor}`;
 
   // Size variations with improved padding and text sizes
   const sizeStyles = {

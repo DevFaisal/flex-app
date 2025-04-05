@@ -106,13 +106,11 @@ export const faqData = [
     question: 'Why the name Flex?',
     answer: (
       <div className="text-gray-700">
-        <p>Because credit should bend, not break you.</p>
-        <p>Picture two wallets, facing each other.</p>
-        <p>Or two coins, having a chat across the front desk.</p>
-        <p>It's about give and take — a fair way to borrow, repay, and move on.</p>
-        <p>Flex means freedom. Flex means choice.</p>
-        <p>Flex means you're in control — and you only pay for what you owe.</p>
-        <p>That's it. No tricks, no stress. Just credit that fits you.</p>
+        Because credit should bend, not break you. Picture two wallets, facing each other. Or two
+        coins, having a chat across the front desk. It's about give and take — a fair way to borrow,
+        repay, and move on. Flex means freedom. Flex means choice. Flex means you're in control —
+        and you only pay for what you owe. That's it. No tricks, no stress. Just credit that fits
+        you.
       </div>
     ),
   },
@@ -121,19 +119,12 @@ export const faqData = [
     question: 'What does Pay For What You Owe actually mean?',
     answer: (
       <div className="text-gray-700">
-        <p>
-          Most credit cards make you jump through hoops — you pay some off, but still get charged
-          interest on the whole amount. Not with Flex.
-        </p>
-        <p>With Flex, you only pay interest on what's left.</p>
-        <p>Let's say you've spent £1,000 and you repay £300.</p>
-        <p>You'll only pay interest on the remaining £700. That's it.</p>
-        <p>
-          You also get to choose how much to repay — 10%, 25%, 50%, 75%, or even a custom amount —
-          and we'll show you exactly how much interest you'll pay and how much you'll save with each
-          option.
-        </p>
-        <p>You stay in control, every step of the way.</p>
+        Most credit cards make you jump through hoops — you pay some off, but still get charged
+        interest on the whole amount. Not with Flex. With Flex, you only pay interest on what's
+        left. Let's say you've spent £1,000 and you repay £300. You'll only pay interest on the
+        remaining £700. That's it. You also get to choose how much to repay — 10%, 25%, 50%, 75%, or
+        even a custom amount — and we'll show you exactly how much interest you'll pay and how much
+        you'll save with each option. You stay in control, every step of the way.
       </div>
     ),
   },
@@ -142,17 +133,11 @@ export const faqData = [
     question: 'Can I get Flex now?',
     answer: (
       <div className="text-gray-700">
-        <p>Not just yet — but we're working on it!</p>
-        <p>
-          We're getting ready for Phase 1 of our launch, and we're doing things properly. That means
-          going through the official FCA application process, so we can launch with the right
-          protections in place.
-        </p>
-        <p>Wish us luck — and thanks for being part of the journey.</p>
-        <p>
-          If you join the waitlist now, you'll be one of the first to know when Flex goes live. No
-          obligations, no pressure.
-        </p>
+        Not just yet — but we're working on it! We're getting ready for Phase 1 of our launch, and
+        we're doing things properly. That means going through the official FCA application process,
+        so we can launch with the right protections in place. Wish us luck — and thanks for being
+        part of the journey. If you join the waitlist now, you'll be one of the first to know when
+        Flex goes live. No obligations, no pressure.
       </div>
     ),
   },
@@ -161,15 +146,9 @@ export const faqData = [
     question: 'Will joining the waitlist affect my credit score?',
     answer: (
       <div className="text-gray-700">
-        <p>Nope.</p>
-        <p>
-          Joining the waitlist is totally safe — there's no credit check and no impact on your
-          credit score.
-        </p>
-        <p>
-          We'll only run a check if (and when) you apply later — and even then, we'll make
-          everything crystal clear before you go ahead.
-        </p>
+        Nope. Joining the waitlist is totally safe — there's no credit check and no impact on your
+        credit score. We'll only run a check if (and when) you apply later — and even then, we'll
+        make everything crystal clear before you go ahead.
       </div>
     ),
   },
@@ -178,32 +157,36 @@ export const faqData = [
     question: 'How is Flex different from other credit cards?',
     answer: (
       <div className="text-gray-700">
-        <p>
-          We built Flex because we've made partial repayments, thought we were doing the right thing
-          — only to be hit with interest we didn't expect.
-        </p>
-        <p>
+        We built Flex because we've made partial repayments, thought we were doing the right thing —
+        only to be hit with interest we didn't expect.
+        <span className="block mt-2">
           So, we listened. We spoke to people like us, and built Flex for all of us — because real
           life isn't one-size-fits-all. And credit shouldn't be either.
-        </p>
-        <p>Let's break it down:</p>
-        <p className="font-bold mt-2">With traditional credit cards:</p>
-        <p>
+        </span>
+        <span className="block">Let's break it down:</span>
+        <span className="block font-bold mt-2">With traditional credit cards:</span>
+        <span className="block">
           You spend £1,000 on 8 March. Your statement closes on 10 March. You repay £500 on 20
           March.
-        </p>
-        <p>Sounds fair enough, right?</p>
-        <p>But here's the catch:</p>
-        <p>
+        </span>
+        <span className="block">Sounds fair enough, right?</span>
+        <span className="block">But here's the catch:</span>
+        <span className="block">
           You'll still be charged interest on the full £1,000 — not just the £500 you didn't repay.
-        </p>
-        <p>And not just from your statement date — but from the day you made the purchase.</p>
-        <p>That interest keeps compounding daily until you clear the full balance.</p>
-        <p>
+        </span>
+        <span className="block">
+          And not just from your statement date — but from the day you made the purchase.
+        </span>
+        <span className="block">
+          That interest keeps compounding daily until you clear the full balance.
+        </span>
+        <span className="block">
           So even when you're trying to do the right thing, you can end up paying more than you
           expected.
-        </p>
-        <p className="font-bold mt-2">Flex works differently — because we think differently:</p>
+        </span>
+        <span className="block font-bold mt-2">
+          Flex works differently — because we think differently:
+        </span>
         <ul className="list-disc pl-5 space-y-1 mt-1">
           <li>You choose how much to repay — 10%, 25%, 50%, 75%, or a custom amount</li>
           <li>We only charge interest on what's left, not your full statement</li>
@@ -214,10 +197,12 @@ export const faqData = [
           <li>Late fees are capped at £5, not £12 or more</li>
           <li>And yes, we're app-only, built for your phone and your lifestyle</li>
         </ul>
-        <p className="mt-2">
+        <span className="block mt-2">
           We built Flex to make credit work for real people — not just the system.
-        </p>
-        <p>No tricks. No compounding traps. Just credit that makes sense.</p>
+        </span>
+        <span className="block">
+          No tricks. No compounding traps. Just credit that makes sense.
+        </span>
       </div>
     ),
   },
@@ -226,8 +211,10 @@ export const faqData = [
     question: 'How do you keep my account safe?',
     answer: (
       <div className="text-gray-700">
-        <p>Flex is a digital-only credit card, and your security is baked into everything we do.</p>
-        <p>Here's how we look after you:</p>
+        <span className="block">
+          Flex is a digital-only credit card, and your security is baked into everything we do.
+        </span>
+        <span className="block font-semibold mt-2">Here's how we look after you:</span>
         <ul className="list-disc pl-5 space-y-1 mt-1">
           <li>We use bank-grade encryption to protect your data</li>
           <li>3D Secure (3DS) adds an extra layer of safety to your online payments</li>
@@ -235,7 +222,7 @@ export const faqData = [
           <li>Lost your card? Just freeze it instantly in the app</li>
           <li>Something suspicious? Our UK-based team is here to help</li>
         </ul>
-        <p className="mt-2">You're always in control — and we've got your back.</p>
+        <span className="block mt-2">You're always in control — and we've got your back.</span>
       </div>
     ),
   },
@@ -243,41 +230,38 @@ export const faqData = [
 
 export const questions = [
   {
-    question: 'If you pay half of your credit card bill, how much interest do you pay?',
-    answers: [
-      'A) Only on what’s left unpaid  (Seems fair, right?)',
-      'B) On the full statement amount (Yes, really! Even if you paid half!)',
-    ],
-    correctAnswer: 'A) Only on what’s left unpaid (Seems fair, right?)',
+    question: 'If you pay off half your credit card bill, how is interest typically charged?',
+    answers: ['A) Only on the remaining balance', 'B) On the full statement balance'],
+    correctAnswer: 'B) On the full statement balance',
+    explaination:
+      'Most credit cards charge interest on the <strong>full statement balance</strong> unless it’s repaid in full — even if you’ve made a partial payment.',
   },
   {
-    question: 'You return an item, so your bill goes down… right?',
-    answers: [
-      'A) Yes, refunds reduce what I owe (Logical, isn’t it?)',
-      `B) No, if it’s outside your statement cycle, YOU STILL HAVE TO PAY INTEREST!
-(Wait… what?!)`,
-    ],
-    correctAnswer: `B) No, if it’s outside your statement cycle, YOU STILL HAVE TO PAY INTEREST!
-(Wait… what?!)`,
+    question: 'You return an item after your statement is issued. Does that stop the interest?',
+    answers: ['A) Yes – refunds reduce what I owe immediately', `B) No – interest may still apply`],
+    correctAnswer: `B) No – interest may still apply`,
+    explaination:
+      'If a refund is processed outside your statement cycle, interest may still apply — unless the full balance was already paid.',
   },
   {
-    question: 'How long does it take to pay off £1,000 if you only make minimum payments?',
-    answers: ['A) 2-3 years(Sounds bad, but manageable?)', 'B) Over 10 years (Wait… 10 YEARS?!)'],
-    correctAnswer: 'B) Over 10 years (Wait… 10 YEARS?!)',
+    question: 'How long could it take to repay £1,000 by only making minimum payments?',
+    answers: ['A) 2–3 years', 'B) Over 10 years'],
+    correctAnswer: 'B) Over 10 years',
+    explaination:
+      'Minimum payments barely reduce your balance. You could be paying for a decade — with significant interest added over time.',
   },
   {
-    question: 'Ever noticed cashback and rewards never seem to suit you?',
-    answers: [
-      'A) Yes, I’ve had to change my spending just to use them (Yep, we’ve all been there!)',
-      'B) No, my card gives me the rewards I actually want (Are you sure? Or are you spending extra just to qualify? )',
-    ],
-    correctAnswer:
-      'B) No, my card gives me the rewards I actually want (Are you sure? Or are you spending extra just to qualify? )',
+    question: 'Do your credit card rewards reflect how you actually spend?',
+    answers: ['A) No – I have to change my spending to benefit', 'B) Yes – they’re tailored to me'],
+    correctAnswer: 'A) No – I have to change my spending to benefit',
+    explaination: `Most rewards are generic and not designed around your real spend. At Flex, our <strong>first 1,500 customers</strong> receive 1% cashback on all purchases for 12 months.*`,
   },
   {
     question:
-      'How much more does a £1,000 purchase actually cost if you only make minimum payments at 30% APR?',
-    answers: ['A) £1,400 (A little extra, right?)', 'B) Over £3,000 (Wait… triple the price?!)'],
-    correctAnswer: 'B) Over £3,000 (Wait… triple the price?!)',
+      'How much could a £1,000 purchase cost in total if you only make minimum payments at 30% APR?',
+    answers: ['A) Around £1,400', 'B) Over £3,000'],
+    correctAnswer: 'B) Over £3,000',
+    explaination:
+      'Minimum payments can triple the cost over time — turning a £1,000 purchase into a long-term burden. Minimum payments = maximum trap.',
   },
 ];

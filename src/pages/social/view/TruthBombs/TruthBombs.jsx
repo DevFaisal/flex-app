@@ -57,16 +57,17 @@ function PromoCard({
     <div
       className={`bg-white flex-shrink-0 flex-col rounded-md h-auto w-[240px] md:w-[350px] md:h-[350px] flex items-start justify-start md:gap-6 py-8 md:py-0  px-5 md:px-4 snap-start max-w-md ${className} shadow-[0_8px_30px_rgb(0,0,0,0.12)] border-[1px] border-gray-200 md:even:mt-13`}
     >
-      <div className="flex items-center justify-start 0 pt-5  ">
+      <div className="flex items-center justify-start 0 pt-5 ">
         <div className="mr-2">
-          <img src={icon} alt="icon" className="w-30 h-30" />
+          <img src={icon} alt="icon" className="w-35 h-35" />
         </div>
-
         <div>
-          <h4 className="font-bold  text-black">{title}</h4>
+          <h3 className="font-bold text-black">{title}</h3>
         </div>
       </div>
-      <h5 className=" text-gray-800">{description}</h5>
+      <div className="">
+        <h4 className=" text-gray-800">{description}</h4>
+      </div>
       {/* <button onClick={onCtaClick} className="flex items-center justify-center text-blue-500 font-medium ">
         <span className="mr-2 text-xl md:text-2xl border-2 border-gray-200 rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center hover:bg-gray-50 transition-colors">
           +

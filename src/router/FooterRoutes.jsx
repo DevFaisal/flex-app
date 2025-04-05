@@ -36,6 +36,10 @@ const FooterRoutes = [
     element: () => PageWrapper('Help'),
   },
   {
+    path: 'live-chat',
+    element: () => PageWrapper('Live Chat'),
+  },
+  {
     path: 'contact',
     element: () => PageWrapper('Contact'),
   },
@@ -52,10 +56,10 @@ function PageWrapper(title) {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-b from-gray-800 to-gray-900">
+    <div className="flex flex-col items-center justify-center h-screen  bg-gradient-to-r from-[#0569E8] to-[#76D232]">
       <Navbar />
       <h1 className="text-white font-bold text-3xl">{title}</h1>
-      <p className="text-gray-500">This is the {title} page.</p>
+      <p className="text-gray-200">This is the {title} page.</p>
     </div>
   );
 }
