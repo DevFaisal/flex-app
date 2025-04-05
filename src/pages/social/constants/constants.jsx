@@ -80,17 +80,29 @@ Interest`,
   },
   {
     title: `Rewards Are 
-Designed for 
-Banks, Not You`,
+    Designed for 
+    Banks, Not You`,
     description: `That cashback and rewards program? It’s built to make you spend more—not to help you save.`,
     icon: rewards,
   },
   {
     title: `70% of People 
-Want a Credit 
-Card That’s Fair`,
+    Want a Credit 
+    Card That’s Fair`,
     description: `We asked 2,500+ people what they wanted—70% said they wanted to “Pay for What You Owe.” So, we built Flex.`,
     icon: creditcard,
+  },
+  {
+    title: `Partial Payments?
+  Still Paying Full
+  Interest`,
+    description: `Paying more than the minimum but less than the full balance? Traditional credit cards still charge you interest on the full statement amount.`,
+    icon: partial,
+  },
+  {
+    title: `Refunds Aren’t Payments`,
+    description: `Returned an item? You might think it reduces what you owe… but if it’s after your statement cycle, you’ll still pay interest.`,
+    icon: refunds,
   },
 ];
 export const faqData = [
