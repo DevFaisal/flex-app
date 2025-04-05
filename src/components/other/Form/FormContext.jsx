@@ -1,10 +1,8 @@
 import React, { createContext, useState, useContext } from 'react';
 import { useForm } from 'react-hook-form';
 
-// Create context
 const FormContext = createContext();
 
-// Provider component
 export const FormProvider = ({ children }) => {
   const [currentStep, setCurrentStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);

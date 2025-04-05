@@ -21,13 +21,13 @@ const FormOne = () => {
   return (
     <div className="flex flex-col gap-6 h-full justify-evenly">
       <div>
-        <h2 className="font-bold text-center md:text-left">Join the Waitlist</h2>
-        <p className="mt-3 text-center md:text-left">
+        <h1 className="font-bold text-center md:text-left text-2xl md:text-4xl tracking-wide">Join the Waitlist</h1>
+        <h4 className="mt-3 text-center md:text-left">
           Be the first to get your FlexCard when we launch.
-        </p>
+        </h4>
       </div>
 
-      <div className="flex flex-col gap-4 mt-2">
+      <div className="flex flex-col gap-4 mt-2  px-3 md:px-5">
         <div>
           <Controller
             name="fullname"

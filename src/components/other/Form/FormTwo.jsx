@@ -71,7 +71,7 @@ const FormTwo = () => {
   };
 
   return (
-    <div className="flex flex-col gap-3 px-4 py-3">
+    <div className="flex flex-col gap-3 px-4 py-0">
       <h2 className="text-2xl md:text-3xl font-bold text-center md:text-left">
         Pre-Qualification Questions
       </h2>

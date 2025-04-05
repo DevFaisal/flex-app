@@ -2,74 +2,67 @@ import refunds from '../../../assets/icons/cards/refund.svg';
 import rewards from '../../../assets/icons/cards/rewards.svg';
 import partial from '../../../assets/icons/cards/partialpayment.svg';
 import creditcard from '../../../assets/icons/cards/creditcard.svg';
-import {
-  FaSmile,
-  FaLightbulb,
-  FaMobileAlt,
-  FaQuestion,
-  FaExchangeAlt,
-  FaLock,
-} from 'react-icons/fa';
+
 export const feedbackData = [
-  {
-    text: 'Going back to university for an MBA meant no salary for a while. I knew I had to plan my finances carefully, but in our focus group, I realised just how unfair standard credit cards are. If FlexCard existed, I’d have had a way to make partial repayments without getting hit with interest on my full balance. It’s exactly what students and career changers need—I can’t wait for it to go live!',
-    author: 'Chris',
-    role: 'MBA Student, Career Change',
-    profile: './people/chris.png',
-  },
-  {
-    text: 'Running a startup means cash flow can be unpredictable. Some months are great, others are tight. I never realised that most credit cards lock you into a rigid repayment system—making you pay interest on money you’ve already cleared. If FlexCard existed, it would be a game-changer for founders like me. Can’t wait to get my hands on it!',
-    author: 'Jovi',
-    role: 'Startup Founder, Cash Flow Challenges',
-    profile: './people/jovi.png',
-  },
-  {
-    text: "I love shopping, and I return a lot of stuff. But I never thought twice about how refunds actually work—until our focus group. Turns out, if a refund happens after your statement cycle, it doesn't count as a payment—meaning you still get charged interest on something you don’t even own anymore! WTF?! If FlexCard existed, I wouldn’t have wasted so much money on interest for things I returned. Now I’m just waiting for it to launch!",
-    author: 'Liz',
-    role: 'Impulse Buyer, Heavy Month-End Shopping & Refunds',
-    profile: './people/liz.png',
-  },
-  {
-    text: 'I love the flexibility of working for six months and then taking six months off, but managing cash flow can be tricky. In our focus group, I learned how traditional credit cards charge interest on the full balance—even when you’re making repayments. If FlexCard existed, it would be perfect for people like me who need financial flexibility without being punished with interest. I can’t wait for it to launch!',
-    author: 'Henry',
-    role: '6-Months Work/6-Months Off Lifestyle',
-    profile: './people/henry.png',
-  },
-  {
-    text: 'I always buy a few sizes when I shop online—who doesn’t? But I never realised that if my refund doesn’t hit before the statement cycle closes, I still get charged interest on it. In our focus group, I found out that even though I returned the items, my credit card acted like I still owed the money. That’s insane! If FlexCard existed, it would finally fix this unfair system. Seriously, I need this card in my life!',
-    author: 'Maya',
-    role: 'Gen Z, Online Shopper – Size Tester & Frequent Returns',
-    profile: './people/maya.png',
-  },
   {
     text: 'When I went on maternity leave, my income dropped overnight, but my expenses didn’t. In our focus group, I realised how unfair it is that traditional credit cards charge interest on the full balance—even when you make repayments. If FlexCard existed, I would have had a fairer way to manage my payments. I can’t wait for it to launch!',
     author: 'Beulah',
     role: 'Management Consultant, New Mum',
-    profile: './people/beulah.png',
+    profile: './people/Beualah.jpg',
+  },
+  {
+    text: "I took a short career break to travel before starting a new job. Money was tight, and I had to be careful with spending. In the focus group, I learned how traditional credit cards punish you with full interest, even if you pay off most of your balance. If FlexCard were available, it would have been a game-changer for me. I'm excited to be part of the early adopters!",
+    author: 'Eduardo',
+    role: 'Architect, Career Break',
+    profile: './people/Eduardo.jpg',
+  },
+  {
+    text: 'Going back to university for an MBA meant no salary for a while. I knew I had to plan my finances carefully, but in our focus group, I realised just how unfair standard credit cards are. If FlexCard existed, I’d have had a way to make partial repayments without getting hit with interest on my full balance. It’s exactly what students and career changers need—I can’t wait for it to go live!',
+    author: 'Chris',
+    role: 'MBA Student, Career Change',
+    profile: './people/Chris.jpg',
   },
   {
     text: 'Working for yourself is amazing, but the unpredictable income makes managing cash flow tricky. In our discussions, it became clear that if FlexCard was around, it would have been the perfect solution—allowing me to adjust my repayments without worrying about crazy interest charges. I love that it actually rewards responsible borrowers. I’ll be one of the first in line when it launches!',
     author: 'Lorena',
     role: 'Gig Worker, Self-Employed',
-    profile: './people/lorena.png',
+    profile: './people/Lorena.jpg',
   },
   {
-    text: "Before our focus group, I never really thought about how credit cards work—I just assumed they were all the same. Now I know that most of them are designed to trap you with unfair interest charges. If FlexCard existed when I got my first job, I would have had a much better way to manage my money. I'm proud to be an early supporter!",
+    text: 'Before our focus group, I never really thought about how credit cards work—I just assumed they were all the same. Now I know that most of them are designed to trap you with unfair interest charges. If FlexCard existed when I got my first job, I would have had a much better way to manage my money. I’m proud to be an early supporter!',
     author: 'Pavika',
     role: 'Fresh Graduate, First Job',
-    profile: './people/pavika.png',
+    profile: './people/Pavika.jpg',
+  },
+  {
+    text: 'I love the flexibility of working for six months and then taking six months off, but managing cash flow can be tricky. In our focus group, I learned how traditional credit cards charge interest on the full balance—even when you’re making repayments. If FlexCard existed, it would be perfect for people like me who need financial flexibility without being punished with interest. I can’t wait for it to launch!',
+    author: 'Henry',
+    role: '6-Months Work/6-Months Off Lifestyle',
+    profile: './people/Henry.jpg',
   },
   {
     text: 'Working part-time means my income isn’t always the same each month, so I assumed making partial payments on my credit card was enough. In our focus group, I found out the shocking truth—most cards still charge you full interest even when you’re paying off a big chunk. If FlexCard existed, it would finally give people like me a fairer way to manage credit. It’s about time!',
     author: 'Michael',
     role: 'Part-Time Worker, Variable Income',
-    profile: './people/michael.png',
+    profile: './people/Michael.jpg',
   },
   {
-    text: 'I took a short career break to travel before starting a new job. Money was tight, and I had to be careful with spending. In the focus group, I learned how traditional credit cards punish you with full interest, even if you pay off most of your balance. If FlexCard were available, it would have been a game-changer for me. I’m excited to be part of the early adopters!',
-    author: 'Eduardo',
-    role: 'Architect, Career Break',
-    profile: './people/eduardo.png',
+    text: 'Running a startup means cash flow can be unpredictable. Some months are great, others are tight. I never realised that most credit cards lock you into a rigid repayment system—making you pay interest on money you’ve already cleared. If FlexCard existed, it would be a game-changer for founders like me. Can’t wait to get my hands on it!',
+    author: 'Jovi',
+    role: 'Startup Founder, Cash Flow Challenges',
+    profile: './people/Jovi.jpg',
+  },
+  {
+    text: 'I love shopping, and I return a lot of stuff. But I never thought twice about how refunds actually work—until our focus group. Turns out, if a refund happens after your statement cycle, it doesn’t count as a payment—meaning you still get charged interest on something you don’t even own anymore! WTF?! If FlexCard existed, I wouldn’t have wasted so much money on interest for things I returned. Now I’m just waiting for it to launch!',
+    author: 'Liz',
+    role: 'Impulse Buyer, Heavy Month-End Shopping & Refunds',
+    profile: './people/Liz.jpg',
+  },
+  {
+    text: "I always buy a few sizes when I shop online—who doesn't? But I never realised that if my refund doesn’t hit before the statement cycle closes, I still get charged interest on it. In our focus group, I found out that even though I returned the items, my credit card acted like I still owed the money. That’s insane! If FlexCard existed, it would finally fix this unfair system. Seriously, I need this card in my life!",
+    author: 'Maya',
+    role: 'Gen Z, Online Shopper – Size Tester & Frequent Returns',
+    profile: './people/Maya.jpg',
   },
 ];
 export const promoCards = [
@@ -102,7 +95,6 @@ Card That’s Fair`,
 ];
 export const faqData = [
   {
-    icon: <FaSmile className="text-purple-600 text-xl" />,
     question: 'Why the name Flex?',
     answer: (
       <div className="text-gray-700">
@@ -115,7 +107,6 @@ export const faqData = [
     ),
   },
   {
-    icon: <FaLightbulb className="text-yellow-500 text-xl" />,
     question: 'What does Pay For What You Owe actually mean?',
     answer: (
       <div className="text-gray-700">
@@ -129,7 +120,6 @@ export const faqData = [
     ),
   },
   {
-    icon: <FaMobileAlt className="text-blue-500 text-xl" />,
     question: 'Can I get Flex now?',
     answer: (
       <div className="text-gray-700">
@@ -142,7 +132,6 @@ export const faqData = [
     ),
   },
   {
-    icon: <FaQuestion className="text-green-500 text-xl" />,
     question: 'Will joining the waitlist affect my credit score?',
     answer: (
       <div className="text-gray-700">
@@ -153,40 +142,33 @@ export const faqData = [
     ),
   },
   {
-    icon: <FaExchangeAlt className="text-red-500 text-xl" />,
     question: 'How is Flex different from other credit cards?',
     answer: (
       <div className="text-gray-700">
         We built Flex because we've made partial repayments, thought we were doing the right thing —
         only to be hit with interest we didn't expect.
-        <span className="block mt-2">
+        <p className="mt-2">
           So, we listened. We spoke to people like us, and built Flex for all of us — because real
           life isn't one-size-fits-all. And credit shouldn't be either.
-        </span>
-        <span className="block">Let's break it down:</span>
-        <span className="block font-bold mt-2">With traditional credit cards:</span>
-        <span className="block">
+        </p>
+        <p>Let's break it down:</p>
+        <p className="font-bold mt-2">With traditional credit cards:</p>
+        <p>
           You spend £1,000 on 8 March. Your statement closes on 10 March. You repay £500 on 20
           March.
-        </span>
-        <span className="block">Sounds fair enough, right?</span>
-        <span className="block">But here's the catch:</span>
-        <span className="block">
+        </p>
+        <p>Sounds fair enough, right?</p>
+        <p>But here's the catch:</p>
+        <p>
           You'll still be charged interest on the full £1,000 — not just the £500 you didn't repay.
-        </span>
-        <span className="block">
-          And not just from your statement date — but from the day you made the purchase.
-        </span>
-        <span className="block">
-          That interest keeps compounding daily until you clear the full balance.
-        </span>
-        <span className="block">
+        </p>
+        <p>And not just from your statement date — but from the day you made the purchase.</p>
+        <p>That interest keeps compounding daily until you clear the full balance.</p>
+        <p>
           So even when you're trying to do the right thing, you can end up paying more than you
           expected.
-        </span>
-        <span className="block font-bold mt-2">
-          Flex works differently — because we think differently:
-        </span>
+        </p>
+        <p className="font-bold mt-2">Flex works differently — because we think differently:</p>
         <ul className="list-disc pl-5 space-y-1 mt-1">
           <li>You choose how much to repay — 10%, 25%, 50%, 75%, or a custom amount</li>
           <li>We only charge interest on what's left, not your full statement</li>
@@ -197,24 +179,19 @@ export const faqData = [
           <li>Late fees are capped at £5, not £12 or more</li>
           <li>And yes, we're app-only, built for your phone and your lifestyle</li>
         </ul>
-        <span className="block mt-2">
+        <p className="mt-2">
           We built Flex to make credit work for real people — not just the system.
-        </span>
-        <span className="block">
-          No tricks. No compounding traps. Just credit that makes sense.
-        </span>
+        </p>
+        <p>No tricks. No compounding traps. Just credit that makes sense.</p>
       </div>
     ),
   },
   {
-    icon: <FaLock className="text-gray-700 text-xl" />,
     question: 'How do you keep my account safe?',
     answer: (
       <div className="text-gray-700">
-        <span className="block">
-          Flex is a digital-only credit card, and your security is baked into everything we do.
-        </span>
-        <span className="block font-semibold mt-2">Here's how we look after you:</span>
+        <p>Flex is a digital-only credit card, and your security is baked into everything we do.</p>
+        <p className="font-semibold mt-2">Here's how we look after you:</p>
         <ul className="list-disc pl-5 space-y-1 mt-1">
           <li>We use bank-grade encryption to protect your data</li>
           <li>3D Secure (3DS) adds an extra layer of safety to your online payments</li>
@@ -222,12 +199,11 @@ export const faqData = [
           <li>Lost your card? Just freeze it instantly in the app</li>
           <li>Something suspicious? Our UK-based team is here to help</li>
         </ul>
-        <span className="block mt-2">You're always in control — and we've got your back.</span>
+        <p className="mt-2">You're always in control — and we've got your back.</p>
       </div>
     ),
   },
 ];
-
 export const questions = [
   {
     question: 'If you pay off half your credit card bill, how is interest typically charged?',
@@ -263,5 +239,34 @@ export const questions = [
     correctAnswer: 'B) Over £3,000',
     explaination:
       'Minimum payments can triple the cost over time — turning a £1,000 purchase into a long-term burden. Minimum payments = maximum trap.',
+  },
+];
+export const features = [
+  {
+    icon: '/cash.svg',
+    title: 'Pay For What You Owe',
+    description: `Save interest when you make partial repayments. <br /> Only pay for what you actually owe – not your full statement.`,
+  },
+  {
+    icon: '/percent.svg',
+    title: 'Representative 25% APR (Variable)',
+    description:
+      'We cap your interest rate at 25%. No sneaky jumps. <br /> Subject to credit status.',
+  },
+  {
+    icon: '/cashback.svg',
+    title: '1% Cashback on All Purchases (12 Months)',
+    description:
+      'Earn 1% cashback on every purchase – up to £15/month, <br /> for your first year.*',
+  },
+  {
+    icon: '/credit-limit.svg',
+    title: 'Up to £1,200 Credit Limit*',
+    description: 'Credit subject to status',
+  },
+  {
+    icon: '/metal-card.svg',
+    title: 'Free Metal Card',
+    description: 'The first 1,500 customers get our premium metal card – on us.*',
   },
 ];

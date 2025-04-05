@@ -2,51 +2,20 @@ import React from 'react';
 import image from '../../../../assets/png/image.png';
 import { motion } from 'motion/react';
 import Form from '../../../../components/other/Form/Form';
+import { features } from '../../constants/constants';
 
 const JoinTheFlex = () => {
-  const features = [
-    {
-      icon: '/cash.svg',
-      title: 'Pay For What You Owe',
-      description: `Save interest when you make partial repayments. <br /> Only pay for what you actually owe – not your full statement.`,
-    },
-    {
-      icon: '/percent.svg',
-      title: 'Representative 25% APR (Variable)',
-      description:
-        'We cap your interest rate at 25%. No sneaky jumps. <br /> Subject to credit status.',
-    },
-    {
-      icon: '/cashback.svg',
-      title: '1% Cashback on All Purchases (12 Months)',
-      description:
-        'Earn 1% cashback on every purchase – up to £15/month, <br /> for your first year.*',
-    },
-    {
-      icon: '/credit-limit.svg',
-      title: 'Up to £1,200 Credit Limit*',
-      description: 'Credit subject to status',
-    },
-    {
-      icon: '/metal-card.svg',
-      title: 'Free Metal Card',
-      description: 'The first 1,500 customers get our premium metal card – on us.*',
-    },
-  ];
-
-  // bg-gray-900
-
   return (
     <section
       id="join"
-      className="relative py-10 md:py-19 flex flex-col xl:flex-row gap-10 bg-opacity-80"
+      className="relative py-10 md:py-19 flex flex-col xl:flex-row gap-10 bg-opacity-80 bg-gray-900"
     >
       <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
         <div className="absolute h-full w-full bg-black/40" />
         <img className="w-full h-full object-cover" src={image} alt="Background" />
       </div>
 
-      <div className="relative mx-w-5xl lg:max-w-[1500px] mx-auto z-10 w-full flex flex-col px-5 md:px-8 lg:flex-row md:gap-10 items-center gap-10">
+      <div className="relative mx-w-5xl lg:max-w-[1500px] mx-auto z-10 w-full flex flex-col-reverse px-5 md:px-8 lg:flex-row md:gap-10 items-center gap-10">
         <div className="flex-1 flex flex-col gap-6 bg-opacity-80 w-full px-5 md:px-8">
           <div className="w-full">
             <h1 className="subtitle self-stretch font-bold text-white leading-tight [font-family:'Manrope',Helvetica]">
@@ -81,7 +50,7 @@ const JoinTheFlex = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0, ease: 'easeInOut', stiffness: 100 }}
             exit={{ opacity: 0, scale: 0.8 }}
-            className="bg-white p-4 justify-center items-center bg-opacity-80 rounded-lg z-10 mx-4 md:h-[600px] md:px-7"
+            className="bg-white p-4 justify-center items-center bg-opacity-80 rounded-lg z-10 mx-4 md:h-[650px] md:px-7"
           >
             <Form />
           </motion.div>

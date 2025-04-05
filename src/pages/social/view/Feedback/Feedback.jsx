@@ -1,42 +1,70 @@
 import React, { useState, useEffect } from 'react';
 import HeaderNote from '../../../../components/ui/HeaderNote';
-import { feedbackData } from '../../constants/constants';
 import feedbackIcon from '../../../../assets/svg/feedback.svg';
 import Carousel from '../../../../components/ui/Carousel';
+import { feedbackData } from '../../constants/constants';
 
 const Feedback = () => {
-  const [visibleCards, setVisibleCards] = useState(1);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
-      setVisibleCards(window.innerWidth >= 1024 ? 2 : 1);
+      setIsMobile(window.innerWidth < 768);
     };
 
+    // Initial check
     handleResize();
+
+    // Add event listener
     window.addEventListener('resize', handleResize);
+
+    // Clean up
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Split feedbackData into chunks of `visibleCards` size
-  const groupedFeedback = [];
-  for (let i = 0; i < feedbackData.length; i += visibleCards) {
-    groupedFeedback.push(feedbackData.slice(i, i + visibleCards));
+  // Create mobile view (single card)
+  const mobileView = feedbackData.map((feedback, index) => (
+    <FeedbackCard
+      key={index}
+      text={feedback.text}
+      author={feedback.author}
+      role={feedback.role}
+      profile={feedback.profile}
+    />
+  ));
+
+  const desktopView = [];
+  for (let i = 0; i < feedbackData.length; i += 2) {
+    desktopView.push(
+      <div key={i} className="flex gap-4 max-w-7xl h-full mx-auto p-5">
+        <div className="w-1/2">
+          <FeedbackCard
+            text={feedbackData[i].text}
+            author={feedbackData[i].author}
+            role={feedbackData[i].role}
+            profile={feedbackData[i].profile}
+          />
+        </div>
+        {i + 1 < feedbackData.length && (
+          <div className="w-1/2">
+            <FeedbackCard
+              text={feedbackData[i + 1].text}
+              author={feedbackData[i + 1].author}
+              role={feedbackData[i + 1].role}
+              profile={feedbackData[i + 1].profile}
+            />
+          </div>
+        )}
+      </div>
+    );
   }
 
   return (
     <section className="py-5 md:py-10 bg-gray-50">
       <HeaderNote note="What People Are Saying" desc="Pay For What You Owe" />
-      <div className="container mx-auto px-4 md:px-8 py-6 md:py-10">
+      <div className=" px-4 md:px-8 py-6 md:py-10 h-full">
         <Carousel autoSlide={true} autoSlideInterval={5000}>
-          {groupedFeedback.map((group, index) => (
-            <div key={index} className="min-w-full">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-10 lg:px-8">
-                {group.map((card, idx) => (
-                  <FeedbackCard key={idx} {...card} />
-                ))}
-              </div>
-            </div>
-          ))}
+          {isMobile ? mobileView : desktopView}
         </Carousel>
       </div>
     </section>
@@ -44,27 +72,27 @@ const Feedback = () => {
 };
 
 const FeedbackCard = ({ text, author, role, profile }) => (
-  <div className="mx-1 sm:mx-1 md:mx-2 bg-white rounded-md shadow-lg p-4 md:p-8 flex flex-col text-left justify-between h-full md:min-h-[450px] transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-    <div className="flex md:h-full flex-col justify-center items-center space-y-4 md:space-y-6">
-      <div className="text-blue-600 transform hover:scale-105 transition-transform">
-        <img src={feedbackIcon} alt="Feedback icon" className="w-12 h-12 md:w-16 md:h-16" />
+  <div className="bg-white rounded-md shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] p-4 md:p-6 flex flex-col text-left justify-between h-full transition-all duration-300 hover:-translate-y-1 border border-gray-100">
+    <div className="flex flex-col justify-start items-center space-y-4">
+      <div className="text-blue-600">
+        <img src={feedbackIcon} alt="Feedback icon" className="w-10 h-10 md:w-12 md:h-12" />
       </div>
-      <h5 className="flex-1 text-gray-800 text-base md:text-xl leading-relaxed text-center font-light tracking-wide">
-        {text}
-      </h5>
+      <div className="overflow-hidden">
+        <p className="text-gray-800 text-sm md:text-base leading-relaxed text-center font-light tracking-wide line-clamp-6 md:line-clamp-8">
+          {text}
+        </p>
+      </div>
     </div>
-    <div className="flex flex-col mt-2 md:mt-4 justify-center items-center space-y-2 md:space-y-3">
-      <div className="rounded-full bg-gray-100">
+    <div className="flex flex-col mt-4 justify-center items-center space-y-2">
+      <div className="rounded-full bg-gray-100 overflow-hidden w-10 h-10">
         <img
           src={profile}
           alt={`${author} profile`}
-          width={40}
-          height={40}
-          className="rounded-full"
+          className="rounded-full w-full h-full object-cover"
         />
       </div>
-      <h3 className="font-bold text-gray-900 text-lg md:text-xl">{author}</h3>
-      <h6 className="text-gray-800 capitalize tracking-wider">{role}</h6>
+      <h3 className="font-bold text-gray-900 text-base md:text-lg">{author}</h3>
+      <h6 className="text-gray-600 text-xs md:text-sm capitalize tracking-wider">{role}</h6>
     </div>
   </div>
 );

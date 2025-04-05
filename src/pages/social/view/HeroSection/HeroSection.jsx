@@ -85,10 +85,10 @@ const LeftSection = memo(() => {
       transition={{ delay: 0.5 }}
       className="text-white mt-3 sm:mt-4 lg:mt-6 opacity-90 text-center xl:text-left lg:mb-6"
     >
-      <h4>
+      <h2 className="text-sm sm:text-base md:text-nowrap">
         Join <span className="font-extrabold">1,527</span> people who are redefining credit—fairer,
         smarter, and built for you.
-      </h4>
+      </h2>
     </motion.p>
   );
 

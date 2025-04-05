@@ -145,7 +145,7 @@ function Quiz() {
                 cursor={isAnswerCorrect == null ? 'not-allowed' : 'pointer'}
                 disabled={isAnswerCorrect == null}
                 label={currentQuestionIndex < questions.length - 1 ? 'Continue' : 'Complete Quiz'}
-                className="w-full sm:w-auto"
+                className="w-full sm:w-auto text-sm md:text-base"
                 onClick={handleNextQuestion}
               />
             </div>

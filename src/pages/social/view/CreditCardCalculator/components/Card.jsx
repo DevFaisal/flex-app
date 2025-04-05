@@ -139,12 +139,12 @@ const Card = () => {
       <div className="mt-4 md:mt-6">
         <h6 className="py-2 text-[#21272A]">Monthly interest saved</h6>
         <div className="flex flex-col md:flex-row justify-between items-center bg-secondary p-3 rounded-xl">
-          <h2 className="font-bold text-white truncate">
+          <h2 className="text-xl md:text-3xl font-bold text-white truncate">
             £{parseFloat(monthlySavings).toFixed(2).toLocaleString('en-GB')}
           </h2>
           <Button type="white" className="text-xs md:text-sm" label={'Find Out More'} />
         </div>
-        <p className="pt-4 text-[#7B838B]">
+        <p className="pt-4 text-xs md:text-sm text-[#7B838B]">
           <strong>Note:</strong> This calculator is a guide only and illustrates how "Pay For What
           You Owe" interest works.
         </p>
@@ -162,12 +162,18 @@ function LabelledInput({ label, value, setValue, symbol, type }) {
         {label}
       </label>
       <div className="relative">
-        <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">{symbol}</span>
+        <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-md md:text-xl">
+          {symbol}
+        </span>
         <input
+          keyboardType="numeric"
+          autoComplete="off"
+          autoCorrect="off"
+          spellCheck="false"
           value={value}
           onChange={(e) => setValue(e.target.value)}
           type={type}
-          className="w-full bg-[#F2F4F8] pl-7 pr-3 py-1.5 md:py-2  rounded-md outline-none appearance-none shadow-[0px_2px_0px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]"
+          className="w-full text-md md:text-xl font-semibold bg-[#F2F4F8] pl-7 pr-3 py-1.5 md:py-2  rounded-md outline-none appearance-none shadow-[0px_2px_0px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]"
         />
       </div>
     </div>
