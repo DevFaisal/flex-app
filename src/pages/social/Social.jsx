@@ -33,9 +33,9 @@ const Social = () => {
         <CreditCardCalculator />
         <TruthBombs />
         <TestCredit />
+        <VideoPlayback />
         <JoinTheFlex />
         <Feedback />
-        <VideoPlayback />
         <FlexFAQ />
         <Join />
       </MainContainer>
