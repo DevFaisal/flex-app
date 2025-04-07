@@ -2,11 +2,10 @@ import React from 'react';
 import { Controller } from 'react-hook-form';
 import { useFormContext } from './FormContext';
 import Button from '../../ui/Button';
-import { api } from '../../../utils/api';
 import { getSource } from '../../../utils/getSource';
 import { getChannel } from '../../../utils/getChannel';
 import toast from 'react-hot-toast';
-import useFormStore from './store/FormStore';
+import contactService from '../../../services/contact';
 
 const FormTwo = () => {
   const { formMethods, nextStep, setIsSubmitting, setSubmitStatus, isSubmitting } =
@@ -34,16 +33,15 @@ const FormTwo = () => {
         partial_repayments: formMethods.watch('partialRepayments'),
         traffic_source: getSource() || '',
         channel: (await getChannel()) || '',
+        qna: '',
       },
     };
 
     try {
-      const response = await api.post('create-contact', {
+      await contactService.createContact({
         ContactObject,
         Auth: String(accessToken),
       });
-      const number = response?.data?.randomNumber;
-      useFormStore.getState().setWaitinglistNumber(number);
 
       setSubmitStatus({
         type: 'success',
@@ -55,11 +53,9 @@ const FormTwo = () => {
     } catch (error) {
       console.error('Error Occurred:', error.response?.data || error.message);
       toast.error(
-        error.response?.data?.message.includes('Authentication')
-          ? 'Authentication Error'
-          : error.response?.data?.message.includes('already exists')
-            ? 'Email already exists'
-            : error.response?.data?.message || 'An error occurred while creating the contact'
+        error.response?.data?.message.includes('already exists')
+          ? 'Email already exists'
+          : error.response?.data?.message || 'An error occurred while creating the contact'
       );
       setSubmitStatus({
         type: 'error',

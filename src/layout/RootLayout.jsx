@@ -4,6 +4,7 @@ import Footer from '../components/view/Footer';
 import HandleBGVideo from '../provider/HandleBGVideo';
 import CustomCookieConsent from '../components/other/CustomCookieConsent';
 import { useNewUserStore } from '../store/global.store';
+import Navbar from '../components/view/Navbar';
 
 const RootLayout = () => {
   const fetchTheNewNumber = useNewUserStore((state) => state.fetchTheNewNumber);
@@ -11,13 +12,14 @@ const RootLayout = () => {
 
   useEffect(() => {
     if (!isNewNumberGenerated) {
-      fetchTheNewNumber();
+      // fetchTheNewNumber();
     }
   }, [isNewNumberGenerated]);
 
   return (
-    <div>
+    <div className="">
       <HandleBGVideo>
+        <Navbar />
         <Outlet />
         <Footer />
         <CustomCookieConsent />

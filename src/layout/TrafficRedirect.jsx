@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
-import Social from '../pages/social/Social';
-import Organic from '../pages/organic/Organic';
+import Social from '../pages/landing/social/Social';
 
 function TrafficRedirect() {
   const [source, setSource] = useState(() => localStorage.getItem('traffic_source') || '');
