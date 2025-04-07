@@ -12,7 +12,7 @@ const RootLayout = () => {
 
   useEffect(() => {
     if (!isNewNumberGenerated) {
-      // fetchTheNewNumber();
+      fetchTheNewNumber();
     }
   }, [isNewNumberGenerated]);
 
