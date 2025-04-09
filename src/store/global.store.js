@@ -20,7 +20,6 @@ export const useNewUserStore = create((set, get) => ({
       if (number && !isNewNumberGenerated) {
         setNewNumber(number);
         setIsNewNumberGenerated(true);
-        console.log('New number from Lambda:', number);
       }
     } catch (error) {
       if (error.response?.data?.message?.includes('Rate Exceeded')) {

@@ -21,7 +21,9 @@ const FormOne = () => {
   return (
     <div className="flex flex-col gap-6 h-full justify-evenly">
       <div>
-        <h1 className="font-bold text-center md:text-left text-2xl md:text-4xl tracking-wide">Join the Waitlist</h1>
+        <h1 className="font-bold text-center md:text-left text-2xl md:text-4xl tracking-wide">
+          Join the Waitlist
+        </h1>
         <h4 className="mt-3 text-center md:text-left">
           Be the first to get your FlexCard when we launch.
         </h4>

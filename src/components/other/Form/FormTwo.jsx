@@ -19,7 +19,7 @@ const FormTwo = () => {
     reset,
   } = formMethods;
 
-  const onSubmit = async (data) => {
+  const onSubmit = async () => {
     setIsSubmitting(true);
     setSubmitStatus(null);
 
