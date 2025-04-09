@@ -18,7 +18,6 @@ const useTakeQuizStore = create((set) => ({
     }));
   },
   storeQnAinDB: async (qna) => {
-    console.log(qna);
     const ContactObject = {
       properties: {
         firstname: 'Quiz',
