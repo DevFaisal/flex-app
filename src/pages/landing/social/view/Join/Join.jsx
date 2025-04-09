@@ -12,7 +12,8 @@ const Join = () => {
             Join the #PayForWhatYouOwe Challenge
           </h1>
           <p className="text-white text-center text-sm sm:text-base md:text-lg lg:text-xl w-full max-w-xs sm:max-w-sm md:max-w-2xl lg:max-w-4xl">
-            Join <strong>{number}</strong> people who are switching to fairer credit.
+            Join <strong>{parseInt(number).toLocaleString()}</strong> people who are switching to
+            fairer credit.
           </p>
           <Button
             type="white"

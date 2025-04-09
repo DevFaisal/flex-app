@@ -63,8 +63,8 @@ const LeftSection = memo(() => {
       className="text-white mt-3 sm:mt-4 lg:mt-6 opacity-90 text-center xl:text-left lg:mb-6"
     >
       <h2 className="text-sm sm:text-base md:text-nowrap">
-        Join <span className="font-extrabold">{number}</span> people who are redefining
-        credit—fairer, smarter, and built for you.
+        Join <span className="font-extrabold">{parseInt(number).toLocaleString()}</span> people who
+        are redefining credit—fairer, smarter, and built for you.
       </h2>
     </motion.p>
   );
