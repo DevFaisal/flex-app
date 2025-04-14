@@ -10,7 +10,7 @@ const HeroSection = () => {
     <main className="relative min-h-screen z-[20]">
       <Gradient />
       <Container>
-        <Navbar />
+        {/* <Navbar /> */}
         <section className="flex items-center justify-center md:h-[70vh] h-[100vh]">
           <div className="flex-1 lg:px-0 mt-6 sm:mt-8 lg:mt-35 md:mt-70 xl:ml-16">
             <LeftSection />

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Controller } from 'react-hook-form';
 import { useFormContext } from './FormContext';
 import Button from '../../ui/Button';
@@ -10,7 +10,6 @@ import contactService from '../../../services/contact';
 const FormTwo = () => {
   const { formMethods, nextStep, setIsSubmitting, setSubmitStatus, isSubmitting } =
     useFormContext();
-  const accessToken = import.meta.env.VITE_ACCESS_TOKEN;
 
   const {
     control,
@@ -19,29 +18,46 @@ const FormTwo = () => {
     reset,
   } = formMethods;
 
+
+
   const onSubmit = async () => {
     setIsSubmitting(true);
     setSubmitStatus(null);
 
+    //Hubspot data format
+
+    // const ContactObject = {
+    //   properties: {
+    //     firstname: formMethods.watch('fullname').split(' ')[0] || '',
+    //     lastname: formMethods.watch('fullname').split(' ').slice(1).join(' ') || '',
+    //     email: formMethods.watch('email'),
+    //     eighteen_and_uk_resident: formMethods.watch('eighteenAndUK'),
+    //     employed: formMethods.watch('employed'),
+    //     partial_repayments: formMethods.watch('partialRepayments'),
+    //     traffic_source: getSource() || '',
+    //     channel: (await getChannel()) || '',
+    //     qna: '',
+    //   },
+    // };
+
+    //Zoho data format
     const ContactObject = {
-      properties: {
-        firstname: formMethods.watch('fullname').split(' ')[0] || '',
-        lastname: formMethods.watch('fullname').split(' ').slice(1).join(' ') || '',
-        email: formMethods.watch('email'),
-        eighteen_and_uk_resident: formMethods.watch('eighteenAndUK'),
-        employed: formMethods.watch('employed'),
-        partial_repayments: formMethods.watch('partialRepayments'),
-        traffic_source: getSource() || '',
-        channel: (await getChannel()) || '',
-        qna: '',
-      },
+      data: [
+        {
+          First_Name: formMethods.watch('fullname').split(' ')[0] || '',
+          Last_Name: formMethods.watch('fullname').split(' ').slice(1).join(' ') || '',
+          Email: formMethods.watch('email'),
+          Eighteen_And_UK_Resident: formMethods.watch('eighteenAndUK'),
+          // Employed: formMethods.watch('employed'),
+          // Partial_Repayments: formMethods.watch('partialRepayments'),
+          Traffic: getSource() || '',
+          Channel: (await getChannel()) || 'none',
+        },
+      ],
     };
 
     try {
-      await contactService.createContact({
-        ContactObject,
-        Auth: String(accessToken),
-      });
+      await contactService.createContact(ContactObject);
 
       setSubmitStatus({
         type: 'success',

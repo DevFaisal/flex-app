@@ -5,7 +5,7 @@ import icon from '../../../assets/icons/flexicon.svg';
 import { useNewUserStore } from '../../../store/global.store';
 
 const Success = () => {
-  const newNumber = useNewUserStore((state) => state.newNumber);
+  const newNumber = useNewUserStore((state) => state.newNumber) + 7;
 
   return (
     <div className="flex flex-col justify-center items-center relative z-[1] h-full w-full">

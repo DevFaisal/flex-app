@@ -8,7 +8,7 @@ const HeroSection = () => {
   return (
     <main className="min-h-screen">
       <section className="relative min-h-screen overflow-clip">
-        <Navbar />
+        {/* <Navbar /> */}
         <Gradient />
         <Container>
           <div className="flex flex-col lg:flex-row justify-between items-center pt-10">

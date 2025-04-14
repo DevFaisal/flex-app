@@ -2,6 +2,7 @@ import React, { memo } from 'react';
 import { motion } from 'motion/react';
 import Button from '../../../../../../components/ui/Button';
 import useCurrentEnroll from '../../../../../../hooks/useCurrentEnroll';
+import Counter from '../../../../../../components/ui/Counter';
 
 const textContainer = {
   hidden: {},
@@ -55,18 +56,21 @@ const LeftSection = memo(() => {
   );
 
   const description = (
-    <motion.p
+    <motion.div
       variants={textItem}
       initial="hidden"
       animate="show"
       transition={{ delay: 0.5 }}
       className="text-white mt-3 sm:mt-4 lg:mt-6 opacity-90 text-center xl:text-left lg:mb-6"
     >
-      <h2 className="text-sm sm:text-base md:text-nowrap">
-        Join <span className="font-extrabold">{parseInt(number).toLocaleString()}</span> people who
-        are redefining credit—fairer, smarter, and built for you.
+      <h2 className="flex text-sm sm:text-base md:text-nowrap">
+        <span>Join</span>
+        <span className="w-[55px] block overflow-hidden pl-1">
+          <Counter value={number} className="font-extrabold" />
+        </span>
+        <span>people who are redefining credit—fairer, smarter, and built for you.</span>
       </h2>
-    </motion.p>
+    </motion.div>
   );
 
   const buttons = (

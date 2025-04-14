@@ -1,6 +1,7 @@
 // global.store.js
 import { create } from 'zustand';
 import axios from 'axios';
+import getRandomNumberFromUUID from '../utils/generateRandomNumber';
 
 export const useNewUserStore = create((set, get) => ({
   isNewNumberGenerated: false,
@@ -22,10 +23,14 @@ export const useNewUserStore = create((set, get) => ({
         setIsNewNumberGenerated(true);
       }
     } catch (error) {
-      if (error.response?.data?.message?.includes('Rate Exceeded')) {
+      if (error.response?.data?.message?.includes('exceeded')) {
         console.warn('Rate limit hit. Retrying in 2 seconds...');
         setTimeout(() => get().fetchTheNewNumber(), 2000);
       } else {
+        const num = getRandomNumberFromUUID();
+        console.log('Using fallback random number:', num);
+        setNewNumber(num);
+        setIsNewNumberGenerated(true);
         console.error('Error fetching number:', error);
       }
     }
