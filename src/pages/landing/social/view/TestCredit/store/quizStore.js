@@ -18,26 +18,21 @@ const useTakeQuizStore = create((set) => ({
     }));
   },
   storeQnAinDB: async (qna) => {
-    const ContactObject = {
-      properties: {
-        firstname: 'Quiz',
-        lastname: 'User',
-        email: generateRandomEmailAsPerTimestamp(),
-        eighteen_and_uk_resident: '',
-        employed: '',
-        partial_repayments: '',
-        traffic_source: '',
-        channel: '',
-        qna: JSON.stringify(qna),
-      },
-    };
+      const ContactObject = {
+          data: [
+            {
+              First_Name: 'Quiz',
+              Last_Name: 'User',
+              Email: generateRandomEmailAsPerTimestamp(),
+              // Traffic: getSource() || '',
+              // Channel: (await getChannel()) || 'none',
+              qna: JSON.stringify(qna),
+            },
+          ],
+        };
+
     try {
-      const accessToken = import.meta.env.VITE_ACCESS_TOKEN;
-      const response = await contactService.createContact({
-        ContactObject,
-        Auth: String(accessToken),
-      });
-      console.log(response);
+       await contactService.createContact(ContactObject);
     } catch (error) {
       console.error('Error Occurred:', error.response?.data || error.message);
     }
