@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import contactService from '../../../../../../services/contact';
+import lambdaService from '../../../../../../services/lamda';
 
 const useTakeQuizStore = create((set) => ({
   currentStep: 0,
@@ -32,7 +33,8 @@ const useTakeQuizStore = create((set) => ({
         };
 
     try {
-       await contactService.createContact(ContactObject);
+      //  await contactService.createContact(ContactObject);
+      await lambdaService.createZohoAccount(ContactObject);
     } catch (error) {
       console.error('Error Occurred:', error.response?.data || error.message);
     }
