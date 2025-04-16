@@ -47,7 +47,7 @@ const FormTwo = () => {
       data: [
         {
           First_Name: formMethods.watch('fullname').split(' ')[0] || '',
-          Last_Name: formMethods.watch('fullname').split(' ').slice(1).join(' ') || '',
+          Last_Name: formMethods.watch('fullname').split(' ').slice(1).join(' ') || 'N/A',
           Email: formMethods.watch('email'),
           Eighteen_And_UK_Resident: formMethods.watch('eighteenAndUK'),
           // Employed: formMethods.watch('employed'),
@@ -57,7 +57,7 @@ const FormTwo = () => {
         },
       ],
     };
-
+console.log('ContactObject', ContactObject);
     try {
 
       // await contactService.createContact(ContactObject);
