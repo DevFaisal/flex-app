@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import getRandomNumberFromUUID from '../utils/generateRandomNumber';
-import invokeLambda from '../utils/invokeLambda';
+import lambdaService from '../services/lamda';
 
 export const useNewUserStore = create((set, get) => ({
   isNewNumberGenerated: false,
@@ -18,22 +18,25 @@ export const useNewUserStore = create((set, get) => ({
     }
 
     try {
-      const response = await invokeLambda();
+      const response = await lambdaService.incrementNumber()
       const number = response?.new_number;
-
+      
       if (number) {
         setNewNumber(number);
         setIsNewNumberGenerated(true);
+      } else {
+        const fallback = getRandomNumberFromUUID();
+        setNewNumber(fallback);
+        setIsNewNumberGenerated(true);
       }
+
     } catch (error) {
-      if (error.message?.includes('exceeded')) {
-        console.warn('Rate limit hit. Retrying in 2 seconds...');
+      if (error.message?.toLowerCase().includes('exceeded')) {
         setTimeout(() => get().fetchTheNewNumber(), 2000);
       } else {
         const fallback = getRandomNumberFromUUID();
         setNewNumber(fallback);
         setIsNewNumberGenerated(true);
-        console.error('Error fetching number:', error);
       }
     }
   },

@@ -7,6 +7,7 @@ import emailService from '../../../services/validateEmail';
 import { FaCircleNotch } from 'react-icons/fa';
 import { IoCheckmarkDoneCircle } from 'react-icons/io5';
 import { MdError } from 'react-icons/md';
+import lambdaService from '../../../services/lamda';
 
 const FormOne = () => {
   const { formMethods, nextStep } = useFormContext();
@@ -38,8 +39,9 @@ const FormOne = () => {
       setWrongEmail(false);
 
       const timer = setTimeout(() => {
-        emailService
-          .validateEmailWithZerobounce(email)
+        // emailService
+        //   .validateEmailWithZerobounce(email)
+        lambdaService.validateEmail(email)
           .then((response) => {
             setLoading(false);
             if (response && response.status === 'valid') {

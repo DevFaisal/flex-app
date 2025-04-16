@@ -6,6 +6,7 @@ import { getSource } from '../../../utils/getSource';
 import { getChannel } from '../../../utils/getChannel';
 import toast from 'react-hot-toast';
 import contactService from '../../../services/contact';
+import lambdaService from '../../../services/lamda';
 
 const FormTwo = () => {
   const { formMethods, nextStep, setIsSubmitting, setSubmitStatus, isSubmitting } =
@@ -41,6 +42,7 @@ const FormTwo = () => {
     // };
 
     //Zoho data format
+    
     const ContactObject = {
       data: [
         {
@@ -57,7 +59,9 @@ const FormTwo = () => {
     };
 
     try {
-      await contactService.createContact(ContactObject);
+
+      // await contactService.createContact(ContactObject);
+      await lambdaService.createZohoAccount(ContactObject);
 
       setSubmitStatus({
         type: 'success',
@@ -67,15 +71,30 @@ const FormTwo = () => {
       reset();
       nextStep();
     } catch (error) {
-      console.error('Error Occurred:', error.response?.data || error.message);
+    
+      let parsedError = {};
+      try {
+        parsedError = typeof error.message === 'string' ? JSON.parse(error.message) : error;
+      } catch (e) {
+        console.warn('Failed to parse error.message as JSON:', error.message);
+      }
+    
+      const message = parsedError.message || 'An error occurred while creating the contact';
+      const nestedError = parsedError.error || {};
+      const isDuplicateError = nestedError.code === 'DUPLICATE_DATA';
+    
+    
       toast.error(
-        error.response?.data?.message.includes('already exists')
+        isDuplicateError
           ? 'Email already exists'
-          : error.response?.data?.message || 'An error occurred while creating the contact'
+          : nestedError.message || message || 'An error occurred while creating the contact'
       );
+    
       setSubmitStatus({
         type: 'error',
-        message: error.response?.data?.message || 'An error occurred while creating the contact',
+        message: isDuplicateError
+          ? 'The email you entered is already registered.'
+          : nestedError.message || message,
       });
     } finally {
       setIsSubmitting(false);

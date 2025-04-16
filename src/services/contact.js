@@ -1,10 +1,9 @@
 import { api } from '../utils/api';
 
-
 const contactService = {
   createContact: async (data) => {
     try {
-      const response = await api.post('', data);
+      const response = await api.get('', data);
       return response.data;
     } catch (error) {
       console.error('Error Occurred:', error.response?.data || error.message);
@@ -14,3 +13,5 @@ const contactService = {
 };
 
 export default contactService;
+
+
