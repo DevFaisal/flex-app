@@ -5,7 +5,6 @@ import Button from '../../ui/Button';
 import { getSource } from '../../../utils/getSource';
 import { getChannel } from '../../../utils/getChannel';
 import toast from 'react-hot-toast';
-import contactService from '../../../services/contact';
 import lambdaService from '../../../services/lamda';
 
 const FormTwo = () => {
@@ -59,8 +58,6 @@ const FormTwo = () => {
     };
 console.log('ContactObject', ContactObject);
     try {
-
-      // await contactService.createContact(ContactObject);
       await lambdaService.createZohoAccount(ContactObject);
 
       setSubmitStatus({

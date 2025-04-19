@@ -39,8 +39,6 @@ const FormOne = () => {
       setWrongEmail(false);
 
       const timer = setTimeout(() => {
-        // emailService
-        //   .validateEmailWithZerobounce(email)
         lambdaService.validateEmail(email)
           .then((response) => {
             setLoading(false);

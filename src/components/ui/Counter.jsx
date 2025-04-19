@@ -1,33 +1,54 @@
-import { useEffect, useRef } from 'react';
-import { useInView, useMotionValue, useSpring } from 'framer-motion';
 
-export default function Counter({ value, direction = 'up', className }) {
-  const ref = useRef(null);
-  const motionValue = useMotionValue(direction === 'down' ? value : 0);
-  const springValue = useSpring(motionValue, {
-    damping: 100,
-    stiffness: 100,
+import {  motion,useMotionValue, useTransform, animate } from 'framer-motion';
+import { useEffect } from 'react';
+
+function Counter({
+  number = 0,
+  duration = 2,
+  prefix = '',
+  suffix = '',
+  className = '',
+  fontSize = '',
+  textColor = '',
+  weight = '',
+}) {
+  // Create a motion value for the count
+  const count = useMotionValue(0);
+  
+  // Transform the motion value to a formatted string
+  const roundedCount = useTransform(count, value => {
+    return Math.round(value).toLocaleString('en-US', {
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+    });
   });
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   useEffect(() => {
-    if (isInView) {
-      motionValue.set(direction === 'down' ? 0 : value);
-    }
-  }, [motionValue, isInView]);
+    // Animate the count to the target number
+    const animation = animate(count, number, {
+      duration: duration,
+      ease: "easeOut",
+      onComplete: () => {
+        // Make sure we land exactly on the target number
+        count.set(number);
+      }
+    });
 
-  useEffect(
-    () =>
-      springValue.on('change', (latest) => {
-        if (ref.current) {
-          ref.current.textContent = new Intl.NumberFormat('en-GB', {
-            minimumFractionDigits: 0,
-            maximumFractionDigits: 0,
-          }).format(latest);
-        }
-      }),
-    [springValue]
+    // Clean up the animation on unmount or when deps change
+    return animation.stop;
+  }, [count, number, duration]);
+
+  // Combine Tailwind classes
+  const combinedClassName = `inline text-${fontSize} font-${weight} text-${textColor} ${className}`;
+
+  return (
+    <div className={combinedClassName}>
+      {prefix}
+      <motion.span>{roundedCount}</motion.span>
+      {suffix}
+    </div>
   );
-
-  return <span className={className} ref={ref} />;
 }
+
+
+export default Counter;

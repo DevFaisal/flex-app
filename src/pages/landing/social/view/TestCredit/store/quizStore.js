@@ -1,5 +1,4 @@
 import { create } from 'zustand';
-import contactService from '../../../../../../services/contact';
 import lambdaService from '../../../../../../services/lamda';
 
 const useTakeQuizStore = create((set) => ({
@@ -25,15 +24,12 @@ const useTakeQuizStore = create((set) => ({
               First_Name: 'Quiz',
               Last_Name: 'User',
               Email: generateRandomEmailAsPerTimestamp(),
-              // Traffic: getSource() || '',
-              // Channel: (await getChannel()) || 'none',
               Qna: JSON.stringify(qna),
             },
           ],
         };
 
     try {
-      //  await contactService.createContact(ContactObject);
       await lambdaService.createZohoAccount(ContactObject);
     } catch (error) {
       console.error('Error Occurred:', error.response?.data || error.message);

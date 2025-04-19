@@ -4,7 +4,7 @@ import lambdaService from '../services/lamda';
 
 export const useNewUserStore = create((set, get) => ({
   isNewNumberGenerated: false,
-  newNumber: 0,
+  newNumber: Math.floor(Math.random() * 1000),
 
   setIsNewNumberGenerated: (value) => set({ isNewNumberGenerated: value }),
   setNewNumber: (value) => set({ newNumber: value }),
@@ -13,7 +13,6 @@ export const useNewUserStore = create((set, get) => ({
     const { isNewNumberGenerated, setNewNumber, setIsNewNumberGenerated } = get();
 
     if (isNewNumberGenerated) {
-      console.log('Number already generated:', get().newNumber);
       return;
     }
 

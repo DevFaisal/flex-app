@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { memo, useEffect, useState } from 'react';
 import { motion } from 'motion/react';
 import Button from '../../../../../../components/ui/Button';
 import useCurrentEnroll from '../../../../../../hooks/useCurrentEnroll';
@@ -64,7 +64,7 @@ const LeftSection = memo(() => {
       className="text-white mt-3 sm:mt-4 lg:mt-6 opacity-90 text-center xl:text-left lg:mb-6"
     >
       <h2 className="flex text-sm sm:text-base md:text-nowrap">
-        <span>Join <span className='font-extrabold'>{number}</span> people who are redefining credit—fairer, smarter, and built for you.</span>
+        <span>Join <span className='font-extrabold'><Counter number={number}/></span> people who are redefining credit—fairer, smarter, and built for you.</span>
       </h2>
     </motion.div>
   );
@@ -103,3 +103,4 @@ const LeftSection = memo(() => {
 });
 
 export default LeftSection;
+
