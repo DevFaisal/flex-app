@@ -27,7 +27,7 @@ const useTakeQuizStore = create((set) => ({
               Email: generateRandomEmailAsPerTimestamp(),
               // Traffic: getSource() || '',
               // Channel: (await getChannel()) || 'none',
-              qna: JSON.stringify(qna),
+              Qna: JSON.stringify(qna),
             },
           ],
         };

@@ -9,8 +9,8 @@ const lambdaService = {
     return await callLambdaFunction("validate_email", { email });
   },
 
-  incrementNumber: async () => {
-    return await callLambdaFunction("increment_number");
+  getCount: async () => {
+    return await callLambdaFunction("get_count");
   },
 };
 

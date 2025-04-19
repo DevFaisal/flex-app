@@ -18,8 +18,8 @@ export const useNewUserStore = create((set, get) => ({
     }
 
     try {
-      const response = await lambdaService.incrementNumber()
-      const number = response?.new_number;
+      const response = await lambdaService.getCount()
+      const number = response?.current_number;
       
       if (number) {
         setNewNumber(number);

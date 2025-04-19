@@ -64,11 +64,7 @@ const LeftSection = memo(() => {
       className="text-white mt-3 sm:mt-4 lg:mt-6 opacity-90 text-center xl:text-left lg:mb-6"
     >
       <h2 className="flex text-sm sm:text-base md:text-nowrap">
-        <span>Join</span>
-        <span className="w-[55px] block overflow-hidden pl-1">
-          <Counter value={number} className="font-extrabold" />
-        </span>
-        <span>people who are redefining credit—fairer, smarter, and built for you.</span>
+        <span>Join <span className='font-extrabold'>{number}</span> people who are redefining credit—fairer, smarter, and built for you.</span>
       </h2>
     </motion.div>
   );
